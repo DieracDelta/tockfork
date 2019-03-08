@@ -4,12 +4,14 @@
 
 #![no_std]
 #![no_main]
-#![feature(panic_handler, asm)]
+#![feature(asm)]
 
 extern crate capsules;
 #[allow(unused_imports)]
 #[macro_use(create_capability, debug, debug_gpio, static_init)]
 extern crate kernel;
+// registers
+extern crate riscvregs;
 extern crate e310x;
 extern crate riscv32i;
 extern crate sifive;
@@ -78,226 +80,139 @@ impl Platform for HiFive1 {
     }
 }
 
+pub unsafe fn trap_save_cause(mepc: u32) {
+    riscvregs::register::mepc::write(mepc as usize);
+}
+
+
 /// Reset Handler.
 ///
 /// This function is called from the arch crate after some very basic RISC-V
 /// setup.
 #[no_mangle]
+#[allow(unused_variables)]
 pub unsafe fn reset_handler() {
     // Basic setup of the platform.
     riscv32i::init_memory();
-    riscv32i::configure_trap_handler();
-
-    e310x::watchdog::WATCHDOG.disable();
-    e310x::rtc::RTC.disable();
-    e310x::pwm::PWM0.disable();
-    e310x::pwm::PWM1.disable();
-    e310x::pwm::PWM2.disable();
-
-    e310x::prci::PRCI.set_clock_frequency(sifive::prci::ClockFrequency::Freq18Mhz);
-
-    riscv32i::enable_plic_interrupts();
-
-    let process_mgmt_cap = create_capability!(capabilities::ProcessManagementCapability);
-    let main_loop_cap = create_capability!(capabilities::MainLoopCapability);
-    // let memory_allocation_cap = create_capability!(capabilities::MemoryAllocationCapability);
-
-    // sam4l::pm::PM.setup_system_clock(sam4l::pm::SystemClockSource::PllExternalOscillatorAt48MHz {
-    //     frequency: sam4l::pm::OscillatorFrequency::Frequency16MHz,
-    //     startup_mode: sam4l::pm::OscillatorStartup::SlowStart,
-    // });
-
-    // // Source 32Khz and 1Khz clocks from RC23K (SAM4L Datasheet 11.6.8)
-    // sam4l::bpm::set_ck32source(sam4l::bpm::CK32Source::RC32K);
-
-    let board_kernel = static_init!(kernel::Kernel, kernel::Kernel::new(&PROCESSES));
-
-    // Configure kernel debug gpios as early as possible
-    kernel::debug::assign_gpios(
-        Some(&e310x::gpio::PORT[22]), // Red
-        None,
-        None,
+    let PMP_NAPOT = 0x18;
+    let PMP_R = 0x1;
+    let PMP_W = 0x02;
+    let PMP_X = 0x04;
+    let pmpc = PMP_NAPOT | PMP_R | PMP_W | PMP_X;
+    let save = 0;
+    // let tfn = trap_save_cause;
+    let PMPCFG_COUNT = 4;
+    let PMPADDR_COUNT = 16;
+    asm!("
+csrw 0x3A0, x0
+csrw 0x3A1, x0
+csrw 0x3A2, x0
+csrw 0x3A3, x0
+csrw 0x3B0, x0
+csrw 0x3B1, x0
+csrw 0x3B2, x0
+csrw 0x3B3, x0
+csrw 0x3B4, x0
+csrw 0x3B5, x0
+csrw 0x3B6, x0
+csrw 0x3B7, x0
+csrw 0x3B8, x0
+csrw 0x3B9, x0
+csrw 0x3BA, x0
+csrw 0x3BB, x0
+csrw 0x3BC, x0
+csrw 0x3BD, x0
+csrw 0x3BE, x0
+csrw 0x3BF, x0
+");
+    // tfn = 0;
+    asm!(
+        "
+lui t0, %hi(0x1f)
+addi t0, t0, %lo(0x1f)
+csrrw t0, 0x301, t0
+lui t0, %hi(0xffffffff)
+addi t0, t0, %lo(0xffffffff)
+csrw 0x3B0, t0
+lui t0, %hi(0x1f)
+addi t0, t0, %lo(0x1f)
+csrw 0x3A0, t0
+.align 2
+1: csrw 0x301, t0
+" : : : "t0"
     );
+    riscv32i::configure_machine_trap_handler();
+    riscv32i::configure_supervisor_trap_handler();
+    riscvregs::register::mstatus::set_mpp(riscvregs::register::mstatus::MPP::User);
 
-    let chip = static_init!(e310x::chip::E310x, e310x::chip::E310x::new());
+    asm!("
+    lui a0, %hi(0x80101000)
+    addi a0, a0, %lo(0x80101000)
+    csrw 0x341, a0
+    mret
+");
 
-    // Create a shared UART channel for the console and for kernel debug.
-    let uart_mux = static_init!(
-        UartMux<'static>,
-        UartMux::new(
-            &e310x::uart::UART0,
-            &mut capsules::virtual_uart::RX_BUF,
-            115200
-        )
-    );
-    hil::uart::UART::set_client(&e310x::uart::UART0, uart_mux);
-    uart_mux.initialize();
 
-    // // Create a UartDevice for the console.
-    // let console_uart = static_init!(UartDevice, UartDevice::new(uart_mux, true));
-    // console_uart.setup();
-    // let console = static_init!(
-    //     capsules::console::Console<UartDevice>,
-    //     capsules::console::Console::new(
-    //         console_uart,
-    //         115200,
-    //         &mut capsules::console::WRITE_BUF,
-    //         &mut capsules::console::READ_BUF,
-    //         board_kernel.create_grant()
-    //     )
-    // );
-    // hil::uart::UART::set_client(console_uart, console);
+    // let b = riscvregs::register::mtvec::read();
+    // let a = riscvregs::register::mepc::read();
+    // debug!(" csr val is: {:?}", a);
+    // read mstatus csr
+    // write MPP bit as 0
+    // write back to csr
 
-    // let ast = &sam4l::ast::AST;
+//     asm!("
+//     // csrr    t0, 0x300
+//     // li      t1, (3<<11)
+//     // or      t0, t0, t1
+//     // xor     t0, t0, t1
+//     // li      t1, (1<<11) | (1<<17)
+//     // or      t0, t0, t1
+//     // csrw    0x300, t0
 
-    // let mux_alarm = static_init!(
-    //     MuxAlarm<'static, sam4l::ast::Ast>,
-    //     MuxAlarm::new(&sam4l::ast::AST)
-    // );
-    // ast.configure(mux_alarm);
+//     lui a0, %hi(0x80101000)
+//     addi a0, a0, %lo(0x80101000)
+//     csrw 0x341, a0
+//     mret
+// ");
+    // riscv32i::configure_user_trap_handler();
+    // asm!("
+    //     // set mepc to 0x20c00000
+    //     lui a0, %hi(0x80101000)
+    //     addi a0, a0, %lo(0x80101000)
+    //     csrw 0x041, a0
 
-    // // Initialize and enable SPI HAL
-    // // Set up an SPI MUX, so there can be multiple clients
-    // let mux_spi = static_init!(
-    //     MuxSpiMaster<'static, sam4l::spi::SpiHw>,
-    //     MuxSpiMaster::new(&sam4l::spi::SPI)
-    // );
+    //     // now go to what is in mepc
+    //     uret
+    //     " ::::);
+    // asm!("uret");
 
-    // sam4l::spi::SPI.set_client(mux_spi);
-    // sam4l::spi::SPI.init();
+    // e310x::watchdog::WATCHDOG.disable();
+    // e310x::rtc::RTC.disable();
+    // e310x::pwm::PWM0.disable();
+    // e310x::pwm::PWM1.disable();
+    // e310x::pwm::PWM2.disable();
 
-    // LEDs
-    let led_pins = static_init!(
-        [(
-            &'static sifive::gpio::GpioPin,
-            capsules::led::ActivationMode
-        ); 3],
-        [
-            (
-                // Red
-                &e310x::gpio::PORT[22],
-                capsules::led::ActivationMode::ActiveLow
-            ),
-            (
-                // Green
-                &e310x::gpio::PORT[19],
-                capsules::led::ActivationMode::ActiveLow
-            ),
-            (
-                // Blue
-                &e310x::gpio::PORT[21],
-                capsules::led::ActivationMode::ActiveLow
-            ),
-        ]
-    );
-    let led = static_init!(
-        capsules::led::LED<'static, sifive::gpio::GpioPin>,
-        capsules::led::LED::new(led_pins)
-    );
 
-    // // BUTTONs
-    // let button_pins = static_init!(
-    //     [(&'static sam4l::gpio::GPIOPin, capsules::button::GpioMode); 1],
-    //     [(
-    //         &sam4l::gpio::PA[16],
-    //         capsules::button::GpioMode::LowWhenPressed
-    //     )]
-    // );
-    // let button = static_init!(
-    //     capsules::button::Button<'static, sam4l::gpio::GPIOPin>,
-    //     capsules::button::Button::new(button_pins, board_kernel.create_grant())
-    // );
-    // for &(btn, _) in button_pins.iter() {
-    //     btn.set_client(button);
-    // }
 
-    // set GPIO driver controlling remaining GPIO pins
-    let gpio_pins = static_init!(
-        [&'static sifive::gpio::GpioPin; 3],
-        [
-            &e310x::gpio::PORT[9],
-            &e310x::gpio::PORT[10],
-            &e310x::gpio::PORT[11],
-        ]
-    );
-    let gpio = static_init!(
-        capsules::gpio::GPIO<'static, sifive::gpio::GpioPin>,
-        capsules::gpio::GPIO::new(gpio_pins)
-    );
-    for pin in gpio_pins.iter() {
-        pin.set_client(gpio);
-    }
-
-    hil::gpio::Pin::make_output(&e310x::gpio::PORT[22]);
-    hil::gpio::Pin::set(&e310x::gpio::PORT[22]);
-
-    hil::gpio::Pin::make_output(&e310x::gpio::PORT[19]);
-    hil::gpio::Pin::set(&e310x::gpio::PORT[19]);
-
-    hil::gpio::Pin::make_output(&e310x::gpio::PORT[21]);
-    hil::gpio::Pin::clear(&e310x::gpio::PORT[21]);
-
-    let hifive1 = HiFive1 {
-        // console: console,
-        gpio: gpio,
-        // alarm: alarm,
-        led: led,
-        // button: button,
-        // ipc: kernel::ipc::IPC::new(board_kernel),
-    };
-
-    // hail.console.initialize();
-
-    // Create virtual device for kernel debug.
-    let debugger_uart = static_init!(UartDevice, UartDevice::new(uart_mux, false));
-    debugger_uart.setup();
-    let debugger = static_init!(
-        kernel::debug::DebugWriter,
-        kernel::debug::DebugWriter::new(
-            debugger_uart,
-            &mut kernel::debug::OUTPUT_BUF,
-            &mut kernel::debug::INTERNAL_BUF,
-        )
-    );
-    hil::uart::UART::set_client(debugger_uart, debugger);
-
-    let debug_wrapper = static_init!(
-        kernel::debug::DebugWriterWrapper,
-        kernel::debug::DebugWriterWrapper::new(debugger)
-    );
-    kernel::debug::set_debug_writer_wrapper(debug_wrapper);
-
-    e310x::uart::UART0.initialize_gpio_pins(&e310x::gpio::PORT[17], &e310x::gpio::PORT[16]);
-
-    debug!("Initialization complete. Entering main loop");
 
     // testing some mret jump-around code
 
-    // asm!("
-    //     // set mepc to 0x20c00000
-    //     lui a0, %hi(0x20c00000)
-    //     addi a0, a0, %lo(0x20c00000)
-    //     csrw 0x341, a0
 
-    //     // now go to what is in mepc
-    //     mret
-    //     " ::::);
+    // extern "C" {
+    //     /// Beginning of the ROM region containing app images.
+    //     ///
+    //     /// This symbol is defined in the linker script.
+    //     static _sapps: u8;
+    // }
 
-    extern "C" {
-        /// Beginning of the ROM region containing app images.
-        ///
-        /// This symbol is defined in the linker script.
-        static _sapps: u8;
-    }
-
-    kernel::procs::load_processes(
-        board_kernel,
-        chip,
-        &_sapps as *const u8,
-        &mut APP_MEMORY,
-        &mut PROCESSES,
-        FAULT_RESPONSE,
-        &process_mgmt_cap,
-    );
-    board_kernel.kernel_loop(&hifive1, chip, None, &main_loop_cap);
+    // kernel::procs::load_processes(
+    //     board_kernel,
+    //     chip,
+    //     &_sapps as *const u8,
+    //     &mut APP_MEMORY,
+    //     &mut PROCESSES,
+    //     FAULT_RESPONSE,
+    //     &process_mgmt_cap,
+    // );
+    // board_kernel.kernel_loop(&hifive1, chip, None, &main_loop_cap);
 }

@@ -202,6 +202,7 @@ SECTIONS
         /* _sapps symbol used by tock to look for first application */
         . = ALIGN(4);
         _sapps = .;
+	LONG(0)
 
         /* Optional .app sections a convenience mechanism to bundle tock
            kernel and apps into a single image */

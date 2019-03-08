@@ -5,6 +5,7 @@
 
 #[macro_use(register_bitfields, register_bitmasks)]
 extern crate kernel;
+extern crate riscvregs;
 
 pub mod plic;
 pub mod support;
@@ -32,6 +33,30 @@ extern "C" {
     static mut _srelocate: u32;
     static mut _erelocate: u32;
 }
+
+struct StackFrame {
+    ra: u32,
+    t0: u32,
+    t1: u32,
+    t2: u32,
+    t3: u32,
+    t4: u32,
+    t5: u32,
+    t6: u32,
+    a0: u32,
+    a1: u32,
+    a2: u32,
+    a3: u32,
+    a4: u32,
+    a5: u32,
+    a6: u32,
+    a7: u32,
+}
+
+// unsafe fn _start_trap2(){
+//     let sf = StackFrame{0,  0,  0,  0,  0,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+
+// }
 
 /// Entry point of all programs (_start).
 ///
@@ -105,23 +130,31 @@ pub unsafe fn init_memory() {
     }
 }
 
+// enum ValToWrite{
+//     Val(u32),
+//     Addr(&'static unsafe extern "C" fn() {start_trap_rust})
+// }
+
 /// Tell the MCU what address the trap handler is located at.
 ///
 /// The trap handler is called on exceptions and for interrupts.
-pub unsafe fn configure_trap_handler() {
-    asm!("
-		// The csrw instruction writes a Control and Status Register (CSR)
-		// with a new value.
-		//
-		// CSR 0x305 (mtvec, 'Machine trap-handler base address.') sets the address
-    // of the trap handler. We do not care about its old value, so we don't
-    // bother reading it.
-		csrw 0x305, $0
-		"
-	     :
-	     : "r"(&_start_trap)
-	     :
-	     : "volatile");
+pub unsafe fn configure_machine_trap_handler() {
+    // riscvregs::register::mtvec::write(start_trap_rust as usize, riscvregs::register::mtvec::TrapMode::Direct);
+    asm!("csrw 0x305, $0": : "r"(&_start_trap) : : "volatile");
+}
+/// Tell the MCU what address the trap handler is located at.
+///
+/// The trap handler is called on exceptions and for interrupts.
+pub unsafe fn configure_supervisor_trap_handler() {
+    asm!("csrw 0x105, $0": : "r"(&_start_trap) : : "volatile");
+    // riscvregs::register::stvec::write(start_trap_rust as usize, riscvregs::register::stvec::TrapMode::Direct);
+    // let addr: &'static unsafe extern "C" fn() = start_trap_rust;
+    // write_csr(0x005, (start_trap_rust) as u32);
+}
+
+pub unsafe fn configure_user_trap_handler() {
+    asm!("csrw 0x005, $0": : "r"(&_start_trap) : : "volatile");
+    
 }
 
 /// Enable all PLIC interrupts so that individual peripheral drivers do not have
@@ -131,6 +164,13 @@ pub unsafe fn enable_plic_interrupts() {
     plic::clear_all_pending();
     plic::enable_all();
 }
+
+// macro_rules! read_register {
+//     #[inline]
+//     ($reg_name:tt, $var:ident) => {
+//         asm!("sw ")
+//     }
+// }
 
 /// Trap entry point (_start_trap)
 ///
@@ -146,6 +186,9 @@ global_asm!(
 _start_trap:
   addi sp, sp, -16*4
 
+  // csrr t6, 0x342;
+
+  //csrr t6, 0x343;
   sw ra, 0*4(sp)
   sw t0, 1*4(sp)
   sw t1, 2*4(sp)
@@ -195,7 +238,10 @@ _start_trap:
 /// handle_exception.
 // #[link_section = ".trap.rust"]
 #[export_name = "_start_trap_rust"]
-pub extern "C" fn start_trap_rust() {
+pub unsafe extern "C" fn start_trap_rust() {
+    asm!("csrr t0, 0x342");
+    asm!("ret");
+    // asm!("j ra");
     // // dispatch trap to handler
     // trap_handler(mcause::read().cause());
     // // mstatus, remain in M-mode after mret

@@ -4,9 +4,9 @@ TARGET=riscv32imac-unknown-none-elf
 PLATFORM=hifive1
 
 # Need this to be different for now
-RUSTFLAGS_FOR_CARGO_LINKING ?= -C link-arg=-Tlayout.ld -C linker=riscv32-unknown-elf-ld
+RUSTFLAGS_FOR_CARGO_LINKING ?= -C link-arg=-Tlayout.ld -C linker=/home/dieraca/school/fall_2018/urop/binshit/bin/riscv32-unknown-linux-gnu-ld
 
-TOOLCHAIN ?= /Users/bradjc/git/riscv-rust-toolchain/toolchain/bin/riscv32-unknown-elf
+TOOLCHAIN ?= /home/dieraca/school/fall_2018/urop/binshit/bin/riscv32-unknown-linux-gnu
 
 include ../Makefile.common
 
