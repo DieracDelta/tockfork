@@ -103,116 +103,59 @@ pub unsafe fn reset_handler() {
     // let tfn = trap_save_cause;
     let PMPCFG_COUNT = 4;
     let PMPADDR_COUNT = 16;
+    // set all PMP sections to zero except for last one
     asm!("
-csrw 0x3A0, x0
-csrw 0x3A1, x0
-csrw 0x3A2, x0
-csrw 0x3A3, x0
-csrw 0x3B0, x0
-csrw 0x3B1, x0
-csrw 0x3B2, x0
-csrw 0x3B3, x0
-csrw 0x3B4, x0
-csrw 0x3B5, x0
-csrw 0x3B6, x0
-csrw 0x3B7, x0
-csrw 0x3B8, x0
-csrw 0x3B9, x0
-csrw 0x3BA, x0
-csrw 0x3BB, x0
-csrw 0x3BC, x0
-csrw 0x3BD, x0
-csrw 0x3BE, x0
-csrw 0x3BF, x0
-");
-    // tfn = 0;
-    asm!(
-        "
-lui t0, %hi(0x1f)
-addi t0, t0, %lo(0x1f)
-csrrw t0, 0x301, t0
-lui t0, %hi(0xffffffff)
-addi t0, t0, %lo(0xffffffff)
-csrw 0x3B0, t0
-lui t0, %hi(0x1f)
-addi t0, t0, %lo(0x1f)
-csrw 0x3A0, t0
-.align 2
-1: csrw 0x301, t0
-" : : : "t0"
+        csrw 0x3A0, x0
+        csrw 0x3A1, x0
+        csrw 0x3A2, x0
+        csrw 0x3A3, x0
+        csrw 0x3B0, x0
+        csrw 0x3B1, x0
+        csrw 0x3B2, x0
+        csrw 0x3B3, x0
+        csrw 0x3B4, x0
+        csrw 0x3B5, x0
+        csrw 0x3B6, x0
+        csrw 0x3B7, x0
+        csrw 0x3B8, x0
+        csrw 0x3B9, x0
+        csrw 0x3BA, x0
+        csrw 0x3BB, x0
+        csrw 0x3BC, x0
+        csrw 0x3BD, x0
+        csrw 0x3BE, x0
+        csrw 0x3BF, x0
+    ");
+    asm!("
+        lui t0, %hi(0x1f)
+        addi t0, t0, %lo(0x1f)
+        csrrw t0, 0x301, t0
+
+
+        // set last PMP section to largest possible address so may access entire address space
+        lui t0, %hi(0xffffffff)
+        addi t0, t0, %lo(0xffffffff)
+        csrw 0x3B0, t0
+
+
+        lui t0, %hi(0x1f)
+        addi t0, t0, %lo(0x1f)
+        csrw 0x3A0, t0
+        .align 2
+        1: csrw 0x301, t0
+        " : : : "t0"
     );
+    // configure trap handler addresses
     riscv32i::configure_machine_trap_handler();
     riscv32i::configure_supervisor_trap_handler();
-    riscvregs::register::mstatus::set_mpp(riscvregs::register::mstatus::MPP::User);
+    // change privilege level
+    riscvregs::register::mstatus::set_mpp(riscvregs::register::mstatus::MPP::Supervisor);
 
+    // return into userland code (0x80101000) with supervisor privilege levels
     asm!("
-    lui a0, %hi(0x80101000)
-    addi a0, a0, %lo(0x80101000)
-    csrw 0x341, a0
-    mret
-");
-
-
-    // let b = riscvregs::register::mtvec::read();
-    // let a = riscvregs::register::mepc::read();
-    // debug!(" csr val is: {:?}", a);
-    // read mstatus csr
-    // write MPP bit as 0
-    // write back to csr
-
-//     asm!("
-//     // csrr    t0, 0x300
-//     // li      t1, (3<<11)
-//     // or      t0, t0, t1
-//     // xor     t0, t0, t1
-//     // li      t1, (1<<11) | (1<<17)
-//     // or      t0, t0, t1
-//     // csrw    0x300, t0
-
-//     lui a0, %hi(0x80101000)
-//     addi a0, a0, %lo(0x80101000)
-//     csrw 0x341, a0
-//     mret
-// ");
-    // riscv32i::configure_user_trap_handler();
-    // asm!("
-    //     // set mepc to 0x20c00000
-    //     lui a0, %hi(0x80101000)
-    //     addi a0, a0, %lo(0x80101000)
-    //     csrw 0x041, a0
-
-    //     // now go to what is in mepc
-    //     uret
-    //     " ::::);
-    // asm!("uret");
-
-    // e310x::watchdog::WATCHDOG.disable();
-    // e310x::rtc::RTC.disable();
-    // e310x::pwm::PWM0.disable();
-    // e310x::pwm::PWM1.disable();
-    // e310x::pwm::PWM2.disable();
-
-
-
-
-    // testing some mret jump-around code
-
-
-    // extern "C" {
-    //     /// Beginning of the ROM region containing app images.
-    //     ///
-    //     /// This symbol is defined in the linker script.
-    //     static _sapps: u8;
-    // }
-
-    // kernel::procs::load_processes(
-    //     board_kernel,
-    //     chip,
-    //     &_sapps as *const u8,
-    //     &mut APP_MEMORY,
-    //     &mut PROCESSES,
-    //     FAULT_RESPONSE,
-    //     &process_mgmt_cap,
-    // );
-    // board_kernel.kernel_loop(&hifive1, chip, None, &main_loop_cap);
+        lui a0, %hi(0x80101000)
+        addi a0, a0, %lo(0x80101000)
+        csrw 0x341, a0
+        mret
+    ");
 }

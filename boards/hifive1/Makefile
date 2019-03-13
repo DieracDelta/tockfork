@@ -2,11 +2,12 @@
 
 TARGET=riscv32imac-unknown-none-elf
 PLATFORM=hifive1
+TOOLCHAIN_PATH=/home/dieraca/school/fall_2018/urop/riscv-toolchain/bin
 
 # Need this to be different for now
-RUSTFLAGS_FOR_CARGO_LINKING ?= -C link-arg=-Tlayout.ld -C linker=/home/dieraca/school/fall_2018/urop/binshit/bin/riscv32-unknown-linux-gnu-ld
+RUSTFLAGS_FOR_CARGO_LINKING ?= -C link-arg=-Tlayout.ld -C linker=${TOOLCHAIN_PATH}/riscv32-unknown-linux-gnu-ld
 
-TOOLCHAIN ?= /home/dieraca/school/fall_2018/urop/binshit/bin/riscv32-unknown-linux-gnu
+TOOLCHAIN ?= ${TOOLCHAIN_PATH}/riscv32-unknown-linux-gnu
 
 include ../Makefile.common
 
