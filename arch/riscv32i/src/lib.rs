@@ -130,11 +130,6 @@ pub unsafe fn init_memory() {
     }
 }
 
-// enum ValToWrite{
-//     Val(u32),
-//     Addr(&'static unsafe extern "C" fn() {start_trap_rust})
-// }
-
 /// Tell the MCU what address the trap handler is located at.
 ///
 /// The trap handler is called on exceptions and for interrupts.
@@ -154,7 +149,6 @@ pub unsafe fn configure_supervisor_trap_handler() {
 
 pub unsafe fn configure_user_trap_handler() {
     asm!("csrw 0x005, $0": : "r"(&_start_trap) : : "volatile");
-    
 }
 
 /// Enable all PLIC interrupts so that individual peripheral drivers do not have
@@ -239,8 +233,8 @@ _start_trap:
 // #[link_section = ".trap.rust"]
 #[export_name = "_start_trap_rust"]
 pub unsafe extern "C" fn start_trap_rust() {
-    asm!("csrr t0, 0x342");
-    asm!("ret");
+    // asm!("csrr t0, 0x342");
+    // asm!("ret");
     // asm!("j ra");
     // // dispatch trap to handler
     // trap_handler(mcause::read().cause());

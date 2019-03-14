@@ -5,4 +5,4 @@ authors = ["Tock Project Developers <tock-dev@googlegroups.com>"]
 
 [dependencies]
 kernel = { path = "../../kernel" }
-riscvregs = { git = "https://github.com/DieracDelta/riscvregs.git", rev = "dbad75f" }
+riscvregs = { git = "https://github.com/DieracDelta/riscvregs.git", rev = "788e280ef25" }

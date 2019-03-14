@@ -81,7 +81,7 @@ impl Platform for HiFive1 {
 }
 
 pub unsafe fn trap_save_cause(mepc: u32) {
-    riscvregs::register::mepc::write(mepc as usize);
+        riscvregs::register::mepc::write(mepc as usize);
 }
 
 
@@ -93,7 +93,7 @@ pub unsafe fn trap_save_cause(mepc: u32) {
 #[allow(unused_variables)]
 pub unsafe fn reset_handler() {
     // Basic setup of the platform.
-    riscv32i::init_memory();
+        riscv32i::init_memory();
     let PMP_NAPOT = 0x18;
     let PMP_R = 0x1;
     let PMP_W = 0x02;
@@ -103,12 +103,16 @@ pub unsafe fn reset_handler() {
     // let tfn = trap_save_cause;
     let PMPCFG_COUNT = 4;
     let PMPADDR_COUNT = 16;
-    // set all PMP sections to zero except for last one
+    // set all PMP config and address sections to zero 
+    // documentation came from riscv volume 2 spec 1.10
+    // https://content.riscv.org/wp-content/uploads/2017/05/riscv-privileged-v1.10.pdf
     asm!("
+        // config sections to null region/off
         csrw 0x3A0, x0
         csrw 0x3A1, x0
         csrw 0x3A2, x0
         csrw 0x3A3, x0
+        // address registers
         csrw 0x3B0, x0
         csrw 0x3B1, x0
         csrw 0x3B2, x0
@@ -127,27 +131,30 @@ pub unsafe fn reset_handler() {
         csrw 0x3BF, x0
     ");
     asm!("
-        lui t0, %hi(0x1f)
-        addi t0, t0, %lo(0x1f)
-        csrrw t0, 0x301, t0
+        // update mstatus
+        // lui t0, %hi(0x1f)
+        // addi t0, t0, %lo(0x1f)
+        // csrrw t0, 0x301, t0
 
 
-        // set last PMP section to largest possible address so may access entire address space
+        // set last PMP section to largest possible address for perms to entire address space
         lui t0, %hi(0xffffffff)
         addi t0, t0, %lo(0xffffffff)
         csrw 0x3B0, t0
 
-
+        // set pmpcfg0
+        // set A field to TOR
+        // set L field to 0
+        // set X, W, R fields
         lui t0, %hi(0x1f)
         addi t0, t0, %lo(0x1f)
         csrw 0x3A0, t0
-        .align 2
-        1: csrw 0x301, t0
         " : : : "t0"
     );
     // configure trap handler addresses
     riscv32i::configure_machine_trap_handler();
     riscv32i::configure_supervisor_trap_handler();
+    // riscv32i::configure_user_trap_handler();
     // change privilege level
     riscvregs::register::mstatus::set_mpp(riscvregs::register::mstatus::MPP::Supervisor);
 
