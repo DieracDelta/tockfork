@@ -17,7 +17,7 @@ extern crate sifive;
 )]
 extern crate kernel;
 
-mod interrupts;
+pub mod interrupts;
 
 pub mod chip;
 pub mod gpio;

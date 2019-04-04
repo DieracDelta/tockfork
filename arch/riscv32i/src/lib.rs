@@ -5,8 +5,9 @@
 
 #[macro_use(register_bitfields, register_bitmasks)]
 extern crate kernel;
+//extern crate e310x;
 extern crate riscvregs;
-
+pub mod clint;
 pub mod plic;
 pub mod support;
 pub mod syscall;
@@ -34,35 +35,35 @@ extern "C" {
     static mut _erelocate: u32;
 }
 
-struct StackFrame {
-    ra: u32,
-    t0: u32,
-    t1: u32,
-    t2: u32,
-    t3: u32,
-    t4: u32,
-    t5: u32,
-    t6: u32,
-    a0: u32,
-    a1: u32,
-    a2: u32,
-    a3: u32,
-    a4: u32,
-    a5: u32,
-    a6: u32,
-    a7: u32,
-}
+//struct StackFrame {
+//ra: u32,
+//t0: u32,
+//t1: u32,
+//t2: u32,
+//t3: u32,
+//t4: u32,
+//t5: u32,
+//t6: u32,
+//a0: u32,
+//a1: u32,
+//a2: u32,
+//a3: u32,
+//a4: u32,
+//a5: u32,
+//a6: u32,
+//a7: u32,
+//}
 
 // unsafe fn _start_trap2(){
 //     let sf = StackFrame{0,  0,  0,  0,  0,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
 // }
 
-/// Entry point of all programs (_start).
-///
-/// It initializes DWARF call frame information, the stack pointer, the
-/// frame pointer (needed for closures to work in start_rust) and the global
-/// pointer. Then it calls _start_rust.
+// Entry point of all programs (_start).
+//
+// It initializes DWARF call frame information, the stack pointer, the
+// frame pointer (needed for closures to work in start_rust) and the global
+// pointer. Then it calls _start_rust.
 #[cfg(any(target_arch = "riscv32", target_arch = "riscv64"))]
 global_asm!(
     r#"
@@ -151,25 +152,10 @@ pub unsafe fn configure_user_trap_handler() {
     asm!("csrw 0x005, $0": : "r"(&_start_trap) : : "volatile");
 }
 
-/// Enable all PLIC interrupts so that individual peripheral drivers do not have
-/// to manage these.
-pub unsafe fn enable_plic_interrupts() {
-    plic::disable_all();
-    plic::clear_all_pending();
-    plic::enable_all();
-}
-
-// macro_rules! read_register {
-//     #[inline]
-//     ($reg_name:tt, $var:ident) => {
-//         asm!("sw ")
-//     }
-// }
-
-/// Trap entry point (_start_trap)
-///
-/// Saves caller saved registers ra, t0..6, a0..7, calls _start_trap_rust,
-/// restores caller saved registers and then returns.
+// Trap entry point (_start_trap)
+//
+// Saves caller saved registers ra, t0..6, a0..7, calls _start_trap_rust,
+// restores caller saved registers and then returns.
 #[cfg(any(target_arch = "riscv32", target_arch = "riscv64"))]
 global_asm!(
     r#"
@@ -202,6 +188,7 @@ _start_trap:
 
   jal ra, _start_trap_rust
 
+
   lw ra, 0*4(sp)
   lw t0, 1*4(sp)
   lw t1, 2*4(sp)
@@ -233,15 +220,76 @@ _start_trap:
 // #[link_section = ".trap.rust"]
 #[export_name = "_start_trap_rust"]
 pub unsafe extern "C" fn start_trap_rust() {
-    // asm!("csrr t0, 0x342");
-    // asm!("ret");
-    // asm!("j ra");
-    // // dispatch trap to handler
-    // trap_handler(mcause::read().cause());
-    // // mstatus, remain in M-mode after mret
-    // unsafe {
-    //     mstatus::set_mpp(mstatus::MPP::Machine);
-    // }
+    let cause = riscvregs::register::mcause::read();
+    //debug!("cause: {:?}!", cause),
+    // if most sig bit is set, is inerrupt
+    let is_interrupt = cause.is_interrupt();
+    if is_interrupt {
+        // strip off the msb
+        match riscvregs::register::mcause::Interrupt::from(cause.code()) {
+            riscvregs::register::mcause::Interrupt::UserSoft => (
+                // TODO why is this not triggered when ecall is called
+                // TODO read ecall cause out of one of the registers (store it in a register) for trap
+            ),
+            riscvregs::register::mcause::Interrupt::SupervisorSoft => (),
+            riscvregs::register::mcause::Interrupt::MachineSoft => {
+                panic!("Bad news bears");
+            }
+            riscvregs::register::mcause::Interrupt::UserTimer => (),
+            riscvregs::register::mcause::Interrupt::SupervisorTimer => (),
+            riscvregs::register::mcause::Interrupt::MachineTimer => {
+                panic!("Bad news bears");
+            }
+            riscvregs::register::mcause::Interrupt::UserExternal => {
+                panic!("Bad news bears");
+            }
+            riscvregs::register::mcause::Interrupt::SupervisorExternal => (),
+            riscvregs::register::mcause::Interrupt::MachineExternal => {
+                panic!("Bad news bears");
+                let trap_id = plic::claim_m_mode();
+                // no interrupt ?
+                //debug!("Pidx {}", interrupt)
+                if trap_id == 0 {
+                    return;
+                }
+                plic::complete(trap_id);
+                //(match trap_id {
+                //chips::interrupts::UART0 => uart::UART0.handle_interrupt(),
+                //index @ interrupts::GPIO0..interrupts::GPIO31 => {
+                //gpio::PORT[index as usize].handle_interrupt()
+                //}
+                ////_ => debug!("PLIC index not supported by Tock {}", interrupt),
+                //_ => debug!("Pidx {}", interrupt),
+                //})
+            }
+            riscvregs::register::mcause::Interrupt::Unknown => {
+                panic!("Bad news bears");
+            }
+        }
+    } else {
+        // strip off the msb, pattern match
+        match riscvregs::register::mcause::Exception::from(cause.code()) {
+            riscvregs::register::mcause::Exception::InstructionMisaligned => (),
+            riscvregs::register::mcause::Exception::InstructionFault => (),
+            riscvregs::register::mcause::Exception::IllegalInstruction => (),
+            riscvregs::register::mcause::Exception::Breakpoint => (),
+            riscvregs::register::mcause::Exception::LoadMisaligned => (),
+            riscvregs::register::mcause::Exception::LoadFault => (),
+            riscvregs::register::mcause::Exception::StoreMisaligned => (),
+            riscvregs::register::mcause::Exception::StoreFault => (),
+            riscvregs::register::mcause::Exception::UserEnvCall => (),
+            riscvregs::register::mcause::Exception::SupervisorEnvCall => (),
+            riscvregs::register::mcause::Exception::MachineEnvCall => (),
+            riscvregs::register::mcause::Exception::InstructionPageFault => (),
+            riscvregs::register::mcause::Exception::LoadPageFault => (),
+            riscvregs::register::mcause::Exception::StorePageFault => (),
+            riscvregs::register::mcause::Exception::Unknown => (),
+            _ => (),
+        }
+    }
+    // mtval + 4 -> mepc
+    let current_instr = riscvregs::register::mepc::read().bits();
+    riscvregs::register::mepc::write(current_instr + 4);
 }
 
 // Make sure there is an abort when linking.

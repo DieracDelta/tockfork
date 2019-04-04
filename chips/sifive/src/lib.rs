@@ -1,4 +1,4 @@
-#![feature(asm, concat_idents, const_fn, try_from)]
+#![feature(asm, concat_idents, const_fn)]
 #![feature(exclusive_range_pattern)]
 #![no_std]
 #![crate_name = "sifive"]

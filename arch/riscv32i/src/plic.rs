@@ -1,64 +1,106 @@
 //! Platform Level Interrupt Control
 
-use kernel::common::registers::{self, ReadOnly, ReadWrite, WriteOnly};
+use kernel::common::registers::{ReadOnly, ReadWrite};
 use kernel::common::StaticRef;
 
+// memory map as described here: https://sifive.cdn.prismic.io/sifive%2F898b5153-4c06-4085-8d95-2d5fd67e74c6_u54_core_complex_manual_v19_02.pdf
 #[repr(C)]
 struct PlicRegisters {
-    /// Interrupt Priority Register
+    //claim: ReadWrite<u32>,
     _reserved0: u32,
-    priority: [ReadWrite<u32, priority::Register>; 51],
-    _reserved1: [u8; 3888],
-    /// Interrupt Pending Register
-    pending: [ReadWrite<u32>; 2],
-    _reserved2: [u8; 4088],
-    /// Interrupt Enable Register
-    enable: [ReadWrite<u32>; 2],
-    _reserved3: [u8; 2088952],
-    /// Priority Threshold Register
-    threshold: ReadWrite<u32, priority::Register>,
-    /// Claim/Complete Register
-    claim: ReadWrite<u32>,
+    // Interrupt Priority Register
+    priority: [ReadWrite<u32, Priority::Register>; (0x0C00_0214 - 0x0C00_0004) / 0x4],
+    _reserved1: [u32; (0x0C00_1000 - 0x0C00_0214) / 0x4],
+    // Interrupt Pending Register
+    pending: [ReadOnly<u32, Pending::Register>; (0x0C00_1014 - 0x0C00_1000) / 0x4],
+    _reserved2: [u32; (0x0C00_2000 - 0x0C00_1014) / 0x4],
+    // Interrupt machine enable Register
+    m_enable: [ReadWrite<u32, Enable::Register>; (0x0C00_2014 - 0x0C00_2000) / 0x4],
+    _reserved3: [u32; (0x0C00_2080 - 0x0C00_2014) / 0x4],
+    // Interrupt supervisor enable Register
+    s_enable: [ReadWrite<u32, Enable::Register>; (0x0C00_2094 - 0x0C00_2080) / 0x4],
+    // Interrupt priority threshold Register
+    m_priority_threshold: ReadWrite<u32, PriorityThreshold::Register>,
+    // Interrupt claim complete Register
+    m_claim_complete: ReadWrite<u32>,
+    _reserved4: [u32; (0x0C20_1000 - 0x0C20_0008) / 0x4],
+    // Interrupt priority threshold register
+    s_priority_threshold: ReadWrite<u32, PriorityThreshold::Register>,
+    // Interrupt claim complete register
+    s_claim_complete: ReadWrite<u32>,
+    _reserved5: [u32; (0x1000_0000 - 0x0C20_1008) / 0x4],
 }
 
 register_bitfields![u32,
-    priority [
-        Priority OFFSET(0) NUMBITS(3) []
-    ]
+Priority [
+    PRIORITYBITS OFFSET(0) NUMBITS(3) []
+],
+Enable [
+    ENABLEBITS OFFSET(0) NUMBITS(32) []
+],
+Pending [
+    PENDINGBITS OFFSET(0) NUMBITS(32) []
+],
+PriorityThreshold [
+    THRESHOLDBITS OFFSET(0) NUMBITS(3) []
+    //PRIORITYBITS OFFSET(3) NUMBITS(29) [],
+]
 ];
 
 const PLIC_BASE: StaticRef<PlicRegisters> =
     unsafe { StaticRef::new(0x0c00_0000 as *const PlicRegisters) };
 
+pub unsafe fn machine_clear_pending_bit(id: u32) {
+    let plic: &PlicRegisters = &*PLIC_BASE;
+    let offset = id / 32;
+    let bit_index = offset % 32;
+    let m_enable = &plic.m_enable[offset as usize];
+    m_enable.set(m_enable.get() & (0 << bit_index));
+}
+
 /// Clear all pending interrupts.
 pub unsafe fn clear_all_pending() {
+    //let plic: &PlicRegisters = &*PLIC_BASE;
+    //for pending in plic.pending.iter() {
+    //pending.set(0);
+    //}
+}
+
+pub unsafe fn set_priority_threshold(val: i8) {
     let plic: &PlicRegisters = &*PLIC_BASE;
-    for pending in plic.pending.iter() {
-        pending.set(0);
-    }
+    plic.m_priority_threshold
+        .modify(PriorityThreshold::THRESHOLDBITS.val(0));
+    // to enable the supervisor level interrupts
+    // keeping things simple
+    //plic.s_priority_threshold
+    //.modify(PriorityThreshold::THRESHOLDBITS.val(0));
 }
 
 /// Enable all interrupts.
-pub unsafe fn enable_all() {
+pub unsafe fn enable_all_sources() {
     let plic: &PlicRegisters = &*PLIC_BASE;
-    for enable in plic.enable.iter() {
-        enable.set(0xFFFF_FFFF);
-    }
+    // don't set the first bit, as RO
+    plic.m_enable[0].set(0xFFFF_FFFE);
+    plic.m_enable[1].set(0xFFFF_FFFF);
+    plic.m_enable[2].set(0xFFFF_FFFF);
+    plic.m_enable[3].set(0xFFFF_FFFF);
+    // only first 3 bits matter
+    plic.m_enable[4].set(0x7);
 
     // Set some default priority for each interrupt. This is not really used
     // at this point.
     for priority in plic.priority.iter() {
-        priority.write(priority::Priority.val(4));
+        priority.write(Priority::PRIORITYBITS.val(7));
     }
-
-    // Accept all interrupts.
-    plic.threshold.write(priority::Priority.val(0));
 }
 
 /// Disable all interrupts.
-pub unsafe fn disable_all() {
+pub unsafe fn disable_all_sources() {
     let plic: &PlicRegisters = &*PLIC_BASE;
-    for enable in plic.enable.iter() {
+    for enable in plic.m_enable.iter() {
+        enable.set(0);
+    }
+    for enable in plic.s_enable.iter() {
         enable.set(0);
     }
 }
@@ -66,28 +108,80 @@ pub unsafe fn disable_all() {
 /// Get the index (0-256) of the lowest number pending interrupt, or `None` if
 /// none is pending. RISC-V PLIC has a "claim" register which makes it easy
 /// to grab the highest priority pending interrupt.
-pub unsafe fn next_pending() -> Option<u32> {
+pub unsafe fn claim_m_mode() -> u32 {
     let plic: &PlicRegisters = &*PLIC_BASE;
 
-    let claim = plic.claim.get();
-    if claim == 0 {
-        None
-    } else {
-        Some(claim)
-    }
+    plic.m_priority_threshold.get()
 }
 
 /// Signal that an interrupt is finished being handled. In Tock, this should be
 /// called from the normal main loop (not the interrupt handler).
 pub unsafe fn complete(index: u32) {
     let plic: &PlicRegisters = &*PLIC_BASE;
-    plic.claim.set(index);
+    plic.m_claim_complete.set(index);
 }
 
 /// Return `true` if there are any pending interrupts in the PLIC, `false`
 /// otherwise.
 pub unsafe fn has_pending() -> bool {
     let plic: &PlicRegisters = &*PLIC_BASE;
-
     plic.pending.iter().fold(0, |i, pending| pending.get() | i) != 0
+}
+
+pub unsafe fn enable_interrupts() {
+    riscvregs::register::mstatus::set_mie();
+    //enable software interrupts
+    riscvregs::register::mie::set_msoft();
+    riscvregs::register::mie::set_ssoft();
+    // enable timer interrupts
+    riscvregs::register::mie::set_mtimer();
+    riscvregs::register::mie::set_stimer();
+    // enable external interrupts
+    riscvregs::register::mie::set_mext();
+    riscvregs::register::mie::set_sext();
+    riscvregs::register::mie::set_lie0();
+    riscvregs::register::mie::set_lie1();
+    riscvregs::register::mie::set_lie2();
+    riscvregs::register::mie::set_lie3();
+    riscvregs::register::mie::set_lie4();
+    riscvregs::register::mie::set_lie5();
+    riscvregs::register::mie::set_lie6();
+    riscvregs::register::mie::set_lie7();
+    riscvregs::register::mie::set_lie8();
+    riscvregs::register::mie::set_lie9();
+    riscvregs::register::mie::set_lie10();
+    riscvregs::register::mie::set_lie11();
+    riscvregs::register::mie::set_lie12();
+    riscvregs::register::mie::set_lie13();
+    riscvregs::register::mie::set_lie14();
+    riscvregs::register::mie::set_lie15();
+}
+
+pub unsafe fn disable_interrupts() {
+    riscvregs::register::mstatus::clear_mie();
+    //enable software interrupts
+    riscvregs::register::mie::clear_msoft();
+    riscvregs::register::mie::clear_ssoft();
+    // enable timer interrupts
+    riscvregs::register::mie::clear_mtimer();
+    riscvregs::register::mie::clear_stimer();
+    // enable external interrupts
+    riscvregs::register::mie::clear_mext();
+    riscvregs::register::mie::clear_sext();
+    riscvregs::register::mie::clear_lie0();
+    riscvregs::register::mie::clear_lie1();
+    riscvregs::register::mie::clear_lie2();
+    riscvregs::register::mie::clear_lie3();
+    riscvregs::register::mie::clear_lie4();
+    riscvregs::register::mie::clear_lie5();
+    riscvregs::register::mie::clear_lie6();
+    riscvregs::register::mie::clear_lie7();
+    riscvregs::register::mie::clear_lie8();
+    riscvregs::register::mie::clear_lie9();
+    riscvregs::register::mie::clear_lie10();
+    riscvregs::register::mie::clear_lie11();
+    riscvregs::register::mie::clear_lie12();
+    riscvregs::register::mie::clear_lie13();
+    riscvregs::register::mie::clear_lie14();
+    riscvregs::register::mie::clear_lie15();
 }
