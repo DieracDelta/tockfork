@@ -268,26 +268,11 @@ pub unsafe extern "C" fn fake_userland_2() {
     if b > 0 {
         debug!("asdf");
     }
-    //riscv32i::clint::write_mtime(500);
-    //let c = riscv32i::clint::read_mtime();
-    //if c > 0 {
-    //debug!("asdf");
-    //}
-    //riscv32i::plic::enable_all_sources();
-    //riscv32i::plic::set_priority_threshold(0);
-    //riscv32i::plic::enable_interrupts();
+    // triggers timer interrupts every 6000
+    riscv32i::clint::write_mtimecmp1(6000);
 
     //this works now! calls start_trap_rust
     riscv32i::clint::trigger_software_interrupt();
-    //let this_should_be_one = riscvregs::register::mip::read().msoft();
-    //let this_should_be_one = riscvregs::register::mip::read().bits();
-    //if this_should_be_one > 0 {
-    //debug!("asdf");
-    //}
-    //let this_should_also_be_one = riscvregs::register::mstatus::read().mie();
-    //if this_should_also_be_one {
-    //debug!("asdf");
-    //}
 }
 
 global_asm!(
