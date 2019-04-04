@@ -118,7 +118,8 @@ pub unsafe fn reset_handler() {
     riscv32i::plic::enable_all_sources();
     riscv32i::plic::set_priority_threshold(0);
     riscv32i::plic::enable_interrupts();
-    riscv32i::clint::write_mtimecmp1(0x0);
+    riscvregs::register::mstatus::set_mpie();
+    //riscv32i::clint::write_mtimecmp1(0x0);
 
     let process_mgmt_cap = create_capability!(capabilities::ProcessManagementCapability);
     let main_loop_cap = create_capability!(capabilities::MainLoopCapability);
@@ -267,18 +268,26 @@ pub unsafe extern "C" fn fake_userland_2() {
     if b > 0 {
         debug!("asdf");
     }
-    riscv32i::clint::write_mtime(500);
-    let c = riscv32i::clint::read_mtime();
-    if c > 0 {
-        debug!("asdf");
-    }
+    //riscv32i::clint::write_mtime(500);
+    //let c = riscv32i::clint::read_mtime();
+    //if c > 0 {
+    //debug!("asdf");
+    //}
+    //riscv32i::plic::enable_all_sources();
+    //riscv32i::plic::set_priority_threshold(0);
+    //riscv32i::plic::enable_interrupts();
 
-    riscv32i::plic::enable_interrupts();
+    //this works now! calls start_trap_rust
     riscv32i::clint::trigger_software_interrupt();
-    let this_should_be_one = riscvregs::register::mip::read().msoft();
-    if this_should_be_one {
-        debug!("asdf");
-    }
+    //let this_should_be_one = riscvregs::register::mip::read().msoft();
+    //let this_should_be_one = riscvregs::register::mip::read().bits();
+    //if this_should_be_one > 0 {
+    //debug!("asdf");
+    //}
+    //let this_should_also_be_one = riscvregs::register::mstatus::read().mie();
+    //if this_should_also_be_one {
+    //debug!("asdf");
+    //}
 }
 
 global_asm!(

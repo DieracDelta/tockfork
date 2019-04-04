@@ -32,7 +32,7 @@ register_bitfields![u32,
 ];
 
 const CLINT_BASE: StaticRef<ClintRegisters> =
-    unsafe { StaticRef::new(0x20_0000 as *const ClintRegisters) };
+    unsafe { StaticRef::new(0x200_0000 as *const ClintRegisters) };
 
 //pub unsafe fn read_mtimecmp() -> u64 {
 //let clint: &ClintRegisters = &*CLINT_BASE;

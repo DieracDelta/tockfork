@@ -47,3 +47,4 @@ doc/rustdoc
 [._]sw[a-p]
 
 /.idea
+/boards/hifive1/tags

@@ -90,7 +90,7 @@ pub unsafe fn enable_all_sources() {
     // Set some default priority for each interrupt. This is not really used
     // at this point.
     for priority in plic.priority.iter() {
-        priority.write(Priority::PRIORITYBITS.val(7));
+        priority.write(Priority::PRIORITYBITS.val(0));
     }
 }
 
