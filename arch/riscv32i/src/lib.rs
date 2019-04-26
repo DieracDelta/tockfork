@@ -227,25 +227,17 @@ pub unsafe extern "C" fn start_trap_rust() {
     if is_interrupt {
         // strip off the msb
         match riscvregs::register::mcause::Interrupt::from(cause.code()) {
-            riscvregs::register::mcause::Interrupt::UserSoft => (
-                // TODO why is this not triggered when ecall is called
-                // TODO read ecall cause out of one of the registers (store it in a register) for trap
-            ),
+            riscvregs::register::mcause::Interrupt::UserSoft => (),
             riscvregs::register::mcause::Interrupt::SupervisorSoft => (),
             riscvregs::register::mcause::Interrupt::MachineSoft => {
-                panic!("Bad news bears");
+                // TODO add in handler logic
             }
             riscvregs::register::mcause::Interrupt::UserTimer => (),
             riscvregs::register::mcause::Interrupt::SupervisorTimer => (),
-            riscvregs::register::mcause::Interrupt::MachineTimer => {
-                panic!("Bad news bears");
-            }
-            riscvregs::register::mcause::Interrupt::UserExternal => {
-                panic!("Bad news bears");
-            }
+            riscvregs::register::mcause::Interrupt::MachineTimer => (),
+            riscvregs::register::mcause::Interrupt::UserExternal => (),
             riscvregs::register::mcause::Interrupt::SupervisorExternal => (),
             riscvregs::register::mcause::Interrupt::MachineExternal => {
-                panic!("Bad news bears");
                 let trap_id = plic::claim_m_mode();
                 // no interrupt ?
                 //debug!("Pidx {}", interrupt)
@@ -279,7 +271,9 @@ pub unsafe extern "C" fn start_trap_rust() {
             riscvregs::register::mcause::Exception::StoreFault => (),
             riscvregs::register::mcause::Exception::UserEnvCall => (),
             riscvregs::register::mcause::Exception::SupervisorEnvCall => (),
-            riscvregs::register::mcause::Exception::MachineEnvCall => (),
+            riscvregs::register::mcause::Exception::MachineEnvCall => {
+                //e310x::uart::UART0::freebuffer();
+            }
             riscvregs::register::mcause::Exception::InstructionPageFault => (),
             riscvregs::register::mcause::Exception::LoadPageFault => (),
             riscvregs::register::mcause::Exception::StorePageFault => (),

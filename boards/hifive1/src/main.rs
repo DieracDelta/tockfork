@@ -16,6 +16,10 @@ extern crate e310x;
 extern crate riscv32i;
 extern crate riscvregs;
 extern crate sifive;
+use core::fmt::Write;
+use kernel::common::StaticRef;
+use kernel::debug::get_debug_writer;
+use sifive::uart::UartRegisters;
 
 // use capsules::virtual_alarm::{MuxAlarm, VirtualMuxAlarm};
 // use capsules::virtual_i2c::{I2CDevice, MuxI2C};
@@ -151,6 +155,7 @@ pub unsafe fn reset_handler() {
     // Create virtual device for kernel debug.
     let debugger_uart = static_init!(UartDevice, UartDevice::new(uart_mux, false));
     debugger_uart.setup();
+    //UartDevice::set_client(&debugger_uart, uart_mux);
     let debugger = static_init!(
         kernel::debug::DebugWriter,
         kernel::debug::DebugWriter::new(
@@ -160,6 +165,7 @@ pub unsafe fn reset_handler() {
         )
     );
     hil::uart::UART::set_client(debugger_uart, debugger);
+    //UartDevice::UART::set_client(debugger_uart );
 
     let debug_wrapper = static_init!(
         kernel::debug::DebugWriterWrapper,
@@ -169,6 +175,31 @@ pub unsafe fn reset_handler() {
 
     e310x::uart::UART0.initialize_gpio_pins(&e310x::gpio::PORT[17], &e310x::gpio::PORT[16]);
 
+    const UART0_BASE: StaticRef<UartRegisters> =
+        unsafe { StaticRef::new(0x1001_3000 as *const UartRegisters) };
+    let uart0 = &UART0_BASE;
+    //debug!("hi\r\n");
+    //hil::uart::UART::client.map(|aclient| {
+    //self.buffer.take().map(|a| {
+    //aclient.transmit_complete(a, kernel::hil::uart::Error::CommandComplete);
+    //});
+    //});
+    //debug!("hi");
+    //uart0.txdata.set('y' as u32);
+    //uart0.txdata.set('e' as u32);
+    //uart0.txdata.set('e' as u32);
+    //uart0.txdata.set('t' as u32);
+    //uart0.txdata.set('m' as u32);
+    //uart0.txdata.set('o' as u32);
+    //uart0.txdata.set('f' as u32);
+    //uart0.txdata.set('o' as u32);
+    //uart0.txdata.set('\r' as u32);
+    //uart0.txdata.set('\n' as u32);
+    //uart0.txdata.set('h' as u32);
+    //uart0.txdata.set('a' as u32);
+    //uart0.txdata.set('h' as u32);
+    //uart0.txdata.set('a' as u32);
+
     //let a = riscv32i::clint::read_mtimecmp();
     //let a = riscvregs::register::mie::read().bits();
     //let a = riscvregs::register::mip::read().bits();
@@ -176,8 +207,19 @@ pub unsafe fn reset_handler() {
     //let a = riscvregs::register::mtvec::read().bits();
     //if a == 0 {
     //debug!("hi!");
+    //let new_wrapper = get_debug_writer();
+    //new_wrapper.write_str("fo shizzle\r\n");
+    //new_wrapper.publish_str();
+    //new_wrapper.write_str("haw yee\r\n");
+    //new_wrapper.publish_str();
+    ////new_wrapper.write_str("\n\n");
+    //kernel::debug::flush(new_wrapper);
+    //debug_wrapper.write_str("eet");
+    //debug_wrapper;
+
     //} else {
     //debug!("more hi!");
+    //e310x::uart::UART
     //}
     //debug!("the a is: {:?}", a);
 
@@ -259,20 +301,15 @@ pub unsafe fn fake_return_to_userland() {
 
 #[export_name = "fake_userland_2"]
 pub unsafe extern "C" fn fake_userland_2() {
-    let b: u32;
-    let a = riscvregs::register::mtvec::read().bits();
-    if a > 0 {
-        debug!("asdf");
-    }
-    let b = riscvregs::register::mie::read().bits();
-    if b > 0 {
-        debug!("asdf");
-    }
+    //asm!("ecall");
+    debug!("yeet");
+    hil::uart::UART::abort_receive(&e310x::uart::UART0);
+    debug!("hello world 2");
     // triggers timer interrupts every 6000
-    riscv32i::clint::write_mtimecmp1(6000);
+    //riscv32i::clint::write_mtimecmp1(6000);
 
     //this works now! calls start_trap_rust
-    riscv32i::clint::trigger_software_interrupt();
+    //riscv32i::clint::trigger_software_interrupt();
 }
 
 global_asm!(

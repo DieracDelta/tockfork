@@ -2,4 +2,5 @@ file /home/dieraca/school/fall_2018/urop/tockos/boards/hifive1/target/riscv32ima
 set riscv use-compressed-breakpoint off
 set architecture riscv:rv32
 set disassemble-next-line on
-target remote localhost:1234
+
+target remote :1234

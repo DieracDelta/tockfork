@@ -48,3 +48,8 @@ doc/rustdoc
 
 /.idea
 /boards/hifive1/tags
+/chips/arty_exx/Cargo.lock
+/chips/e310x/Cargo.lock
+/chips/nrf52/Cargo.lock
+/chips/sifive/Cargo.lock
+/kernel/Cargo.lock
