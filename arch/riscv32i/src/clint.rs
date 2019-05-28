@@ -2,6 +2,7 @@ use kernel::common::registers::{ReadOnly, ReadWrite};
 use kernel::common::StaticRef;
 
 // memory map as described here: https://sifive.cdn.prismic.io/sifive%2F898b5153-4c06-4085-8d95-2d5fd67e74c6_u54_core_complex_manual_v19_02.pdf
+// TODO move this and PLIC somewhere else
 #[repr(C)]
 struct ClintRegisters {
     //claim: ReadWrite<u32>,
@@ -55,6 +56,7 @@ pub unsafe fn write_mtimecmp1(new_bound: u32) {
     let clint: &ClintRegisters = &*CLINT_BASE;
     clint.mtimecmp1.set(new_bound);
 }
+
 pub unsafe fn write_mtimecmp2(new_bound: u32) {
     let clint: &ClintRegisters = &*CLINT_BASE;
     clint.mtimecmp2.set(new_bound);

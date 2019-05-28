@@ -245,14 +245,6 @@ pub unsafe extern "C" fn start_trap_rust() {
                     return;
                 }
                 plic::complete(trap_id);
-                //(match trap_id {
-                //chips::interrupts::UART0 => uart::UART0.handle_interrupt(),
-                //index @ interrupts::GPIO0..interrupts::GPIO31 => {
-                //gpio::PORT[index as usize].handle_interrupt()
-                //}
-                ////_ => debug!("PLIC index not supported by Tock {}", interrupt),
-                //_ => debug!("Pidx {}", interrupt),
-                //})
             }
             riscvregs::register::mcause::Interrupt::Unknown => {
                 panic!("Bad news bears");

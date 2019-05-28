@@ -37,7 +37,7 @@ rxdata [
 ],
 txctrl [
     // morally speaking this hsould be 3 bits but I just want to set it to 1
-    txcnt OFFSET(16) NUMBITS(1) [],
+    txcnt OFFSET(16) NUMBITS(3) [],
     nstop OFFSET(1) NUMBITS(1) [
         OneStopBit = 0,
         TwoStopBits = 1
@@ -127,43 +127,43 @@ impl Uart {
     }
 
     pub fn handle_interrupt(&self) {
-        //let regs = self.registers;
+        let regs = self.registers;
 
-        //// Get a copy so we can check each interrupt flag in the register.
-        //let pending_interrupts = regs.ip.extract();
+        // Get a copy so we can check each interrupt flag in the register.
+        let pending_interrupts = regs.ip.extract();
 
-        //// Determine why an interrupt occurred.
-        //if pending_interrupts.is_set(interrupt::txwm) {
-        //// Got a TX interrupt which means the number of bytes in the FIFO
-        //// has fallen to zero. If there is more to send do that, otherwise
-        //// send a callback to the client.
-        //if self.len.get() == self.index.get() {
-        //// We are done.
-        //regs.txctrl.write(txctrl::txen::CLEAR);
-        //self.disable_tx_interrupt();
+        // Determine why an interrupt occurred.
+        if pending_interrupts.is_set(interrupt::txwm) {
+            // Got a TX interrupt which means the number of bytes in the FIFO
+            // has fallen to zero. If there is more to send do that, otherwise
+            // send a callback to the client.
+            if self.len.get() == self.index.get() {
+                // We are done.
+                regs.txctrl.write(txctrl::txen::CLEAR);
+                self.disable_tx_interrupt();
 
-        //// Signal client write done
-        //self.client.map(|client| {
-        //self.buffer.take().map(|buffer| {
-        //client.transmit_complete(buffer, hil::uart::Error::CommandComplete);
-        //});
-        //});
-        //} else {
-        //// More to send. Fill the buffer until it is full.
-        //self.buffer.map(|buffer| {
-        //for i in self.index.get()..self.len.get() {
-        //// Write the byte from the array to the tx register.
-        //regs.txdata.write(txdata::data.val(buffer[i] as u32));
-        //self.index.set(i + 1);
-        //// Check if the buffer is full
-        //if regs.txdata.is_set(txdata::full) {
-        //// If it is, break and wait for the TX interrupt.
-        //break;
-        //}
-        //}
-        //});
-        //}
-        //}
+                // Signal client write done
+                self.client.map(|client| {
+                    self.buffer.take().map(|buffer| {
+                        client.transmit_complete(buffer, hil::uart::Error::CommandComplete);
+                    });
+                });
+            } else {
+                // More to send. Fill the buffer until it is full.
+                self.buffer.map(|buffer| {
+                    for i in self.index.get()..self.len.get() {
+                        // Write the byte from the array to the tx register.
+                        regs.txdata.write(txdata::data.val(buffer[i] as u32));
+                        self.index.set(i + 1);
+                        // Check if the buffer is full
+                        if regs.txdata.is_set(txdata::full) {
+                            // If it is, break and wait for the TX interrupt.
+                            break;
+                        }
+                    }
+                });
+            }
+        }
 
         //if pending_interrupts.is_set(interrupt::rxwm) {
         //// TODO
@@ -218,14 +218,15 @@ impl hil::uart::UART for Uart {
             hil::uart::StopBits::One => txctrl::nstop::OneStopBit,
             hil::uart::StopBits::Two => txctrl::nstop::TwoStopBits,
         };
+        // just to confirm that tx interrupts are actually enabled
         let a = regs.ie.read(interrupt::txwm);
         regs.txctrl
             .write(txctrl::txen::SET + stop_bits + txctrl::txcnt.val(1));
-        regs.rxctrl.write(rxctrl::rxen.val(1) + rxctrl::rxcnt::SET);
-        if a == 0 {
-            regs.txctrl
-                .write(txctrl::txen::SET + stop_bits + txctrl::txcnt.val(1));
-        }
+        //regs.rxctrl.write(rxctrl::rxen.val(1) + rxctrl::rxcnt::SET);
+        //if a == 0 {
+        //regs.txctrl
+        //.write(txctrl::txen::SET + stop_bits + txctrl::txcnt.val(1));
+        //}
 
         // Fill the TX buffer until it reports full.
         for i in 0..tx_len {
@@ -233,6 +234,11 @@ impl hil::uart::UART for Uart {
             self.buffer.map(|tx_buffer| {
                 regs.txdata.set(tx_buffer[i] as u32);
                 self.index.set(i + 1);
+
+                //let a = regs.ip.read(interrupt::txwm);
+                //if a == 1 {
+                //return;
+                //}
                 //self.index.set(i + 1);
             });
             //self.index.set(i + 1);

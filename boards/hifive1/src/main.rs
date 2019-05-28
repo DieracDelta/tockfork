@@ -173,6 +173,8 @@ pub unsafe fn reset_handler() {
     );
     kernel::debug::set_debug_writer_wrapper(debug_wrapper);
 
+    // for e310x, gpio pin 17 is tx, gpio pin 16 is rx
+    // see page 5 https://sifive.cdn.prismic.io/sifive%2Ffeb6f967-ff96-418f-9af4-a7f3b7fd1dfc_fe310-g000-ds.pdf
     e310x::uart::UART0.initialize_gpio_pins(&e310x::gpio::PORT[17], &e310x::gpio::PORT[16]);
 
     const UART0_BASE: StaticRef<UartRegisters> =
@@ -230,6 +232,10 @@ pub unsafe fn reset_handler() {
     // change privilege level
     //riscvregs::register::mstatus::set_mpp(riscvregs::register::mstatus::MPP::Supervisor);
     riscvregs::register::mstatus::set_mpp(riscvregs::register::mstatus::MPP::Machine);
+    //debug!("hello world 1");
+    //<e310x::chip::E310x as kernel::Chip>::service_pending_interrupts(&the_chip);
+    //debug!("hello world 2");
+    //<e310x::chip::E310x as kernel::Chip>::service_pending_interrupts(&the_chip);
     // return into userland code (0x80101000) with supervisor privilege levels
     fake_return_to_userland_2();
 }
@@ -301,10 +307,13 @@ pub unsafe fn fake_return_to_userland() {
 
 #[export_name = "fake_userland_2"]
 pub unsafe extern "C" fn fake_userland_2() {
+    // triggering software interrupt works
+    //riscv32i::clint::trigger_software_interrupt();
+
     //asm!("ecall");
-    debug!("yeet");
-    hil::uart::UART::abort_receive(&e310x::uart::UART0);
-    debug!("hello world 2");
+    debug!("first hello world");
+    //hil::uart::UART::abort_receive(&e310x::uart::UART0);
+    debug!("second hello world");
     // triggers timer interrupts every 6000
     //riscv32i::clint::write_mtimecmp1(6000);
 

@@ -1,0 +1,1363 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+AES128	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/symmetric_encryption.rs	/^pub trait AES128<'a> {$/;"	i
+AES128CBC	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/symmetric_encryption.rs	/^pub trait AES128CBC {$/;"	i
+AES128CCM	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/symmetric_encryption.rs	/^pub trait AES128CCM<'a> {$/;"	i
+AES128Ctr	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/symmetric_encryption.rs	/^pub trait AES128Ctr {$/;"	i
+ALLOW	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/syscall.rs	/^    ALLOW {$/;"	e	enum:Syscall
+Aborted	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^    Aborted,$/;"	e	enum:Error
+Adc	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/adc.rs	/^pub trait Adc {$/;"	i
+AdcHighSpeed	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/adc.rs	/^pub trait AdcHighSpeed: Adc {$/;"	i
+AddressNak	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    AddressNak,$/;"	e	enum:Error
+AddressOutOfBounds	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    AddressOutOfBounds,$/;"	e	enum:Error
+AdvertisingChannel37	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    AdvertisingChannel37 = 2,$/;"	e	enum:RadioChannel
+AdvertisingChannel38	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    AdvertisingChannel38 = 26,$/;"	e	enum:RadioChannel
+AdvertisingChannel39	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    AdvertisingChannel39 = 80,$/;"	e	enum:RadioChannel
+Alarm	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^pub trait Alarm: Time {$/;"	i
+Allocator	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^impl Allocator {$/;"	c
+Allocator	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^pub struct Allocator {$/;"	s
+AmbientLight	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/sensors.rs	/^pub trait AmbientLight {$/;"	i
+AmbientLightClient	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/sensors.rs	/^pub trait AmbientLightClient {$/;"	i
+AnalogComparator	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/analog_comparator.rs	/^pub trait AnalogComparator {$/;"	i
+AppId	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/callback.rs	/^impl AppId {$/;"	c
+AppId	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/callback.rs	/^impl Eq for AppId {}$/;"	c
+AppId	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/callback.rs	/^impl PartialEq for AppId {$/;"	c
+AppId	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/callback.rs	/^impl fmt::Debug for AppId {$/;"	c
+AppId	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/callback.rs	/^pub struct AppId {$/;"	s
+AppPtr	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^impl<L, T> AppPtr<L, T> {$/;"	c
+AppPtr	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^impl<L, T> Deref for AppPtr<L, T> {$/;"	c
+AppPtr	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^impl<L, T> DerefMut for AppPtr<L, T> {$/;"	c
+AppPtr	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^impl<L, T> Drop for AppPtr<L, T> {$/;"	c
+AppPtr	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^pub struct AppPtr<L, T> {$/;"	s
+AppSlice	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^impl<L, T> AppSlice<L, T> {$/;"	c
+AppSlice	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^impl<L, T> AsMut<[T]> for AppSlice<L, T> {$/;"	c
+AppSlice	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^impl<L, T> AsRef<[T]> for AppSlice<L, T> {$/;"	c
+AppSlice	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^pub struct AppSlice<L, T> {$/;"	s
+AppliedGrant	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^impl<T> AppliedGrant<T> {$/;"	c
+AppliedGrant	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^pub struct AppliedGrant<T> {$/;"	s
+ArbitrationLost	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    ArbitrationLost,$/;"	e	enum:Error
+ArtyExx	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/chip.rs	/^impl ArtyExx {$/;"	c
+ArtyExx	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/chip.rs	/^impl kernel::Chip for ArtyExx {$/;"	c
+ArtyExx	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/chip.rs	/^pub struct ArtyExx {$/;"	s
+AtomicUsize	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/deferred_call.rs	/^impl AtomicUsize {$/;"	c
+AtomicUsize	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/deferred_call.rs	/^struct AtomicUsize {$/;"	s
+AtomicUsize	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/deferred_call.rs	/^unsafe impl Sync for AtomicUsize {}$/;"	c
+BleAdvertisementDriver	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^pub trait BleAdvertisementDriver {$/;"	i
+BleConfig	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^pub trait BleConfig {$/;"	i
+Borrowed	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^impl<T: 'a + ?Sized> Borrowed<'a, T> {$/;"	c
+Borrowed	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^impl<T: 'a + ?Sized> Deref for Borrowed<'a, T> {$/;"	c
+Borrowed	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^impl<T: 'a + ?Sized> DerefMut for Borrowed<'a, T> {$/;"	c
+Borrowed	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^pub struct Borrowed<'a, T: 'a + ?Sized> {$/;"	s
+BulkInResult	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^pub enum BulkInResult {$/;"	g
+BulkOutResult	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^pub enum BulkOutResult {$/;"	g
+CCMClient	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/symmetric_encryption.rs	/^pub trait CCMClient {$/;"	i
+COMMAND	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/syscall.rs	/^    COMMAND {$/;"	e	enum:Syscall
+CRC	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/crc.rs	/^pub trait CRC {$/;"	i
+Callback	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/callback.rs	/^impl Callback {$/;"	c
+Callback	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/callback.rs	/^pub struct Callback {$/;"	s
+Channel	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/adc.rs	/^    type Channel;$/;"	t	interface:Adc
+Channel	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/analog_comparator.rs	/^    type Channel;$/;"	t	interface:AnalogComparator
+Chip	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mod.rs	/^pub trait Chip {$/;"	i
+ChipSelect	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    type ChipSelect: Copy;$/;"	t	interface:SpiMaster
+Client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/adc.rs	/^pub trait Client {$/;"	i
+Client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/analog_comparator.rs	/^pub trait Client {$/;"	i
+Client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/crc.rs	/^pub trait Client {$/;"	i
+Client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/flash.rs	/^pub trait Client<F: Flash> {$/;"	i
+Client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio.rs	/^pub trait Client {$/;"	i
+Client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio_async.rs	/^pub trait Client {$/;"	i
+Client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/rng.rs	/^pub trait Client {$/;"	i
+Client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/symmetric_encryption.rs	/^pub trait Client<'a> {$/;"	i
+Client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^pub trait Client {$/;"	i
+Client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^pub trait Client {$/;"	i
+Client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^pub trait Client {$/;"	i
+Client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    Client,$/;"	e	enum:IPCType
+Client32	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/entropy.rs	/^pub trait Client32 {$/;"	i
+Client8	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/entropy.rs	/^pub trait Client8 {$/;"	i
+ClockFrequency	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/prci.rs	/^pub enum ClockFrequency {$/;"	g
+ClockInterface	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mod.rs	/^pub trait ClockInterface {$/;"	i
+ClockPhase	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^pub enum ClockPhase {$/;"	g
+ClockPolarity	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^pub enum ClockPolarity {$/;"	g
+CommandComplete	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/flash.rs	/^    CommandComplete,$/;"	e	enum:Error
+CommandComplete	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    CommandComplete,$/;"	e	enum:Error
+CommandComplete	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^    CommandComplete,$/;"	e	enum:Error
+Component	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/component.rs	/^pub trait Component {$/;"	i
+Config	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/mod.rs	/^    type Config;$/;"	t	interface:Controller
+ConfigClient	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^pub trait ConfigClient {$/;"	i
+ContextSwitchReason	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/syscall.rs	/^pub enum ContextSwitchReason {$/;"	g
+Continue	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/entropy.rs	/^pub enum Continue {$/;"	g
+Continue	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/rng.rs	/^pub enum Continue {$/;"	g
+Controller	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/mod.rs	/^pub trait Controller {$/;"	i
+Crc32	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/crc.rs	/^    Crc32,$/;"	e	enum:CrcAlg
+Crc32C	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/crc.rs	/^    Crc32C,$/;"	e	enum:CrcAlg
+CrcAlg	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/crc.rs	/^pub enum CrcAlg {$/;"	g
+CtrlInResult	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^pub enum CtrlInResult {$/;"	g
+CtrlOutResult	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^pub enum CtrlOutResult {$/;"	g
+CtrlSetupResult	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^pub enum CtrlSetupResult {$/;"	g
+DEBUG_GPIOS	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^pub static mut DEBUG_GPIOS: ($/;"	v
+DEBUG_WRITER	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^static mut DEBUG_WRITER: Option<&'static mut DebugWriterWrapper> = None;$/;"	v
+DEFERRED_CALL	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/deferred_call.rs	/^static DEFERRED_CALL: AtomicUsize = AtomicUsize::new(0);$/;"	v
+DacChannel	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/dac.rs	/^pub trait DacChannel {$/;"	i
+DataChannel0	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel0 = 4,$/;"	e	enum:RadioChannel
+DataChannel1	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel1 = 6,$/;"	e	enum:RadioChannel
+DataChannel10	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel10 = 24,$/;"	e	enum:RadioChannel
+DataChannel11	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel11 = 28,$/;"	e	enum:RadioChannel
+DataChannel12	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel12 = 30,$/;"	e	enum:RadioChannel
+DataChannel13	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel13 = 32,$/;"	e	enum:RadioChannel
+DataChannel14	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel14 = 34,$/;"	e	enum:RadioChannel
+DataChannel15	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel15 = 36,$/;"	e	enum:RadioChannel
+DataChannel16	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel16 = 38,$/;"	e	enum:RadioChannel
+DataChannel17	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel17 = 40,$/;"	e	enum:RadioChannel
+DataChannel18	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel18 = 42,$/;"	e	enum:RadioChannel
+DataChannel19	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel19 = 44,$/;"	e	enum:RadioChannel
+DataChannel2	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel2 = 8,$/;"	e	enum:RadioChannel
+DataChannel20	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel20 = 46,$/;"	e	enum:RadioChannel
+DataChannel21	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel21 = 48,$/;"	e	enum:RadioChannel
+DataChannel22	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel22 = 50,$/;"	e	enum:RadioChannel
+DataChannel23	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel23 = 52,$/;"	e	enum:RadioChannel
+DataChannel24	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel24 = 54,$/;"	e	enum:RadioChannel
+DataChannel25	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel25 = 56,$/;"	e	enum:RadioChannel
+DataChannel26	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel26 = 58,$/;"	e	enum:RadioChannel
+DataChannel27	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel27 = 60,$/;"	e	enum:RadioChannel
+DataChannel28	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel28 = 62,$/;"	e	enum:RadioChannel
+DataChannel29	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel29 = 64,$/;"	e	enum:RadioChannel
+DataChannel3	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel3 = 10,$/;"	e	enum:RadioChannel
+DataChannel30	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel30 = 66,$/;"	e	enum:RadioChannel
+DataChannel31	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel31 = 68,$/;"	e	enum:RadioChannel
+DataChannel32	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel32 = 70,$/;"	e	enum:RadioChannel
+DataChannel33	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel33 = 72,$/;"	e	enum:RadioChannel
+DataChannel34	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel34 = 74,$/;"	e	enum:RadioChannel
+DataChannel35	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel35 = 76,$/;"	e	enum:RadioChannel
+DataChannel36	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel36 = 78,$/;"	e	enum:RadioChannel
+DataChannel4	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel4 = 12,$/;"	e	enum:RadioChannel
+DataChannel5	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel5 = 14,$/;"	e	enum:RadioChannel
+DataChannel6	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel6 = 16,$/;"	e	enum:RadioChannel
+DataChannel7	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel7 = 18,$/;"	e	enum:RadioChannel
+DataChannel8	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel8 = 20,$/;"	e	enum:RadioChannel
+DataChannel9	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    DataChannel9 = 22,$/;"	e	enum:RadioChannel
+DataNak	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    DataNak,$/;"	e	enum:Error
+DataOrder	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^pub enum DataOrder {$/;"	g
+Debug	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^impl Default for Debug {$/;"	c
+Debug	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^pub trait Debug {$/;"	i
+DebugWriter	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^impl DebugWriter {$/;"	c
+DebugWriter	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^impl hil::uart::Client for DebugWriter {$/;"	c
+DebugWriter	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^pub struct DebugWriter {$/;"	s
+DebugWriterWrapper	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^impl DebugWriterWrapper {$/;"	c
+DebugWriterWrapper	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^impl Write for DebugWriterWrapper {$/;"	c
+DebugWriterWrapper	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^pub struct DebugWriterWrapper {$/;"	s
+DebugWriterWrapper	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^static mut DEBUG_WRITER: Option<&'static mut DebugWriterWrapper> = None;$/;"	v
+DeferredCall	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/deferred_call.rs	/^impl<T: Into<usize> + TryFrom<usize> + Copy> DeferredCall<T> {$/;"	c
+DeferredCall	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/deferred_call.rs	/^pub struct DeferredCall<T>(T);$/;"	s
+Delay	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    Delay,$/;"	e	enum:BulkInResult
+Delay	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    Delay,$/;"	e	enum:BulkOutResult
+Delay	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    Delay,$/;"	e	enum:CtrlInResult
+Delay	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    Delay,$/;"	e	enum:CtrlOutResult
+DeviceSpeed	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^pub enum DeviceSpeed {$/;"	g
+Done	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/entropy.rs	/^    Done,$/;"	e	enum:Continue
+Done	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/rng.rs	/^    Done,$/;"	e	enum:Continue
+Driver	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/driver.rs	/^pub trait Driver {$/;"	i
+EALREADY	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/returncode.rs	/^    EALREADY,$/;"	e	enum:ReturnCode
+EBUSY	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/returncode.rs	/^    EBUSY,$/;"	e	enum:ReturnCode
+ECANCEL	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/returncode.rs	/^    ECANCEL,$/;"	e	enum:ReturnCode
+EINVAL	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/returncode.rs	/^    EINVAL,$/;"	e	enum:ReturnCode
+ENOACK	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/returncode.rs	/^    ENOACK,$/;"	e	enum:ReturnCode
+ENODEVICE	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/returncode.rs	/^    ENODEVICE,$/;"	e	enum:ReturnCode
+ENOMEM	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/returncode.rs	/^    ENOMEM,$/;"	e	enum:ReturnCode
+ENOSUPPORT	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/returncode.rs	/^    ENOSUPPORT,$/;"	e	enum:ReturnCode
+EOFF	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/returncode.rs	/^    EOFF,$/;"	e	enum:ReturnCode
+ERESERVE	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/returncode.rs	/^    ERESERVE,$/;"	e	enum:ReturnCode
+ESIZE	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/returncode.rs	/^    ESIZE,$/;"	e	enum:ReturnCode
+EUNINSTALLED	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/returncode.rs	/^    EUNINSTALLED,$/;"	e	enum:ReturnCode
+EitherEdge	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio.rs	/^    EitherEdge,$/;"	e	enum:InterruptMode
+Entropy32	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/entropy.rs	/^pub trait Entropy32<'a> {$/;"	i
+Entropy8	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/entropy.rs	/^pub trait Entropy8<'a> {$/;"	i
+ErrBadLength	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    ErrBadLength,$/;"	e	enum:CtrlSetupResult
+ErrInvalidConfigurationIndex	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    ErrInvalidConfigurationIndex,$/;"	e	enum:CtrlSetupResult
+ErrInvalidDeviceIndex	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    ErrInvalidDeviceIndex,$/;"	e	enum:CtrlSetupResult
+ErrInvalidStringIndex	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    ErrInvalidStringIndex,$/;"	e	enum:CtrlSetupResult
+ErrNoDeviceQualifier	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    ErrNoDeviceQualifier,$/;"	e	enum:CtrlSetupResult
+ErrNoParse	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    ErrNoParse,$/;"	e	enum:CtrlSetupResult
+ErrNonstandardRequest	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    ErrNonstandardRequest,$/;"	e	enum:CtrlSetupResult
+ErrUnrecognizedDescriptorType	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    ErrUnrecognizedDescriptorType,$/;"	e	enum:CtrlSetupResult
+ErrUnrecognizedRequestType	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    ErrUnrecognizedRequestType,$/;"	e	enum:CtrlSetupResult
+Error	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/flash.rs	/^pub enum Error {$/;"	g
+Error	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^impl Display for Error {$/;"	c
+Error	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^pub enum Error {$/;"	g
+Error	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^pub enum Error {$/;"	g
+Error	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    Error,$/;"	e	enum:BulkInResult
+Error	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    Error,$/;"	e	enum:BulkOutResult
+Error	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    Error,$/;"	e	enum:CtrlInResult
+Error	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^pub enum Error {$/;"	g
+Even	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^    Even = 2,$/;"	e	enum:Parity
+ExecuteOnly	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mpu.rs	/^    ExecuteOnly,$/;"	e	enum:Permissions
+FAIL	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/returncode.rs	/^    FAIL,$/;"	e	enum:ReturnCode
+FallingEdge	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio.rs	/^    FallingEdge,$/;"	e	enum:InterruptMode
+Fault	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    Fault,$/;"	e	enum:State
+Fault	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/syscall.rs	/^    Fault,$/;"	e	enum:ContextSwitchReason
+FaultResponse	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^pub enum FaultResponse {$/;"	g
+Flash	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/flash.rs	/^pub trait Flash {$/;"	i
+FlashError	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/flash.rs	/^    FlashError,$/;"	e	enum:Error
+FramingError	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^    FramingError,$/;"	e	enum:Error
+Freq16KHz	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^impl Frequency for Freq16KHz {$/;"	c
+Freq16KHz	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^pub struct Freq16KHz;$/;"	s
+Freq16MHz	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^impl Frequency for Freq16MHz {$/;"	c
+Freq16MHz	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^pub struct Freq16MHz;$/;"	s
+Freq18Mhz	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/prci.rs	/^    Freq18Mhz,$/;"	e	enum:ClockFrequency
+Freq1KHz	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^impl Frequency for Freq1KHz {$/;"	c
+Freq1KHz	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^pub struct Freq1KHz;$/;"	s
+Freq32KHz	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^impl Frequency for Freq32KHz {$/;"	c
+Freq32KHz	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^pub struct Freq32KHz;$/;"	s
+Freq384Mhz	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/prci.rs	/^    Freq384Mhz,$/;"	e	enum:ClockFrequency
+Frequency	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^    type Frequency: Frequency;$/;"	t	interface:Time
+Frequency	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^pub trait Frequency {$/;"	i
+Full	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    Full,$/;"	e	enum:DeviceSpeed
+FunctionCall	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    FunctionCall(FunctionCall),$/;"	e	enum:Task
+FunctionCall	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^pub struct FunctionCall {$/;"	s
+GpioPin	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^impl GpioPin {$/;"	c
+GpioPin	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^impl hil::gpio::Pin for GpioPin {$/;"	c
+GpioPin	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^impl hil::gpio::PinCtl for GpioPin {$/;"	c
+GpioPin	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^pub struct GpioPin {$/;"	s
+GpioRegisters	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^pub struct GpioRegisters {$/;"	s
+Grant	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^impl<T: Default> Grant<T> {$/;"	c
+Grant	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^pub struct Grant<T: Default> {$/;"	s
+Halted	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    Halted,$/;"	e	enum:CtrlOutResult
+HasClient	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/flash.rs	/^pub trait HasClient<'a, C> {$/;"	i
+HighSpeedClient	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/adc.rs	/^pub trait HighSpeedClient {$/;"	i
+HumidityClient	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/sensors.rs	/^pub trait HumidityClient {$/;"	i
+HumidityDriver	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/sensors.rs	/^pub trait HumidityDriver {$/;"	i
+I2CClient	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^pub trait I2CClient {$/;"	i
+I2CDevice	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^pub trait I2CDevice {$/;"	i
+I2CHwMasterClient	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^pub trait I2CHwMasterClient {$/;"	i
+I2CHwSlaveClient	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^pub trait I2CHwSlaveClient {$/;"	i
+I2CMaster	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^pub trait I2CMaster {$/;"	i
+I2CMasterSlave	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^pub trait I2CMasterSlave: I2CMaster + I2CSlave {}$/;"	i
+I2CSlave	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^pub trait I2CSlave {$/;"	i
+INTERNAL_BUF	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^pub static mut INTERNAL_BUF: [u8; 1024] = [0; 1024];$/;"	v
+IPC	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/ipc.rs	/^impl Driver for IPC {$/;"	c
+IPC	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/ipc.rs	/^impl IPC {$/;"	c
+IPC	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/ipc.rs	/^pub struct IPC {$/;"	s
+IPC	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    IPC((AppId, IPCType)),$/;"	e	enum:Task
+IPCData	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/ipc.rs	/^impl Default for IPCData {$/;"	c
+IPCData	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/ipc.rs	/^struct IPCData {$/;"	s
+IPCType	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^pub enum IPCType {$/;"	g
+IdleHigh	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    IdleHigh,$/;"	e	enum:ClockPolarity
+IdleLow	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    IdleLow,$/;"	e	enum:ClockPolarity
+InputMode	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio.rs	/^pub enum InputMode {$/;"	g
+InterruptMode	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio.rs	/^pub enum InterruptMode {$/;"	g
+Interrupted	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/syscall.rs	/^    Interrupted,$/;"	e	enum:ContextSwitchReason
+Item	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/list.rs	/^    type Item = &'a T;$/;"	t	implementation:ListIterator
+Item	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    type Item = AppliedGrant<T>;$/;"	t	implementation:Iter
+Iter	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^impl<T: Default> Iterator for Iter<'a, T> {$/;"	c
+Iter	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^pub struct Iter<'a, T: 'a + Default> {$/;"	s
+Kernel	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/sched.rs	/^impl Kernel {$/;"	c
+Kernel	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/sched.rs	/^pub struct Kernel {$/;"	s
+KernelError	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    KernelError, \/\/ This likely indicates a bug in the kernel and that some$/;"	e	enum:Error
+KernelInfo	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/introspection.rs	/^impl KernelInfo {$/;"	c
+KernelInfo	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/introspection.rs	/^pub struct KernelInfo {$/;"	s
+LSBFirst	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    LSBFirst,$/;"	e	enum:DataOrder
+Led	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/led.rs	/^pub trait Led {$/;"	i
+LedHigh	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/led.rs	/^impl Led for LedHigh<'a> {$/;"	c
+LedHigh	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/led.rs	/^impl LedHigh<'a> {$/;"	c
+LedHigh	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/led.rs	/^pub struct LedHigh<'a> {$/;"	s
+LedLow	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/led.rs	/^impl Led for LedLow<'a> {$/;"	c
+LedLow	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/led.rs	/^impl LedLow<'a> {$/;"	c
+LedLow	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/led.rs	/^pub struct LedLow<'a> {$/;"	s
+List	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/list.rs	/^impl<T: ?Sized + ListNode<'a, T>> List<'a, T> {$/;"	c
+List	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/list.rs	/^pub struct List<'a, T: 'a + ?Sized + ListNode<'a, T>> {$/;"	s
+ListIterator	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/list.rs	/^impl<T: ?Sized + ListNode<'a, T>> Iterator for ListIterator<'a, T> {$/;"	c
+ListIterator	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/list.rs	/^pub struct ListIterator<'a, T: 'a + ?Sized + ListNode<'a, T>> {$/;"	s
+ListLink	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/list.rs	/^impl<T: ?Sized> ListLink<'a, T> {$/;"	c
+ListLink	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/list.rs	/^pub struct ListLink<'a, T: 'a + ?Sized>(Cell<Option<&'a T>>);$/;"	s
+ListNode	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/list.rs	/^pub trait ListNode<'a, T: ?Sized> {$/;"	i
+Low	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    Low,$/;"	e	enum:DeviceSpeed
+MEMOP	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/syscall.rs	/^    MEMOP { operand: usize, arg0: usize },$/;"	e	enum:Syscall
+MPU	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/chip.rs	/^    type MPU = ();$/;"	t	implementation:ArtyExx
+MPU	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mod.rs	/^    type MPU: mpu::MPU;$/;"	t	interface:Chip
+MPU	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mpu.rs	/^impl MPU for () {}$/;"	c
+MPU	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mpu.rs	/^pub trait MPU {$/;"	i
+MSBFirst	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    MSBFirst,$/;"	e	enum:DataOrder
+MainLoopCapability	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/capabilities.rs	/^pub unsafe trait MainLoopCapability {}$/;"	i
+MemoryAllocationCapability	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/capabilities.rs	/^pub unsafe trait MemoryAllocationCapability {}$/;"	i
+More	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/entropy.rs	/^    More,$/;"	e	enum:Continue
+More	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/rng.rs	/^    More,$/;"	e	enum:Continue
+MpuConfig	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mpu.rs	/^    type MpuConfig: Default = ();$/;"	t	interface:MPU
+NO_CLOCK_CONTROL	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mod.rs	/^pub static mut NO_CLOCK_CONTROL: NoClockControl = NoClockControl {};$/;"	v
+NineDof	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ninedof.rs	/^pub trait NineDof<'a> {$/;"	i
+NineDof	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/sensors.rs	/^pub trait NineDof {$/;"	i
+NineDofClient	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ninedof.rs	/^pub trait NineDofClient {$/;"	i
+NineDofClient	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/sensors.rs	/^pub trait NineDofClient {$/;"	i
+NoClockControl	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mod.rs	/^impl ClockInterface for NoClockControl {$/;"	c
+NoClockControl	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mod.rs	/^pub struct NoClockControl {}$/;"	s
+NoSuchApp	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    NoSuchApp,$/;"	e	enum:Error
+None	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^    None = 0,$/;"	e	enum:Parity
+NonvolatileStorage	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/nonvolatile_storage.rs	/^pub trait NonvolatileStorage {$/;"	i
+NonvolatileStorageClient	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/nonvolatile_storage.rs	/^pub trait NonvolatileStorageClient {$/;"	i
+OUTPUT_BUF	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^pub static mut OUTPUT_BUF: [u8; 64] = [0; 64];$/;"	v
+Odd	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^    Odd = 1,$/;"	e	enum:Parity
+Ok	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    Ok,$/;"	e	enum:BulkOutResult
+Ok	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    Ok,$/;"	e	enum:CtrlOutResult
+Ok	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    Ok,$/;"	e	enum:CtrlSetupResult
+One	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^    One = 0,$/;"	e	enum:StopBits
+OutOfMemory	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    OutOfMemory,$/;"	e	enum:Error
+Output	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/gpio.rs	/^    type Output = GpioPin;$/;"	t	implementation:Port
+Output	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/component.rs	/^    type Output;$/;"	t	interface:Component
+Overrun	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    Overrun,$/;"	e	enum:Error
+OverrunError	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^    OverrunError,$/;"	e	enum:Error
+Owned	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^impl<T: ?Sized> Deref for Owned<T> {$/;"	c
+Owned	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^impl<T: ?Sized> DerefMut for Owned<T> {$/;"	c
+Owned	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^impl<T: ?Sized> Drop for Owned<T> {$/;"	c
+Owned	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^impl<T: ?Sized> Owned<T> {$/;"	c
+Owned	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^pub struct Owned<T: ?Sized> {$/;"	s
+PORT	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/gpio.rs	/^pub static mut PORT: Port = Port {$/;"	v
+PWM0	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/pwm.rs	/^pub static mut PWM0: Pwm = Pwm::new(PWM0_BASE);$/;"	v
+Packet	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    Packet(usize),$/;"	e	enum:BulkInResult
+Packet	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    Packet(usize, bool),$/;"	e	enum:CtrlInResult
+Padding	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    Padding(&'static TbfHeaderV2Base),$/;"	e	enum:TbfHeader
+Page	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/flash.rs	/^    type Page: AsMut<[u8]>;$/;"	t	interface:Flash
+Panic	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    Panic,$/;"	e	enum:FaultResponse
+Parity	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^pub enum Parity {$/;"	g
+ParityError	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^    ParityError,$/;"	e	enum:Error
+PeripheralManagement	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/peripherals.rs	/^pub trait PeripheralManagement<C>$/;"	i
+PeripheralManager	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/peripherals.rs	/^impl<H, C> Drop for PeripheralManager<'a, H, C>$/;"	c
+PeripheralManager	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/peripherals.rs	/^impl<H, C> PeripheralManager<'a, H, C>$/;"	c
+PeripheralManager	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/peripherals.rs	/^pub struct PeripheralManager<'a, H, C>$/;"	s
+Permissions	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mpu.rs	/^pub enum Permissions {$/;"	g
+Pin	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio.rs	/^pub trait Pin {$/;"	i
+PinCtl	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio.rs	/^pub trait PinCtl {$/;"	i
+Platform	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mod.rs	/^pub trait Platform {$/;"	i
+PlicRegisters	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/plic.rs	/^struct PlicRegisters {$/;"	s
+Port	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/gpio.rs	/^impl Index<usize> for Port {$/;"	c
+Port	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/gpio.rs	/^impl IndexMut<usize> for Port {$/;"	c
+Port	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/gpio.rs	/^pub struct Port {$/;"	s
+Port	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio_async.rs	/^pub trait Port {$/;"	i
+PowerClient	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^pub trait PowerClient {$/;"	i
+PowerOfTwo	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/math.rs	/^impl PowerOfTwo {$/;"	c
+PowerOfTwo	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/math.rs	/^pub struct PowerOfTwo(u32);$/;"	s
+Prci	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/prci.rs	/^impl Prci {$/;"	c
+Prci	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/prci.rs	/^pub struct Prci {$/;"	s
+PrciRegisters	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/prci.rs	/^pub struct PrciRegisters {$/;"	s
+Private	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^pub struct Private;$/;"	s
+Process	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^impl<C: 'static + Chip> Process<'a, C> {$/;"	c
+Process	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^impl<C: Chip> ProcessType for Process<'a, C> {$/;"	c
+Process	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^pub struct Process<'a, C: 'static + Chip> {$/;"	s
+ProcessDebug	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^struct ProcessDebug {$/;"	s
+ProcessManagementCapability	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/capabilities.rs	/^pub unsafe trait ProcessManagementCapability {}$/;"	i
+ProcessType	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^pub trait ProcessType {$/;"	i
+PullDown	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio.rs	/^    PullDown,$/;"	e	enum:InputMode
+PullNone	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio.rs	/^    PullNone,$/;"	e	enum:InputMode
+PullUp	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio.rs	/^    PullUp,$/;"	e	enum:InputMode
+Pwm	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/pwm.rs	/^impl Pwm {$/;"	c
+Pwm	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/pwm.rs	/^pub struct Pwm {$/;"	s
+PwmRegisters	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/pwm.rs	/^pub struct PwmRegisters {$/;"	s
+Queue	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/queue.rs	/^pub trait Queue<T> {$/;"	i
+Radio	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^pub trait Radio: RadioConfig + RadioData {}$/;"	i
+RadioChannel	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^impl RadioChannel {$/;"	c
+RadioChannel	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^pub enum RadioChannel {$/;"	g
+RadioConfig	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^pub trait RadioConfig {$/;"	i
+RadioData	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^pub trait RadioData {$/;"	i
+Random	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/rng.rs	/^pub trait Random<'a> {$/;"	i
+Read	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    Read,$/;"	e	enum:SlaveTransmissionType
+ReadExecuteOnly	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mpu.rs	/^    ReadExecuteOnly,$/;"	e	enum:Permissions
+ReadOnly	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mpu.rs	/^    ReadOnly,$/;"	e	enum:Permissions
+ReadWriteExecute	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mpu.rs	/^    ReadWriteExecute,$/;"	e	enum:Permissions
+ReadWriteOnly	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mpu.rs	/^    ReadWriteOnly,$/;"	e	enum:Permissions
+Region	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mpu.rs	/^impl Region {$/;"	c
+Region	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mpu.rs	/^pub struct Region {$/;"	s
+RegisterType	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/peripherals.rs	/^    type RegisterType;$/;"	t	interface:PeripheralManagement
+RepeatCallError	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^    RepeatCallError,$/;"	e	enum:Error
+ResetError	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^    ResetError,$/;"	e	enum:Error
+Restart	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    Restart,$/;"	e	enum:FaultResponse
+ReturnCode	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^impl From<Error> for ReturnCode {$/;"	c
+ReturnCode	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/returncode.rs	/^pub enum ReturnCode {$/;"	g
+RingBuffer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/ring_buffer.rs	/^impl<T: Copy> RingBuffer<'a, T> {$/;"	c
+RingBuffer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/ring_buffer.rs	/^impl<T: Copy> queue::Queue<T> for RingBuffer<'a, T> {$/;"	c
+RingBuffer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/ring_buffer.rs	/^pub struct RingBuffer<'a, T: 'a> {$/;"	s
+RiscvimacStoredState	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/syscall.rs	/^pub struct RiscvimacStoredState {}$/;"	s
+RisingEdge	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio.rs	/^    RisingEdge,$/;"	e	enum:InterruptMode
+Rng	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/rng.rs	/^pub trait Rng<'a> {$/;"	i
+Rtc	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/rtc.rs	/^impl Rtc {$/;"	c
+Rtc	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/rtc.rs	/^pub struct Rtc {$/;"	s
+RtcRegisters	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/rtc.rs	/^pub struct RtcRegisters {$/;"	s
+Running	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    Running,$/;"	e	enum:State
+RxClient	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^pub trait RxClient {$/;"	i
+RxClient	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^pub trait RxClient {$/;"	i
+SUBSCRIBE	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/syscall.rs	/^    SUBSCRIBE {$/;"	e	enum:Syscall
+SUCCESS	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/returncode.rs	/^    SUCCESS,$/;"	e	enum:ReturnCode
+Sam4L16	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/crc.rs	/^    Sam4L16,$/;"	e	enum:CrcAlg
+Sam4L32	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/crc.rs	/^    Sam4L32,$/;"	e	enum:CrcAlg
+Sam4L32C	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/crc.rs	/^    Sam4L32C,$/;"	e	enum:CrcAlg
+SampleLeading	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    SampleLeading,$/;"	e	enum:ClockPhase
+SampleTrailing	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    SampleTrailing,$/;"	e	enum:ClockPhase
+Service	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    Service,$/;"	e	enum:IPCType
+Shared	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^pub struct Shared;$/;"	s
+SlaveTransmissionType	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^pub enum SlaveTransmissionType {$/;"	g
+SpiMaster	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^pub trait SpiMaster {$/;"	i
+SpiMasterClient	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^pub trait SpiMasterClient {$/;"	i
+SpiMasterDevice	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^pub trait SpiMasterDevice {$/;"	i
+SpiSlave	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^pub trait SpiSlave {$/;"	i
+SpiSlaveClient	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^pub trait SpiSlaveClient {$/;"	i
+SpiSlaveDevice	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^pub trait SpiSlaveDevice {$/;"	i
+State	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^pub enum State {$/;"	g
+StaticRef	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/static_ref.rs	/^impl<T> Clone for StaticRef<T> {$/;"	c
+StaticRef	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/static_ref.rs	/^impl<T> Copy for StaticRef<T> {}$/;"	c
+StaticRef	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/static_ref.rs	/^impl<T> Deref for StaticRef<T> {$/;"	c
+StaticRef	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/static_ref.rs	/^impl<T> StaticRef<T> {$/;"	c
+StaticRef	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/static_ref.rs	/^pub struct StaticRef<T> {$/;"	s
+StopBits	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^pub enum StopBits {$/;"	g
+StoppedRunning	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    StoppedRunning,$/;"	e	enum:State
+StoppedYielded	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    StoppedYielded,$/;"	e	enum:State
+StoredState	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/syscall.rs	/^    type StoredState = RiscvimacStoredState;$/;"	t	implementation:SysCall
+StoredState	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/syscall.rs	/^    type StoredState: Default + Copy;$/;"	t	interface:UserspaceKernelBoundary
+SuccessWithValue	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/returncode.rs	/^    SuccessWithValue { value: usize },$/;"	e	enum:ReturnCode
+SysCall	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/syscall.rs	/^impl SysCall {$/;"	c
+SysCall	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/syscall.rs	/^impl kernel::syscall::UserspaceKernelBoundary for SysCall {$/;"	c
+SysCall	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/syscall.rs	/^pub struct SysCall();$/;"	s
+SysTick	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/chip.rs	/^    type SysTick = ();$/;"	t	implementation:ArtyExx
+SysTick	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mod.rs	/^    type SysTick: systick::SysTick;$/;"	t	interface:Chip
+SysTick	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/systick.rs	/^impl SysTick for () {$/;"	c
+SysTick	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/systick.rs	/^pub trait SysTick {$/;"	i
+Syscall	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/syscall.rs	/^pub enum Syscall {$/;"	g
+SyscallFired	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/syscall.rs	/^    SyscallFired,$/;"	e	enum:ContextSwitchReason
+Target	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/static_ref.rs	/^    type Target = T;$/;"	t	implementation:StaticRef
+Target	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    type Target = T;$/;"	t	implementation:Borrowed
+Target	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    type Target = T;$/;"	t	implementation:Owned
+Target	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^    type Target = T;$/;"	t	implementation:AppPtr
+Task	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    tasks: MapCell<RingBuffer<'a, Task>>,$/;"	m	struct:Process
+Task	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^pub enum Task {$/;"	g
+TbfHeader	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^crate enum TbfHeader {$/;"	g
+TbfHeader	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^impl TbfHeader {$/;"	c
+TbfHeaderMain	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    TbfHeaderMain = 1,$/;"	e	enum:TbfHeaderTypes
+TbfHeaderPackageName	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    TbfHeaderPackageName = 3,$/;"	e	enum:TbfHeaderTypes
+TbfHeaderTlv	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^crate struct TbfHeaderTlv {$/;"	s
+TbfHeaderTypes	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^crate enum TbfHeaderTypes {$/;"	g
+TbfHeaderV2	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    TbfHeaderV2(TbfHeaderV2),$/;"	e	enum:TbfHeader
+TbfHeaderV2	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^crate struct TbfHeaderV2 {$/;"	s
+TbfHeaderV2Base	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^crate struct TbfHeaderV2Base {$/;"	s
+TbfHeaderV2Main	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^crate struct TbfHeaderV2Main {$/;"	s
+TbfHeaderV2WriteableFlashRegion	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^crate struct TbfHeaderV2WriteableFlashRegion {$/;"	s
+TbfHeaderWriteableFlashRegions	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    TbfHeaderWriteableFlashRegions = 2,$/;"	e	enum:TbfHeaderTypes
+TemperatureClient	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/sensors.rs	/^pub trait TemperatureClient {$/;"	i
+TemperatureDriver	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/sensors.rs	/^pub trait TemperatureDriver {$/;"	i
+Time	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^pub trait Time {$/;"	i
+Timer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^pub trait Timer: Time {$/;"	i
+TimesliceExpired	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/syscall.rs	/^    TimesliceExpired,$/;"	e	enum:ContextSwitchReason
+Two	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^    Two = 2,$/;"	e	enum:StopBits
+TxClient	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^pub trait TxClient {$/;"	i
+TxClient	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^pub trait TxClient {$/;"	i
+UART	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^pub trait UART {$/;"	i
+UART0	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/uart.rs	/^pub static mut UART0: Uart = Uart::new(UART0_BASE);$/;"	v
+UARTParameters	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^pub struct UARTParameters {$/;"	s
+UARTReceiveAdvanced	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^pub trait UARTReceiveAdvanced: UART {$/;"	i
+Uart	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^impl Uart {$/;"	c
+Uart	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^impl hil::uart::UART for Uart {$/;"	c
+Uart	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^pub struct Uart {$/;"	s
+UartParams	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^pub struct UartParams {$/;"	s
+UartRegisters	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^pub struct UartRegisters {$/;"	s
+Unused	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    Unused = 5,$/;"	e	enum:TbfHeaderTypes
+UsbController	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^pub trait UsbController {$/;"	i
+UserspaceKernelBoundary	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/chip.rs	/^    type UserspaceKernelBoundary = riscv32i::syscall::SysCall;$/;"	t	implementation:ArtyExx
+UserspaceKernelBoundary	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mod.rs	/^    type UserspaceKernelBoundary: syscall::UserspaceKernelBoundary;$/;"	t	interface:Chip
+UserspaceKernelBoundary	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/syscall.rs	/^pub trait UserspaceKernelBoundary {$/;"	i
+Watchdog	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/watchdog.rs	/^impl Watchdog {$/;"	c
+Watchdog	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/watchdog.rs	/^pub struct Watchdog {$/;"	s
+Watchdog	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/watchdog.rs	/^pub trait Watchdog {$/;"	i
+WatchdogRegisters	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/watchdog.rs	/^pub struct WatchdogRegisters {$/;"	s
+Write	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    Write,$/;"	e	enum:SlaveTransmissionType
+YIELD	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/syscall.rs	/^    YIELD,$/;"	e	enum:Syscall
+Yielded	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    Yielded,$/;"	e	enum:State
+__errno	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/math.rs	/^    fn __errno() -> &'static mut i32;$/;"	f
+_erelocate	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/lib.rs	/^    static mut _erelocate: u32;$/;"	v
+_estack	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/lib.rs	/^    static _estack: u32;$/;"	v
+_etext	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/lib.rs	/^    static mut _etext: u32;$/;"	v
+_ezero	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/lib.rs	/^    static mut _ezero: u32;$/;"	v
+_phantom	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    _phantom: PhantomData<T>,$/;"	m	struct:AppliedGrant
+_phantom	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^    _phantom: PhantomData<L>,$/;"	m	struct:AppPtr
+_reserved0	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/plic.rs	/^    _reserved0: u32,$/;"	m	struct:PlicRegisters
+_reserved0	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/pwm.rs	/^    _reserved0: [u8; 8],$/;"	m	struct:PwmRegisters
+_reserved0	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/watchdog.rs	/^    _reserved0: [u8; 4],$/;"	m	struct:WatchdogRegisters
+_reserved1	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/plic.rs	/^    _reserved1: [u32; (0x0C00_1000 - 0x0C00_0214) \/ 0x4],$/;"	m	struct:PlicRegisters
+_reserved1	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/pwm.rs	/^    _reserved1: [u8; 12],$/;"	m	struct:PwmRegisters
+_reserved1	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/rtc.rs	/^    _reserved1: [u8; 4],$/;"	m	struct:RtcRegisters
+_reserved1	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/watchdog.rs	/^    _reserved1: [u8; 4],$/;"	m	struct:WatchdogRegisters
+_reserved2	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/plic.rs	/^    _reserved2: [u32; (0x0C00_2000 - 0x0C00_1014) \/ 0x4],$/;"	m	struct:PlicRegisters
+_reserved2	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/rtc.rs	/^    _reserved2: [u8; 12],$/;"	m	struct:RtcRegisters
+_reserved2	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/watchdog.rs	/^    _reserved2: [u8; 4],$/;"	m	struct:WatchdogRegisters
+_reserved3	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/plic.rs	/^    _reserved3: [u32; (0x0C00_2080 - 0x0C00_2014) \/ 0x4],$/;"	m	struct:PlicRegisters
+_reserved4	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/plic.rs	/^    _reserved4: [u32; (0x0C20_1000 - 0x0C20_0008) \/ 0x4],$/;"	m	struct:PlicRegisters
+_reserved5	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/plic.rs	/^    _reserved5: [u32; (0x1000_0000 - 0x0C20_1008) \/ 0x4],$/;"	m	struct:PlicRegisters
+_srelocate	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/lib.rs	/^    static mut _srelocate: u32;$/;"	v
+_start_trap	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/lib.rs	/^    static _start_trap: u32;$/;"	v
+_szero	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/lib.rs	/^    static mut _szero: u32;$/;"	v
+abort_receive	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^    fn abort_receive(&self) {$/;"	F	implementation:Uart
+abort_receive	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^    fn abort_receive(&self);$/;"	F	interface:UART
+active_len	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^    active_len: Cell<usize>,$/;"	m	struct:DebugWriter
+adc	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/mod.rs	/^pub mod adc;$/;"	n
+add_mpu_region	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn add_mpu_region($/;"	F	implementation:Process
+add_mpu_region	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn add_mpu_region($/;"	F	interface:ProcessType
+after_peripheral_access	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/peripherals.rs	/^    fn after_peripheral_access(&self, &C, &Self::RegisterType);$/;"	F	interface:PeripheralManagement
+align4	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^macro_rules! align4 {$/;"	M
+alloc	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    pub fn alloc<T>(&mut self, data: T) -> Result<Owned<T>, Error> {$/;"	F	implementation:Allocator
+alloc	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    unsafe fn alloc(&self, size: usize) -> Option<&mut [u8]> {$/;"	F	implementation:Process
+alloc	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    unsafe fn alloc(&self, size: usize) -> Option<&mut [u8]>;$/;"	F	interface:ProcessType
+allocate_app_memory_region	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mpu.rs	/^    fn allocate_app_memory_region($/;"	F	interface:MPU
+allocate_region	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mpu.rs	/^    fn allocate_region($/;"	F	interface:MPU
+allow	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/driver.rs	/^    fn allow($/;"	F	interface:Driver
+allow	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/ipc.rs	/^    fn allow($/;"	F	implementation:IPC
+allow	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn allow($/;"	F	implementation:Process
+allow	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn allow($/;"	F	interface:ProcessType
+allow_high_water_mark	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    allow_high_water_mark: Cell<*const u8>,$/;"	m	struct:Process
+analog_comparator	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/mod.rs	/^pub mod analog_comparator;$/;"	n
+app_break	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    app_break: Cell<*const u8>,$/;"	m	struct:Process
+app_heap_start_pointer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    app_heap_start_pointer: Option<*const u8>,$/;"	m	struct:ProcessDebug
+app_id	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/callback.rs	/^    app_id: AppId,$/;"	m	struct:Callback
+app_idx	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    app_idx: usize,$/;"	m	struct:Process
+app_stack_start_pointer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    app_stack_start_pointer: Option<*const u8>,$/;"	m	struct:ProcessDebug
+appdata	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/callback.rs	/^    appdata: usize,$/;"	m	struct:Callback
+appid	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    appid: AppId,$/;"	m	struct:Allocator
+appid	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    appid: AppId,$/;"	m	struct:AppliedGrant
+appid	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    appid: AppId,$/;"	m	struct:Borrowed
+appid	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    appid: AppId,$/;"	m	struct:Owned
+appid	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    pub fn appid(&self) -> AppId {$/;"	F	implementation:Borrowed
+appid	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    pub fn appid(&self) -> AppId {$/;"	F	implementation:Owned
+appid	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn appid(&self) -> AppId {$/;"	F	implementation:Process
+appid	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn appid(&self) -> AppId;$/;"	F	interface:ProcessType
+argument0	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    pub argument0: usize,$/;"	m	struct:FunctionCall
+argument1	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    pub argument1: usize,$/;"	m	struct:FunctionCall
+argument2	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    pub argument2: usize,$/;"	m	struct:FunctionCall
+argument3	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    pub argument3: usize,$/;"	m	struct:FunctionCall
+as_mut	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^    fn as_mut(&mut self) -> &mut [T] {$/;"	F	implementation:AppSlice
+as_num	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/math.rs	/^    pub fn as_num<F: From<u32>>(self) -> F {$/;"	F	implementation:PowerOfTwo
+as_ref	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^    fn as_ref(&self) -> &[T] {$/;"	F	implementation:AppSlice
+assign_gpios	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^pub unsafe fn assign_gpios($/;"	f
+atomic	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/support.rs	/^pub unsafe fn atomic<F, R>(f: F) -> R$/;"	f
+atomic	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/chip.rs	/^    unsafe fn atomic<F, R>(&self, f: F) -> R$/;"	F	implementation:ArtyExx
+atomic	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mod.rs	/^    unsafe fn atomic<F, R>(&self, f: F) -> R$/;"	F	interface:Chip
+attach	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    fn attach(&self);$/;"	F	interface:Client
+attach	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    fn attach(&self);$/;"	F	interface:UsbController
+base	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    base: &'static TbfHeaderV2Base,$/;"	m	struct:TbfHeaderV2
+baud_rate	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^    pub baud_rate: u32,$/;"	m	struct:UartParams
+baud_rate	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^    pub baud_rate: u32, \/\/ baud rate in bit\/s$/;"	m	struct:UARTParameters
+before_peripheral_access	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/peripherals.rs	/^    fn before_peripheral_access(&self, &C, &Self::RegisterType);$/;"	F	interface:PeripheralManagement
+begin_debug_fmt	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^pub fn begin_debug_fmt(args: Arguments) {$/;"	f
+begin_debug_verbose_fmt	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^pub fn begin_debug_verbose_fmt(args: Arguments, file_line: &(&'static str, u32)) {$/;"	f
+ble_advertising	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/mod.rs	/^pub mod ble_advertising;$/;"	n
+brk	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn brk(&self, new_break: *const u8) -> Result<*const u8, Error> {$/;"	F	implementation:Process
+brk	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn brk(&self, new_break: *const u8) -> Result<*const u8, Error>;$/;"	F	interface:ProcessType
+buffer	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^    buffer: TakeCell<'static, [u8]>,$/;"	m	struct:Uart
+bulk_in	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    fn bulk_in(&self, endpoint: usize) -> BulkInResult;$/;"	F	interface:Client
+bulk_out	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    fn bulk_out(&self, endpoint: usize, packet_bytes: u32) -> BulkOutResult;$/;"	F	interface:Client
+bus_reset	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    fn bus_reset(&self);$/;"	F	interface:Client
+busy	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^    fn busy(&self) -> bool;$/;"	F	interface:RadioConfig
+callback	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ninedof.rs	/^    fn callback(&self, x: usize, y: usize, z: usize);$/;"	F	interface:NineDofClient
+callback	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/sensors.rs	/^    fn callback(&self, arg1: usize, arg2: usize, arg3: usize);$/;"	F	interface:NineDofClient
+callback	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/sensors.rs	/^    fn callback(&self, lux: usize);$/;"	F	interface:AmbientLightClient
+callback	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/sensors.rs	/^    fn callback(&self, value: usize);$/;"	F	interface:HumidityClient
+callback	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/sensors.rs	/^    fn callback(&self, value: usize);$/;"	F	interface:TemperatureClient
+callback	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/ipc.rs	/^    callback: Option<Callback>,$/;"	m	struct:IPCData
+callback	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/lib.rs	/^mod callback;$/;"	n
+cancel	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/entropy.rs	/^    fn cancel(&self) -> ReturnCode;$/;"	F	interface:Entropy32
+cancel	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/entropy.rs	/^    fn cancel(&self) -> ReturnCode;$/;"	F	interface:Entropy8
+cancel	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/rng.rs	/^    fn cancel(&self) -> ReturnCode;$/;"	F	interface:Rng
+capabilities	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/lib.rs	/^pub mod capabilities;$/;"	n
+ceiling	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/math.rs	/^    pub fn ceiling<F: Into<u32>>(f: F) -> PowerOfTwo {$/;"	F	implementation:PowerOfTwo
+cells	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/mod.rs	/^pub mod cells {$/;"	n
+cfg	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/pwm.rs	/^    cfg: ReadWrite<u32, cfg::Register>,$/;"	m	struct:PwmRegisters
+changed	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^    fn changed(&self, on: bool);$/;"	F	interface:PowerClient
+checksum	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    checksum: u32,$/;"	m	struct:TbfHeaderV2Base
+chip	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/lib.rs	/^pub mod chip;$/;"	n
+chip	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    chip: &'static C,$/;"	m	struct:Process
+chip_selected	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn chip_selected(&self);$/;"	F	interface:SpiSlaveClient
+chunks	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^    pub fn chunks(&self, size: usize) -> slice::Chunks<T> {$/;"	F	implementation:AppSlice
+chunks_mut	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^    pub fn chunks_mut(&mut self, size: usize) -> slice::ChunksMut<T> {$/;"	F	implementation:AppSlice
+claim_m_mode	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/plic.rs	/^pub unsafe fn claim_m_mode() -> u32 {$/;"	f
+clear	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    clear: FieldValue<u32, pins::Register>,$/;"	m	struct:GpioPin
+clear	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    fn clear(&self) {$/;"	F	implementation:GpioPin
+clear	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio.rs	/^    fn clear(&self);$/;"	F	interface:Pin
+clear	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio_async.rs	/^    fn clear(&self, pin: usize) -> ReturnCode;$/;"	F	interface:Port
+clear_all_pending	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/plic.rs	/^pub unsafe fn clear_all_pending() {$/;"	f
+client	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    client: OptionalCell<&'static hil::gpio::Client>,$/;"	m	struct:GpioPin
+client	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^    client: OptionalCell<&'static hil::uart::Client>,$/;"	m	struct:Uart
+client_callbacks	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/ipc.rs	/^    client_callbacks: [Option<Callback>; 8],$/;"	m	struct:IPCData
+client_data	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    client_data: Cell<usize>,$/;"	m	struct:GpioPin
+clock	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/peripherals.rs	/^    clock: &'a C,$/;"	m	struct:PeripheralManager
+clone	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/static_ref.rs	/^    fn clone(&self) -> Self {$/;"	F	implementation:StaticRef
+closest_power_of_two	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/math.rs	/^pub fn closest_power_of_two(mut num: u32) -> u32 {$/;"	f
+cmp0	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/pwm.rs	/^    cmp0: ReadWrite<u32>,$/;"	m	struct:PwmRegisters
+cmp1	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/pwm.rs	/^    cmp1: ReadWrite<u32>,$/;"	m	struct:PwmRegisters
+cmp2	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/pwm.rs	/^    cmp2: ReadWrite<u32>,$/;"	m	struct:PwmRegisters
+cmp3	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/pwm.rs	/^    cmp3: ReadWrite<u32>,$/;"	m	struct:PwmRegisters
+command	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/driver.rs	/^    fn command(&self, minor_num: usize, r2: usize, r3: usize, caller_id: AppId) -> ReturnCode {$/;"	F	interface:Driver
+command	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/ipc.rs	/^    fn command($/;"	F	implementation:IPC
+command_complete	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    fn command_complete($/;"	F	interface:I2CHwSlaveClient
+command_complete	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    fn command_complete(&self, buffer: &'static mut [u8], error: Error);$/;"	F	interface:I2CClient
+command_complete	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    fn command_complete(&self, buffer: &'static mut [u8], error: Error);$/;"	F	interface:I2CHwMasterClient
+common	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/lib.rs	/^pub mod common;$/;"	n
+comparison	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/analog_comparator.rs	/^    fn comparison(&self, channel: &Self::Channel) -> bool;$/;"	F	interface:AnalogComparator
+complete	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/plic.rs	/^pub unsafe fn complete(index: u32) {$/;"	f
+component	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/lib.rs	/^pub mod component;$/;"	n
+compute	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/crc.rs	/^    fn compute(&self, data: &[u8], CrcAlg) -> ReturnCode;$/;"	F	interface:CRC
+config_commit	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^    fn config_commit(&self);$/;"	F	interface:RadioConfig
+config_done	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^    fn config_done(&self, result: ReturnCode);$/;"	F	interface:ConfigClient
+configure	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^    fn configure(&self, params: hil::uart::UARTParameters) -> ReturnCode {$/;"	F	implementation:Uart
+configure	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/mod.rs	/^    fn configure(&self, Self::Config);$/;"	F	interface:Controller
+configure	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn configure(&self, cpol: ClockPolarity, cpal: ClockPhase);$/;"	F	interface:SpiSlaveDevice
+configure	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn configure(&self, cpol: ClockPolarity, cpal: ClockPhase, rate: u32);$/;"	F	interface:SpiMasterDevice
+configure	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^    fn configure(&self, params: UARTParameters) -> ReturnCode;$/;"	F	interface:UART
+configure_machine_trap_handler	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/lib.rs	/^pub unsafe fn configure_machine_trap_handler() {$/;"	f
+configure_mpu	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mpu.rs	/^    fn configure_mpu(&self, config: &Self::MpuConfig) {}$/;"	F	interface:MPU
+configure_supervisor_trap_handler	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/lib.rs	/^pub unsafe fn configure_supervisor_trap_handler() {$/;"	f
+configure_user_trap_handler	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/lib.rs	/^pub unsafe fn configure_user_trap_handler() {$/;"	f
+coreclkcfg	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/prci.rs	/^    coreclkcfg: ReadWrite<u32>,$/;"	m	struct:PrciRegisters
+count	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/pwm.rs	/^    count: ReadWrite<u32>,$/;"	m	struct:PwmRegisters
+count	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^    count: Cell<usize>,$/;"	m	struct:DebugWriter
+crate	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/callback.rs	/^    crate kernel: &'static Kernel,$/;"	m	struct:AppId
+crate	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    crate kernel: &'static Kernel,$/;"	m	struct:Grant
+crc	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/mod.rs	/^pub mod crc;$/;"	n
+create	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    crate unsafe fn create($/;"	F	implementation:Process
+create_capability	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/utils.rs	/^macro_rules! create_capability {$/;"	M
+create_grant	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/sched.rs	/^    pub fn create_grant<T: Default>($/;"	F	implementation:Kernel
+crypt	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/symmetric_encryption.rs	/^    fn crypt($/;"	F	interface:AES128
+crypt	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/symmetric_encryption.rs	/^    fn crypt($/;"	F	interface:AES128CCM
+crypt_done	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/symmetric_encryption.rs	/^    fn crypt_done(&'a self, source: Option<&'a mut [u8]>, dest: &'a mut [u8]);$/;"	F	interface:Client
+crypt_done	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/symmetric_encryption.rs	/^    fn crypt_done(&self, buf: &'static mut [u8], res: ReturnCode, tag_is_valid: bool);$/;"	F	interface:CCMClient
+ctrl_in	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    fn ctrl_in(&self, endpoint: usize) -> CtrlInResult;$/;"	F	interface:Client
+ctrl_out	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    fn ctrl_out(&self, endpoint: usize, packet_bytes: u32) -> CtrlOutResult;$/;"	F	interface:Client
+ctrl_setup	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    fn ctrl_setup(&self, endpoint: usize) -> CtrlSetupResult;$/;"	F	interface:Client
+ctrl_status	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    fn ctrl_status(&self, endpoint: usize);$/;"	F	interface:Client
+ctrl_status_complete	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    fn ctrl_status_complete(&self, endpoint: usize);$/;"	F	interface:Client
+cur	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/list.rs	/^    cur: Option<&'a T>,$/;"	m	struct:ListIterator
+current_stack_pointer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    current_stack_pointer: Cell<*const u8>,$/;"	m	struct:Process
+dac	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/mod.rs	/^pub mod dac;$/;"	n
+data	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    data: &'a mut T,$/;"	m	struct:Borrowed
+data	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    data: Unique<T>,$/;"	m	struct:Owned
+data	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/ipc.rs	/^    data: Grant<IPCData>,$/;"	m	struct:IPC
+debug	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^macro_rules! debug {$/;"	M
+debug	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/lib.rs	/^pub mod debug;$/;"	n
+debug	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    debug: MapCell<ProcessDebug>,$/;"	m	struct:Process
+debug_dropped_callback_count	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn debug_dropped_callback_count(&self) -> usize {$/;"	F	implementation:Process
+debug_dropped_callback_count	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn debug_dropped_callback_count(&self) -> usize;$/;"	F	interface:ProcessType
+debug_gpio	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^macro_rules! debug_gpio {$/;"	M
+debug_restart_count	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn debug_restart_count(&self) -> usize {$/;"	F	implementation:Process
+debug_restart_count	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn debug_restart_count(&self) -> usize;$/;"	F	interface:ProcessType
+debug_set_max_stack_depth	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn debug_set_max_stack_depth(&self) {$/;"	F	implementation:Process
+debug_syscall_count	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn debug_syscall_count(&self) -> usize {$/;"	F	implementation:Process
+debug_syscall_count	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn debug_syscall_count(&self) -> usize;$/;"	F	interface:ProcessType
+debug_timeslice_expiration_count	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn debug_timeslice_expiration_count(&self) -> usize {$/;"	F	implementation:Process
+debug_timeslice_expiration_count	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn debug_timeslice_expiration_count(&self) -> usize;$/;"	F	interface:ProcessType
+debug_timeslice_expired	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn debug_timeslice_expired(&self) {$/;"	F	implementation:Process
+debug_timeslice_expired	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn debug_timeslice_expired(&self);$/;"	F	interface:ProcessType
+debug_verbose	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^macro_rules! debug_verbose {$/;"	M
+decrement_work	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/sched.rs	/^    crate fn decrement_work(&self) {$/;"	F	implementation:Kernel
+default	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/ipc.rs	/^    fn default() -> IPCData {$/;"	F	implementation:IPCData
+deferred_call	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/mod.rs	/^pub mod deferred_call;$/;"	n
+dequeue	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/queue.rs	/^    fn dequeue(&mut self) -> Option<T>;$/;"	F	interface:Queue
+dequeue	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/ring_buffer.rs	/^    fn dequeue(&mut self) -> Option<T> {$/;"	F	implementation:RingBuffer
+dequeue_task	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn dequeue_task(&self) -> Option<Task> {$/;"	F	implementation:Process
+dequeue_task	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn dequeue_task(&self) -> Option<Task>;$/;"	F	interface:ProcessType
+deref	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/static_ref.rs	/^    fn deref(&self) -> &'static T {$/;"	F	implementation:StaticRef
+deref	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    fn deref(&self) -> &T {$/;"	F	implementation:Borrowed
+deref	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    fn deref(&self) -> &T {$/;"	F	implementation:Owned
+deref	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^    fn deref(&self) -> &T {$/;"	F	implementation:AppPtr
+deref_mut	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    fn deref_mut(&mut self) -> &mut T {$/;"	F	implementation:Borrowed
+deref_mut	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    fn deref_mut(&mut self) -> &mut T {$/;"	F	implementation:Owned
+deref_mut	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^    fn deref_mut(&mut self) -> &mut T {$/;"	F	implementation:AppPtr
+detach	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    fn detach(&self);$/;"	F	interface:UsbController
+disable	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    fn disable(&self) {$/;"	F	implementation:GpioPin
+disable	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/pwm.rs	/^    pub fn disable(&self) {$/;"	F	implementation:Pwm
+disable	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/rtc.rs	/^    pub fn disable(&self) {$/;"	F	implementation:Rtc
+disable	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/watchdog.rs	/^    pub fn disable(&self) {$/;"	F	implementation:Watchdog
+disable	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/crc.rs	/^    fn disable(&self);$/;"	F	interface:CRC
+disable	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio.rs	/^    fn disable(&self);$/;"	F	interface:Pin
+disable	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio_async.rs	/^    fn disable(&self, pin: usize) -> ReturnCode;$/;"	F	interface:Port
+disable	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    fn disable(&self);$/;"	F	interface:I2CDevice
+disable	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    fn disable(&self);$/;"	F	interface:I2CMaster
+disable	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    fn disable(&self);$/;"	F	interface:I2CSlave
+disable	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/symmetric_encryption.rs	/^    fn disable(&self);$/;"	F	interface:AES128
+disable	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^    fn disable(&self);$/;"	F	interface:Time
+disable	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mod.rs	/^    fn disable(&self) {}$/;"	F	implementation:NoClockControl
+disable	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mod.rs	/^    fn disable(&self);$/;"	F	interface:ClockInterface
+disable_all_sources	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/plic.rs	/^pub unsafe fn disable_all_sources() {$/;"	f
+disable_interrupt	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    fn disable_interrupt(&self) {$/;"	F	implementation:GpioPin
+disable_interrupt	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio.rs	/^    fn disable_interrupt(&self);$/;"	F	interface:Pin
+disable_interrupt	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio_async.rs	/^    fn disable_interrupt(&self, pin: usize) -> ReturnCode;$/;"	F	interface:Port
+disable_interrupts	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/plic.rs	/^pub unsafe fn disable_interrupts() {$/;"	f
+disable_mpu	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mpu.rs	/^    fn disable_mpu(&self) {}$/;"	F	interface:MPU
+disable_tx_interrupt	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^    fn disable_tx_interrupt(&self) {$/;"	F	implementation:Uart
+div	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^    div: ReadWrite<u32, div::Register>,$/;"	m	struct:UartRegisters
+do_process	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/sched.rs	/^    unsafe fn do_process<P: Platform, C: Chip>($/;"	F	implementation:Kernel
+done	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio_async.rs	/^    fn done(&self, value: usize);$/;"	F	interface:Client
+drive	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    drive: ReadWrite<u32, pins::Register>,$/;"	m	struct:GpioRegisters
+driver	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/lib.rs	/^mod driver;$/;"	n
+drop	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/peripherals.rs	/^    fn drop(&mut self) {$/;"	f
+drop	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    fn drop(&mut self) {$/;"	F	implementation:Owned
+drop	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^    fn drop(&mut self) {$/;"	F	implementation:AppPtr
+dropped_callback_count	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    dropped_callback_count: usize,$/;"	m	struct:ProcessDebug
+dw	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^    dw: MapCell<&'static DebugWriter>,$/;"	m	struct:DebugWriterWrapper
+each	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    pub fn each<F>(&self, fun: F)$/;"	F	implementation:Grant
+eh_personality	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/support.rs	/^pub extern "C" fn eh_personality() {}$/;"	f
+empty	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/list.rs	/^    pub const fn empty() -> ListLink<'a, T> {$/;"	F	implementation:ListLink
+empty	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/queue.rs	/^    fn empty(&mut self);$/;"	F	interface:Queue
+empty	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/ring_buffer.rs	/^    fn empty(&mut self) {$/;"	F	implementation:RingBuffer
+enable	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    fn enable(&self);$/;"	F	interface:I2CDevice
+enable	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    fn enable(&self);$/;"	F	interface:I2CMaster
+enable	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    fn enable(&self);$/;"	F	interface:I2CSlave
+enable	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/symmetric_encryption.rs	/^    fn enable(&self);$/;"	F	interface:AES128
+enable	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    fn enable(&self);$/;"	F	interface:Client
+enable	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mod.rs	/^    fn enable(&self) {}$/;"	F	implementation:NoClockControl
+enable	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mod.rs	/^    fn enable(&self);$/;"	F	interface:ClockInterface
+enable	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/systick.rs	/^    fn enable(&self, _: bool) {}$/;"	F	implementation:SysTick
+enable	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/systick.rs	/^    fn enable(&self, with_interrupt: bool);$/;"	F	interface:SysTick
+enable_address	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    fn enable_address(&self);$/;"	F	interface:UsbController
+enable_all_sources	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/plic.rs	/^pub unsafe fn enable_all_sources() {$/;"	f
+enable_as_device	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    fn enable_as_device(&self, speed: DeviceSpeed);$/;"	F	interface:UsbController
+enable_interrupt	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    fn enable_interrupt(&self, client_data: usize, mode: hil::gpio::InterruptMode) {$/;"	F	implementation:GpioPin
+enable_interrupt	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio.rs	/^    fn enable_interrupt(&self, identifier: usize, mode: InterruptMode);$/;"	F	interface:Pin
+enable_interrupt	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio_async.rs	/^    fn enable_interrupt($/;"	F	interface:Port
+enable_interrupts	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/plic.rs	/^pub unsafe fn enable_interrupts() {$/;"	f
+enable_mpu	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mpu.rs	/^    fn enable_mpu(&self) {}$/;"	F	interface:MPU
+enable_tx_interrupt	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^    fn enable_tx_interrupt(&self) {$/;"	F	implementation:Uart
+enabled	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    crate fn enabled(&self) -> bool {$/;"	F	implementation:TbfHeader
+endpoint_bulk_in_enable	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    fn endpoint_bulk_in_enable(&self, endpoint: usize);$/;"	F	interface:UsbController
+endpoint_bulk_out_enable	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    fn endpoint_bulk_out_enable(&self, endpoint: usize);$/;"	F	interface:UsbController
+endpoint_bulk_resume	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    fn endpoint_bulk_resume(&self, endpoint: usize);$/;"	F	interface:UsbController
+endpoint_ctrl_out_enable	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    fn endpoint_ctrl_out_enable(&self, endpoint: usize);$/;"	F	interface:UsbController
+endpoint_set_buffer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    fn endpoint_set_buffer(&self, endpoint: usize, buf: &[VolatileCell<u8>]);$/;"	F	interface:UsbController
+enqueue	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/queue.rs	/^    fn enqueue(&mut self, val: T) -> bool;$/;"	F	interface:Queue
+enqueue	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/ring_buffer.rs	/^    fn enqueue(&mut self, val: T) -> bool {$/;"	F	implementation:RingBuffer
+enqueue_task	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn enqueue_task(&self, task: Task) -> bool {$/;"	F	implementation:Process
+enqueue_task	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn enqueue_task(&self, task: Task) -> bool;$/;"	F	interface:ProcessType
+enter	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    pub fn enter<F, R>(&self, appid: AppId, fun: F) -> Result<R, Error>$/;"	F	implementation:Grant
+enter	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    pub fn enter<F, R>(self, fun: F) -> R$/;"	F	implementation:AppliedGrant
+entropy	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/mod.rs	/^pub mod entropy;$/;"	n
+entropy_available	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/entropy.rs	/^    fn entropy_available(&self, entropy: &mut Iterator<Item = u32>, error: ReturnCode) -> Contin/;"	F	interface:Client32
+entropy_available	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/entropy.rs	/^    fn entropy_available(&self, entropy: &mut Iterator<Item = u8>, error: ReturnCode) -> Continu/;"	F	interface:Client8
+eq	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/callback.rs	/^    fn eq(&self, other: &AppId) -> bool {$/;"	F	implementation:AppId
+erase_complete	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/flash.rs	/^    fn erase_complete(&self, error: Error);$/;"	F	interface:Client
+erase_page	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/flash.rs	/^    fn erase_page(&self, page_number: usize) -> ReturnCode;$/;"	F	interface:Flash
+exp	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/math.rs	/^    pub fn exp<R>(self) -> R$/;"	F	implementation:PowerOfTwo
+expose_to	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^    crate unsafe fn expose_to(&self, appid: AppId) -> bool {$/;"	F	implementation:AppSlice
+extract	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^    fn extract(&self) -> Option<(usize, usize, &mut [u8])> {$/;"	F	implementation:DebugWriter
+extract	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^    fn extract(&self) -> Option<(usize, usize, &mut [u8])> {$/;"	F	implementation:DebugWriterWrapper
+fall_ie	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    fall_ie: ReadWrite<u32, pins::Register>,$/;"	m	struct:GpioRegisters
+fall_ip	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    fall_ip: ReadWrite<u32, pins::Register>,$/;"	m	struct:GpioRegisters
+fault_fmt	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/syscall.rs	/^    unsafe fn fault_fmt(&self, writer: &mut Write) {}$/;"	F	implementation:SysCall
+fault_fmt	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    unsafe fn fault_fmt(&self, writer: &mut Write) {$/;"	F	implementation:Process
+fault_fmt	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    unsafe fn fault_fmt(&self, writer: &mut Write);$/;"	F	interface:ProcessType
+fault_fmt	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/syscall.rs	/^    unsafe fn fault_fmt(&self, writer: &mut Write);$/;"	F	interface:UserspaceKernelBoundary
+feed	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/watchdog.rs	/^    fn feed(&self) {$/;"	F	implementation:Watchdog
+fetch_or_relaxed	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/deferred_call.rs	/^    crate fn fetch_or_relaxed(&self, val: usize) {$/;"	F	implementation:AtomicUsize
+finalize	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/component.rs	/^    unsafe fn finalize(&mut self) -> Self::Output;$/;"	F	interface:Component
+fired	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/analog_comparator.rs	/^    fn fired(&self, usize);$/;"	F	interface:Client
+fired	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio.rs	/^    fn fired(&self, identifier: usize);$/;"	F	interface:Client
+fired	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio_async.rs	/^    fn fired(&self, pin: usize, identifier: usize);$/;"	F	interface:Client
+fired	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^    fn fired(&self);$/;"	F	interface:Client
+flags	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    flags: u32,$/;"	m	struct:TbfHeaderV2Base
+flash	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/mod.rs	/^pub mod flash;$/;"	n
+flash	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    flash: &'static [u8],$/;"	m	struct:Process
+flash_end	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn flash_end(&self) -> *const u8 {$/;"	F	implementation:Process
+flash_end	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn flash_end(&self) -> *const u8;$/;"	F	interface:ProcessType
+flash_non_protected_start	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn flash_non_protected_start(&self) -> *const u8 {$/;"	F	implementation:Process
+flash_non_protected_start	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn flash_non_protected_start(&self) -> *const u8;$/;"	F	interface:ProcessType
+flash_start	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn flash_start(&self) -> *const u8 {$/;"	F	implementation:Process
+flash_start	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn flash_start(&self) -> *const u8;$/;"	F	interface:ProcessType
+floor	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/math.rs	/^    pub fn floor<F: Into<u32>>(f: F) -> PowerOfTwo {$/;"	F	implementation:PowerOfTwo
+flush	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^pub unsafe fn flush<W: Write>(writer: &mut W) {$/;"	f
+fmt	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/callback.rs	/^    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {$/;"	F	implementation:AppId
+fmt	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    fn fmt(&self, fmt: &mut Formatter) -> Result {$/;"	F	implementation:Error
+fn_ptr	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/callback.rs	/^    fn_ptr: NonNull<*mut ()>,$/;"	m	struct:Callback
+free	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    unsafe fn free(&self, _: *mut u8) {}$/;"	F	implementation:Process
+free	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    unsafe fn free(&self, _: *mut u8);$/;"	F	interface:ProcessType
+frequency	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^    fn frequency() -> u32 {$/;"	F	implementation:Freq16KHz
+frequency	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^    fn frequency() -> u32 {$/;"	F	implementation:Freq16MHz
+frequency	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^    fn frequency() -> u32 {$/;"	F	implementation:Freq1KHz
+frequency	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^    fn frequency() -> u32 {$/;"	F	implementation:Freq32KHz
+frequency	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^    fn frequency() -> u32;$/;"	F	interface:Frequency
+from	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn from(err: Error) -> ReturnCode {$/;"	F	implementation:ReturnCode
+from	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/returncode.rs	/^    fn from(original: ReturnCode) -> isize {$/;"	F	implementation:isize
+from	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/returncode.rs	/^    fn from(original: ReturnCode) -> usize {$/;"	F	implementation:usize
+get	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/entropy.rs	/^    fn get(&self) -> ReturnCode;$/;"	F	interface:Entropy32
+get	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/entropy.rs	/^    fn get(&self) -> ReturnCode;$/;"	F	interface:Entropy8
+get	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/rng.rs	/^    fn get(&self) -> ReturnCode;$/;"	F	interface:Rng
+get_address	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^    fn get_address(&self) -> u16; \/\/....... The local 16-bit address$/;"	F	interface:RadioConfig
+get_address_long	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^    fn get_address_long(&self) -> [u8; 8]; \/\/ 64-bit address$/;"	F	interface:RadioConfig
+get_alarm	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^    fn get_alarm(&self) -> u32;$/;"	F	interface:Alarm
+get_channel	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^    fn get_channel(&self) -> u8; \/\/ ....... The 802.15.4 channel$/;"	F	interface:RadioConfig
+get_channel_index	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    pub fn get_channel_index(&self) -> u32 {$/;"	F	implementation:RadioChannel
+get_clock	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/peripherals.rs	/^    fn get_clock(&self) -> &C;$/;"	F	interface:PeripheralManagement
+get_clock	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn get_clock(&self) -> ClockPolarity;$/;"	F	interface:SpiMaster
+get_clock	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn get_clock(&self) -> ClockPolarity;$/;"	F	interface:SpiSlave
+get_count	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^    fn get_count(&self) -> usize {$/;"	F	implementation:DebugWriter
+get_count	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^    fn get_count(&self) -> usize {$/;"	F	implementation:DebugWriterWrapper
+get_debug_writer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^pub unsafe fn get_debug_writer() -> &'static mut DebugWriterWrapper {$/;"	f
+get_editable_flash_range	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/callback.rs	/^    pub fn get_editable_flash_range(&self) -> (usize, usize) {$/;"	F	implementation:AppId
+get_errno	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/math.rs	/^pub fn get_errno() -> i32 {$/;"	f
+get_grant_count_and_finalize	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/sched.rs	/^    crate fn get_grant_count_and_finalize(&self) -> usize {$/;"	F	implementation:Kernel
+get_init_function_offset	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    crate fn get_init_function_offset(&self) -> u32 {$/;"	F	implementation:TbfHeader
+get_minimum_app_ram_size	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    crate fn get_minimum_app_ram_size(&self) -> u32 {$/;"	F	implementation:TbfHeader
+get_package_name	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    crate fn get_package_name(&self) -> &'static str {$/;"	F	implementation:TbfHeader
+get_pan	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^    fn get_pan(&self) -> u16; \/\/........... The 16-bit PAN ID$/;"	F	interface:RadioConfig
+get_phase	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn get_phase(&self) -> ClockPhase;$/;"	F	interface:SpiMaster
+get_phase	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn get_phase(&self) -> ClockPhase;$/;"	F	interface:SpiMasterDevice
+get_phase	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn get_phase(&self) -> ClockPhase;$/;"	F	interface:SpiSlave
+get_phase	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn get_phase(&self) -> ClockPhase;$/;"	F	interface:SpiSlaveDevice
+get_polarity	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn get_polarity(&self) -> ClockPolarity;$/;"	F	interface:SpiMasterDevice
+get_polarity	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn get_polarity(&self) -> ClockPolarity;$/;"	F	interface:SpiSlaveDevice
+get_process_name	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn get_process_name(&self) -> &'static str {$/;"	F	implementation:Process
+get_process_name	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn get_process_name(&self) -> &'static str;$/;"	F	interface:ProcessType
+get_protected_size	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    crate fn get_protected_size(&self) -> u32 {$/;"	F	implementation:TbfHeader
+get_rate	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn get_rate(&self) -> u32;$/;"	F	interface:SpiMaster
+get_rate	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn get_rate(&self) -> u32;$/;"	F	interface:SpiMasterDevice
+get_registers	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/peripherals.rs	/^    fn get_registers(&self) -> &Self::RegisterType;$/;"	F	interface:PeripheralManagement
+get_resolution_bits	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/adc.rs	/^    fn get_resolution_bits(&self) -> usize;$/;"	F	interface:Adc
+get_state	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn get_state(&self) -> State {$/;"	F	implementation:Process
+get_state	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn get_state(&self) -> State;$/;"	F	interface:ProcessType
+get_syscall	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/syscall.rs	/^    unsafe fn get_syscall(&self, _stack_pointer: *const usize) -> Option<kernel::syscall::Syscal/;"	F	implementation:SysCall
+get_syscall	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    unsafe fn get_syscall(&self) -> Option<Syscall> {$/;"	F	implementation:Process
+get_syscall	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    unsafe fn get_syscall(&self) -> Option<Syscall>;$/;"	F	interface:ProcessType
+get_syscall	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/syscall.rs	/^    unsafe fn get_syscall(&self, stack_pointer: *const usize) -> Option<Syscall>;$/;"	F	interface:UserspaceKernelBoundary
+get_total_size	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    crate fn get_total_size(&self) -> u32 {$/;"	F	implementation:TbfHeader
+get_tx_power	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^    fn get_tx_power(&self) -> i8; \/\/....... The transmit power, in dBm$/;"	F	interface:RadioConfig
+get_voltage_reference_mv	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/adc.rs	/^    fn get_voltage_reference_mv(&self) -> Option<usize>;$/;"	F	interface:Adc
+get_writeable_flash_region	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn get_writeable_flash_region(&self, region_index: usize) -> (u32, u32) {$/;"	F	implementation:Process
+get_writeable_flash_region	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn get_writeable_flash_region(&self, region_index: usize) -> (u32, u32);$/;"	F	interface:ProcessType
+get_writeable_flash_region	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    crate fn get_writeable_flash_region(&self, index: usize) -> (u32, u32) {$/;"	F	implementation:TbfHeader
+gpio	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/lib.rs	/^pub mod gpio;$/;"	n
+gpio	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/lib.rs	/^pub mod gpio;$/;"	n
+gpio	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/mod.rs	/^pub mod gpio;$/;"	n
+gpio_async	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/mod.rs	/^pub mod gpio_async;$/;"	n
+grant	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    grant: &'a Grant<T>,$/;"	m	struct:Iter
+grant	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    grant: *mut T,$/;"	m	struct:AppliedGrant
+grant	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    pub fn grant(&self, appid: AppId) -> Option<AppliedGrant<T>> {$/;"	F	implementation:Grant
+grant	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/lib.rs	/^mod grant;$/;"	n
+grant_counter	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/sched.rs	/^    grant_counter: Cell<usize>,$/;"	m	struct:Kernel
+grant_num	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    grant_num: usize,$/;"	m	struct:Grant
+grant_ptr	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    unsafe fn grant_ptr(&self, grant_num: usize) -> *mut *mut u8 {$/;"	F	implementation:Process
+grant_ptr	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    unsafe fn grant_ptr(&self, grant_num: usize) -> *mut *mut u8;$/;"	F	interface:ProcessType
+grant_ptrs_reset	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    unsafe fn grant_ptrs_reset(&self) {$/;"	F	implementation:Process
+grants_finalized	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/sched.rs	/^    grants_finalized: Cell<bool>,$/;"	m	struct:Kernel
+greater_than	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/systick.rs	/^    fn greater_than(&self, _: u32) -> bool {$/;"	F	implementation:SysTick
+greater_than	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/systick.rs	/^    fn greater_than(&self, us: u32) -> bool;$/;"	F	interface:SysTick
+handle_interrupt	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    pub fn handle_interrupt(&self) {$/;"	F	implementation:GpioPin
+handle_interrupt	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^    pub fn handle_interrupt(&self) {$/;"	F	implementation:Uart
+hardfault_all_apps	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/sched.rs	/^    pub fn hardfault_all_apps<C: capabilities::ProcessManagementCapability>(&self, _c: &C) {$/;"	F	implementation:Kernel
+has_client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn has_client(&self) -> bool;$/;"	F	interface:SpiSlave
+has_elements	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/queue.rs	/^    fn has_elements(&self) -> bool;$/;"	F	interface:Queue
+has_elements	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/ring_buffer.rs	/^    fn has_elements(&self) -> bool {$/;"	F	implementation:RingBuffer
+has_pending	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/plic.rs	/^pub unsafe fn has_pending() -> bool {$/;"	f
+has_pending_interrupts	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/chip.rs	/^    fn has_pending_interrupts(&self) -> bool {$/;"	F	implementation:ArtyExx
+has_pending_interrupts	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mod.rs	/^    fn has_pending_interrupts(&self) -> bool;$/;"	F	interface:Chip
+has_tasks	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/deferred_call.rs	/^pub fn has_tasks() -> bool {$/;"	f
+head	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/list.rs	/^    head: ListLink<'a, T>,$/;"	m	struct:List
+head	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/list.rs	/^    pub fn head(&self) -> Option<&'a T> {$/;"	F	implementation:List
+head	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/ring_buffer.rs	/^    head: usize,$/;"	m	struct:RingBuffer
+head	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^    head: Cell<usize>,$/;"	m	struct:DebugWriter
+header	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    header: tbfheader::TbfHeader,$/;"	m	struct:Process
+header_size	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    header_size: u16,$/;"	m	struct:TbfHeaderV2Base
+hfrosccfg	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/prci.rs	/^    hfrosccfg: ReadWrite<u32, hfrosccfg::Register>,$/;"	m	struct:PrciRegisters
+hfxosccfg	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/prci.rs	/^    hfxosccfg: ReadWrite<u32, hfxosccfg::Register>,$/;"	m	struct:PrciRegisters
+high_ie	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    high_ie: ReadWrite<u32, pins::Register>,$/;"	m	struct:GpioRegisters
+high_ip	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    high_ip: ReadWrite<u32, pins::Register>,$/;"	m	struct:GpioRegisters
+hil	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^    Option<&'static hil::gpio::Pin>,$/;"	v
+hil	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/lib.rs	/^pub mod hil;$/;"	n
+hold_low	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn hold_low(&self);$/;"	F	interface:SpiMaster
+hw_flow_control	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^    pub hw_flow_control: bool,$/;"	m	struct:UARTParameters
+i2c	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/mod.rs	/^pub mod i2c;$/;"	n
+idx	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/callback.rs	/^    idx: usize,$/;"	m	struct:AppId
+idx	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/callback.rs	/^    pub fn idx(&self) -> usize {$/;"	F	implementation:AppId
+ie	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^    ie: ReadWrite<u32, interrupt::Register>,$/;"	m	struct:UartRegisters
+in_app_owned_memory	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn in_app_owned_memory(&self, buf_start_addr: *const u8, size: usize) -> bool {$/;"	F	implementation:Process
+increment_count	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^    fn increment_count(&self) {$/;"	F	implementation:DebugWriter
+increment_count	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^    fn increment_count(&self) {$/;"	F	implementation:DebugWriterWrapper
+increment_work	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/sched.rs	/^    crate fn increment_work(&self) {$/;"	F	implementation:Kernel
+index	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/gpio.rs	/^    fn index(&self, index: usize) -> &GpioPin {$/;"	F	implementation:Port
+index	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^    index: Cell<usize>,$/;"	m	struct:Uart
+index	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    index: usize,$/;"	m	struct:Iter
+index_mut	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/gpio.rs	/^    fn index_mut(&mut self, index: usize) -> &mut GpioPin {$/;"	F	implementation:Port
+init	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/led.rs	/^    fn init(&mut self) {$/;"	F	implementation:LedHigh
+init	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/led.rs	/^    fn init(&mut self) {$/;"	F	implementation:LedLow
+init	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/led.rs	/^    fn init(&mut self);$/;"	F	interface:Led
+init	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn init(&self);$/;"	F	interface:SpiMaster
+init	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn init(&self);$/;"	F	interface:SpiSlave
+init_fn_offset	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    init_fn_offset: u32,$/;"	m	struct:TbfHeaderV2Main
+init_memory	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/lib.rs	/^pub unsafe fn init_memory() {$/;"	f
+initialize	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/dac.rs	/^    fn initialize(&self) -> ReturnCode;$/;"	F	interface:DacChannel
+initialize	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^    fn initialize($/;"	F	interface:RadioConfig
+initialize	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/rng.rs	/^    fn initialize(&'a self);$/;"	F	interface:Random
+initialize_gpio_pins	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^    pub fn initialize_gpio_pins(&self, tx: &gpio::GpioPin, rx: &gpio::GpioPin) {$/;"	F	implementation:Uart
+input_en	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    input_en: ReadWrite<u32, pins::Register>,$/;"	m	struct:GpioRegisters
+internal_buffer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^    internal_buffer: TakeCell<'static, [u8]>,$/;"	m	struct:DebugWriter
+interrupts	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/lib.rs	/^pub mod interrupts;$/;"	n
+introspection	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/lib.rs	/^pub mod introspection;$/;"	n
+iof0	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    pub fn iof0(&self) {$/;"	F	implementation:GpioPin
+iof1	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    pub fn iof1(&self) {$/;"	F	implementation:GpioPin
+iof_en	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    iof_en: ReadWrite<u32, pins::Register>,$/;"	m	struct:GpioRegisters
+iof_sel	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    iof_sel: ReadWrite<u32, pins::Register>,$/;"	m	struct:GpioRegisters
+ip	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^    ip: ReadOnly<u32, interrupt::Register>,$/;"	m	struct:UartRegisters
+ipc	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/lib.rs	/^pub mod ipc;$/;"	n
+is_app	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    crate fn is_app(&self) -> bool {$/;"	F	implementation:TbfHeader
+is_armed	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^    fn is_armed(&self) -> bool;$/;"	F	interface:Time
+is_busy	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn is_busy(&self) -> bool;$/;"	F	interface:SpiMaster
+is_enabled	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mod.rs	/^    fn is_enabled(&self) -> bool {$/;"	F	implementation:NoClockControl
+is_enabled	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mod.rs	/^    fn is_enabled(&self) -> bool;$/;"	F	interface:ClockInterface
+is_full	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/queue.rs	/^    fn is_full(&self) -> bool;$/;"	F	interface:Queue
+is_full	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/ring_buffer.rs	/^    fn is_full(&self) -> bool {$/;"	F	implementation:RingBuffer
+is_on	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^    fn is_on(&self) -> bool;$/;"	F	interface:RadioConfig
+isize	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/returncode.rs	/^impl From<ReturnCode> for isize {$/;"	c
+iter	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/list.rs	/^    pub fn iter(&self) -> ListIterator<'a, T> {$/;"	F	implementation:List
+iter	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    pub fn iter(&self) -> Iter<T> {$/;"	F	implementation:Grant
+iter	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^    pub fn iter(&self) -> slice::Iter<T> {$/;"	F	implementation:AppSlice
+iter_mut	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^    pub fn iter_mut(&mut self) -> slice::IterMut<T> {$/;"	F	implementation:AppSlice
+kernel	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/introspection.rs	/^    kernel: &'static Kernel,$/;"	m	struct:KernelInfo
+kernel	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    kernel: &'static Kernel,$/;"	m	struct:Process
+kernel_loop	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/sched.rs	/^    pub fn kernel_loop<P: Platform, C: Chip>($/;"	F	implementation:Kernel
+kernel_memory_break	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn kernel_memory_break(&self) -> *const u8 {$/;"	F	implementation:Process
+kernel_memory_break	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn kernel_memory_break(&self) -> *const u8;$/;"	F	interface:ProcessType
+kernel_memory_break	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    kernel_memory_break: Cell<*const u8>,$/;"	m	struct:Process
+last_syscall	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    last_syscall: Option<Syscall>,$/;"	m	struct:ProcessDebug
+led	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/mod.rs	/^pub mod led;$/;"	n
+len	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^    len: Cell<usize>,$/;"	m	struct:Uart
+len	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/queue.rs	/^    fn len(&self) -> usize;$/;"	F	interface:Queue
+len	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/ring_buffer.rs	/^    fn len(&self) -> usize {$/;"	F	implementation:RingBuffer
+len	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    len: usize,$/;"	m	struct:Iter
+len	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^    len: usize,$/;"	m	struct:AppSlice
+len	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^    pub fn len(&self) -> usize {$/;"	F	implementation:AppSlice
+length	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    length: u16,$/;"	m	struct:TbfHeaderTlv
+list	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/mod.rs	/^pub mod list;$/;"	n
+listen	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    fn listen(&self);$/;"	F	interface:I2CSlave
+load_processes	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^pub fn load_processes<C: Chip>($/;"	f
+load_relaxed	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/deferred_call.rs	/^    crate fn load_relaxed(&self) -> usize {$/;"	F	implementation:AtomicUsize
+log_base_two	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/math.rs	/^pub fn log_base_two(num: u32) -> u32 {$/;"	f
+log_base_two_u64	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/math.rs	/^pub fn log_base_two_u64(num: u64) -> u32 {$/;"	f
+low_ie	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    low_ie: ReadWrite<u32, pins::Register>,$/;"	m	struct:GpioRegisters
+low_ip	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    low_ip: ReadWrite<u32, pins::Register>,$/;"	m	struct:GpioRegisters
+m_claim_complete	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/plic.rs	/^    m_claim_complete: ReadWrite<u32>,$/;"	m	struct:PlicRegisters
+m_enable	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/plic.rs	/^    m_enable: [ReadWrite<u32, Enable::Register>; (0x0C00_2014 - 0x0C00_2000) \/ 0x4],$/;"	m	struct:PlicRegisters
+m_priority_threshold	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/plic.rs	/^    m_priority_threshold: ReadWrite<u32, PriorityThreshold::Register>,$/;"	m	struct:PlicRegisters
+machine_clear_pending_bit	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/plic.rs	/^pub unsafe fn machine_clear_pending_bit(id: u32) {$/;"	f
+main	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    main: Option<&'static TbfHeaderV2Main>,$/;"	m	struct:TbfHeaderV2
+make_input	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    fn make_input(&self) {$/;"	F	implementation:GpioPin
+make_input	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio.rs	/^    fn make_input(&self);$/;"	F	interface:Pin
+make_input	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio_async.rs	/^    fn make_input(&self, pin: usize, mode: hil::gpio::InputMode) -> ReturnCode;$/;"	F	interface:Port
+make_output	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    fn make_output(&self) {$/;"	F	implementation:GpioPin
+make_output	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio.rs	/^    fn make_output(&self);$/;"	F	interface:Pin
+make_output	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio_async.rs	/^    fn make_output(&self, pin: usize) -> ReturnCode;$/;"	F	interface:Port
+math	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/mod.rs	/^pub mod math;$/;"	n
+mem	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/lib.rs	/^mod mem;$/;"	n
+mem_end	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn mem_end(&self) -> *const u8 {$/;"	F	implementation:Process
+mem_end	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn mem_end(&self) -> *const u8;$/;"	F	interface:ProcessType
+mem_start	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn mem_start(&self) -> *const u8 {$/;"	F	implementation:Process
+mem_start	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn mem_start(&self) -> *const u8;$/;"	F	interface:ProcessType
+memop	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/lib.rs	/^mod memop;$/;"	n
+memop	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/memop.rs	/^crate fn memop(process: &ProcessType, op_type: usize, r1: usize) -> ReturnCode {$/;"	f
+memory	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    memory: &'static mut [u8],$/;"	m	struct:Process
+min_stack_pointer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    min_stack_pointer: *const u8,$/;"	m	struct:ProcessDebug
+minimum_ram_size	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    minimum_ram_size: u32,$/;"	m	struct:TbfHeaderV2Main
+mpu	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/chip.rs	/^    fn mpu(&self) -> &Self::MPU {$/;"	F	implementation:ArtyExx
+mpu	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mod.rs	/^    fn mpu(&self) -> &Self::MPU;$/;"	F	interface:Chip
+mpu	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mod.rs	/^pub mod mpu;$/;"	n
+new	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/syscall.rs	/^    pub const unsafe fn new() -> SysCall {$/;"	F	implementation:SysCall
+new	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/chip.rs	/^    pub unsafe fn new() -> ArtyExx {$/;"	F	implementation:ArtyExx
+new	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    pub const fn new($/;"	F	implementation:GpioPin
+new	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/prci.rs	/^    pub const fn new(base: StaticRef<PrciRegisters>) -> Prci {$/;"	F	implementation:Prci
+new	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/pwm.rs	/^    pub const fn new(base: StaticRef<PwmRegisters>) -> Pwm {$/;"	F	implementation:Pwm
+new	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/rtc.rs	/^    pub const fn new(base: StaticRef<RtcRegisters>) -> Rtc {$/;"	F	implementation:Rtc
+new	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^    pub const fn new(base: StaticRef<UartRegisters>) -> Uart {$/;"	F	implementation:Uart
+new	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/watchdog.rs	/^    pub const fn new(base: StaticRef<WatchdogRegisters>) -> Watchdog {$/;"	F	implementation:Watchdog
+new	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/callback.rs	/^    crate fn new(appid: AppId, appdata: usize, fn_ptr: NonNull<*mut ()>) -> Callback {$/;"	F	implementation:Callback
+new	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/callback.rs	/^    crate fn new(kernel: &'static Kernel, idx: usize) -> AppId {$/;"	F	implementation:AppId
+new	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/deferred_call.rs	/^    crate const fn new(v: usize) -> AtomicUsize {$/;"	F	implementation:AtomicUsize
+new	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/deferred_call.rs	/^    pub const unsafe fn new(task: T) -> Self {$/;"	F	implementation:DeferredCall
+new	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/list.rs	/^    pub const fn new() -> List<'a, T> {$/;"	F	implementation:List
+new	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/peripherals.rs	/^    pub fn new(peripheral_hardware: &'a H) -> PeripheralManager<'a, H, C> {$/;"	f
+new	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/ring_buffer.rs	/^    pub fn new(ring: &'a mut [T]) -> RingBuffer<'a, T> {$/;"	F	implementation:RingBuffer
+new	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/static_ref.rs	/^    pub const unsafe fn new(ptr: *const T) -> StaticRef<T> {$/;"	F	implementation:StaticRef
+new	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^    pub fn new($/;"	F	implementation:DebugWriter
+new	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^    pub fn new(dw: &'static DebugWriter) -> DebugWriterWrapper {$/;"	F	implementation:DebugWriterWrapper
+new	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    crate fn new(kernel: &'static Kernel, grant_index: usize) -> Grant<T> {$/;"	F	implementation:Grant
+new	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    pub fn new(data: &'a mut T, appid: AppId) -> Borrowed<'a, T> {$/;"	F	implementation:Borrowed
+new	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    unsafe fn new(data: *mut T, appid: AppId) -> Owned<T> {$/;"	F	implementation:Owned
+new	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/led.rs	/^    pub fn new(p: &'a mut gpio::Pin) -> LedHigh {$/;"	F	implementation:LedHigh
+new	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/led.rs	/^    pub fn new(p: &'a mut gpio::Pin) -> LedLow {$/;"	F	implementation:LedLow
+new	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/introspection.rs	/^    pub fn new(kernel: &'static Kernel) -> KernelInfo {$/;"	F	implementation:KernelInfo
+new	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/ipc.rs	/^    pub fn new(kernel: &'static Kernel, capability: &MemoryAllocationCapability) -> IPC {$/;"	F	implementation:IPC
+new	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^    crate fn new(ptr: *mut T, len: usize, appid: AppId) -> AppSlice<L, T> {$/;"	F	implementation:AppSlice
+new	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^    unsafe fn new(ptr: *mut T, appid: AppId) -> AppPtr<L, T> {$/;"	F	implementation:AppPtr
+new	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mpu.rs	/^    pub fn new(start_address: *const u8, size: usize) -> Region {$/;"	F	implementation:Region
+new	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/sched.rs	/^    pub fn new(processes: &'static [Option<&'static process::ProcessType>]) -> Kernel {$/;"	F	implementation:Kernel
+next	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/list.rs	/^    fn next(&'a self) -> &'a ListLink<'a, T>;$/;"	F	interface:ListNode
+next	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/list.rs	/^    fn next(&mut self) -> Option<&'a T> {$/;"	F	implementation:ListIterator
+next	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    fn next(&mut self) -> Option<Self::Item> {$/;"	F	implementation:Iter
+next_pending	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/deferred_call.rs	/^    pub fn next_pending() -> Option<T> {$/;"	F	implementation:DeferredCall
+nonvolatile_storage	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/mod.rs	/^pub mod nonvolatile_storage;$/;"	n
+nop	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/support.rs	/^pub fn nop() {$/;"	f
+now	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^    fn now(&self) -> u32;$/;"	F	interface:Alarm
+number_active_processes	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/introspection.rs	/^    pub fn number_active_processes(&self, _capability: &ProcessManagementCapability) -> usize {$/;"	F	implementation:KernelInfo
+number_app_dropped_callbacks	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/introspection.rs	/^    pub fn number_app_dropped_callbacks($/;"	F	implementation:KernelInfo
+number_app_restarts	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/introspection.rs	/^    pub fn number_app_restarts($/;"	F	implementation:KernelInfo
+number_app_syscalls	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/introspection.rs	/^    pub fn number_app_syscalls($/;"	F	implementation:KernelInfo
+number_app_timeslice_expirations	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/introspection.rs	/^    pub fn number_app_timeslice_expirations($/;"	F	implementation:KernelInfo
+number_inactive_processes	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/introspection.rs	/^    pub fn number_inactive_processes(&self, _capability: &ProcessManagementCapability) -> usize /;"	F	implementation:KernelInfo
+number_loaded_processes	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/introspection.rs	/^    pub fn number_loaded_processes(&self, _capability: &ProcessManagementCapability) -> usize {$/;"	F	implementation:KernelInfo
+number_of_process_slots	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/sched.rs	/^    crate fn number_of_process_slots(&self) -> usize {$/;"	F	implementation:Kernel
+number_total_regions	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mpu.rs	/^    fn number_total_regions(&self) -> usize {$/;"	F	interface:MPU
+number_writeable_flash_regions	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn number_writeable_flash_regions(&self) -> usize {$/;"	F	implementation:Process
+number_writeable_flash_regions	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn number_writeable_flash_regions(&self) -> usize;$/;"	F	interface:ProcessType
+number_writeable_flash_regions	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    crate fn number_writeable_flash_regions(&self) -> usize {$/;"	F	implementation:TbfHeader
+off	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/led.rs	/^    fn off(&mut self) {$/;"	F	implementation:LedHigh
+off	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/led.rs	/^    fn off(&mut self) {$/;"	F	implementation:LedLow
+off	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/led.rs	/^    fn off(&mut self);$/;"	F	interface:Led
+on	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/led.rs	/^    fn on(&mut self) {$/;"	F	implementation:LedHigh
+on	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/led.rs	/^    fn on(&mut self) {$/;"	F	implementation:LedLow
+on	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/led.rs	/^    fn on(&mut self);$/;"	F	interface:Led
+oneshot	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^    fn oneshot(&self, interval: u32);$/;"	F	interface:Timer
+original_app_break	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    original_app_break: *const u8,$/;"	m	struct:Process
+original_kernel_memory_break	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    original_kernel_memory_break: *const u8,$/;"	m	struct:Process
+original_stack_pointer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    original_stack_pointer: *const u8,$/;"	m	struct:Process
+out_xor	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    out_xor: ReadWrite<u32, pins::Register>,$/;"	m	struct:GpioRegisters
+output_buffer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^    output_buffer: TakeCell<'static, [u8]>,$/;"	m	struct:DebugWriter
+output_en	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    output_en: ReadWrite<u32, pins::Register>,$/;"	m	struct:GpioRegisters
+overflowed	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/systick.rs	/^    fn overflowed(&self) -> bool {$/;"	F	implementation:SysTick
+overflowed	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/systick.rs	/^    fn overflowed(&self) -> bool;$/;"	F	interface:SysTick
+package_name	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    package_name: Option<&'static str>,$/;"	m	struct:TbfHeaderV2
+panic	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^pub unsafe fn panic<L: hil::led::Led, W: Write>($/;"	f
+panic_banner	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^pub unsafe fn panic_banner<W: Write>(writer: &mut W, panic_info: &PanicInfo) {$/;"	f
+panic_begin	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^pub unsafe fn panic_begin(nop: &Fn()) {$/;"	f
+panic_blink_forever	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^pub fn panic_blink_forever<L: hil::led::Led>(leds: &mut [&mut L]) -> ! {$/;"	f
+panic_process_info	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^pub unsafe fn panic_process_info<W: Write>($/;"	f
+parity	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^    pub parity: Parity,$/;"	m	struct:UARTParameters
+parse_and_validate_tbf_header	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^crate unsafe fn parse_and_validate_tbf_header(address: *const u8) -> Option<TbfHeader> {$/;"	f
+pc	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    pub pc: usize,$/;"	m	struct:FunctionCall
+pending	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/plic.rs	/^    pending: [ReadOnly<u32, Pending::Register>; (0x0C00_1014 - 0x0C00_1000) \/ 0x4],$/;"	m	struct:PlicRegisters
+peripheral_hardware	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/peripherals.rs	/^    peripheral_hardware: &'a H,$/;"	m	struct:PeripheralManager
+peripherals	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/mod.rs	/^pub mod peripherals;$/;"	n
+pin	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    pin: Field<u32, pins::Register>,$/;"	m	struct:GpioPin
+pin	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/led.rs	/^    pub pin: &'a mut gpio::Pin,$/;"	m	struct:LedHigh
+pin	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/led.rs	/^    pub pin: &'a mut gpio::Pin,$/;"	m	struct:LedLow
+pins	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/gpio.rs	/^    pins: [GpioPin; 16],$/;"	m	struct:Port
+platform	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/lib.rs	/^mod platform;$/;"	n
+plic	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/lib.rs	/^pub mod plic;$/;"	n
+pllcfg	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/prci.rs	/^    pllcfg: ReadWrite<u32, pllcfg::Register>,$/;"	m	struct:PrciRegisters
+plloutdiv	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/prci.rs	/^    plloutdiv: ReadWrite<u32, plloutdiv::Register>,$/;"	m	struct:PrciRegisters
+pop_head	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/list.rs	/^    pub fn pop_head(&self) -> Option<&'a T> {$/;"	F	implementation:List
+pop_syscall_stack_frame	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/syscall.rs	/^    unsafe fn pop_syscall_stack_frame($/;"	F	implementation:SysCall
+pop_syscall_stack_frame	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    unsafe fn pop_syscall_stack_frame(&self) {$/;"	F	implementation:Process
+pop_syscall_stack_frame	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    unsafe fn pop_syscall_stack_frame(&self);$/;"	F	interface:ProcessType
+pop_syscall_stack_frame	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/syscall.rs	/^    unsafe fn pop_syscall_stack_frame($/;"	F	interface:UserspaceKernelBoundary
+port	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    port: ReadWrite<u32, pins::Register>,$/;"	m	struct:GpioRegisters
+prci	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/lib.rs	/^pub mod prci;$/;"	n
+priority	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/plic.rs	/^    priority: [ReadWrite<u32, Priority::Register>; (0x0C00_0214 - 0x0C00_0004) \/ 0x4],$/;"	m	struct:PlicRegisters
+process	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/lib.rs	/^mod process;$/;"	n
+process	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^    process: AppId,$/;"	m	struct:AppPtr
+process_detail_fmt	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/syscall.rs	/^    unsafe fn process_detail_fmt($/;"	F	implementation:SysCall
+process_detail_fmt	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    unsafe fn process_detail_fmt(&self, writer: &mut Write) {$/;"	F	implementation:Process
+process_detail_fmt	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    unsafe fn process_detail_fmt(&self, writer: &mut Write);$/;"	F	interface:ProcessType
+process_detail_fmt	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/syscall.rs	/^    unsafe fn process_detail_fmt($/;"	F	interface:UserspaceKernelBoundary
+process_each	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/sched.rs	/^    crate fn process_each<F>(&self, closure: F)$/;"	F	implementation:Kernel
+process_each_capability	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/sched.rs	/^    pub fn process_each_capability<F>($/;"	F	implementation:Kernel
+process_map_or	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/sched.rs	/^    crate fn process_map_or<F, R>(&self, default: R, process_index: usize, closure: F) -> R$/;"	F	implementation:Kernel
+process_name	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/introspection.rs	/^    pub fn process_name($/;"	F	implementation:KernelInfo
+process_name	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    process_name: &'static str,$/;"	m	struct:Process
+process_until	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/sched.rs	/^    crate fn process_until<F>(&self, closure: F) -> ReturnCode$/;"	F	implementation:Kernel
+processes	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/sched.rs	/^    processes: &'static [Option<&'static process::ProcessType>],$/;"	m	struct:Kernel
+processes_blocked	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/sched.rs	/^    fn processes_blocked(&self) -> bool {$/;"	F	implementation:Kernel
+procs	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/lib.rs	/^pub mod procs {$/;"	n
+protected_size	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    protected_size: u32,$/;"	m	struct:TbfHeaderV2Main
+provide_buffer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/adc.rs	/^    fn provide_buffer($/;"	F	interface:AdcHighSpeed
+ptr	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/static_ref.rs	/^    ptr: *const T,$/;"	m	struct:StaticRef
+ptr	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/grant.rs	/^    ptr: PhantomData<T>,$/;"	m	struct:Grant
+ptr	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^    ptr: AppPtr<L, T>,$/;"	m	struct:AppSlice
+ptr	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^    ptr: Unique<T>,$/;"	m	struct:AppPtr
+ptr	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/mem.rs	/^    pub fn ptr(&self) -> *const T {$/;"	F	implementation:AppSlice
+publish_str	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^    fn publish_str(&self) {$/;"	F	implementation:DebugWriter
+publish_str	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^    fn publish_str(&self) {$/;"	F	implementation:DebugWriterWrapper
+pullup	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    pullup: ReadWrite<u32, pins::Register>,$/;"	m	struct:GpioRegisters
+push_function_call	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/syscall.rs	/^    unsafe fn push_function_call($/;"	F	implementation:SysCall
+push_function_call	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    unsafe fn push_function_call(&self, callback: FunctionCall) {$/;"	F	implementation:Process
+push_function_call	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    unsafe fn push_function_call(&self, callback: FunctionCall);$/;"	F	interface:ProcessType
+push_function_call	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/syscall.rs	/^    unsafe fn push_function_call($/;"	F	interface:UserspaceKernelBoundary
+push_head	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/list.rs	/^    pub fn push_head(&self, node: &'a T) {$/;"	F	implementation:List
+push_tail	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/list.rs	/^    pub fn push_tail(&self, node: &'a T) {$/;"	F	implementation:List
+pwm	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/lib.rs	/^pub mod pwm;$/;"	n
+pwm	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/lib.rs	/^pub mod pwm;$/;"	n
+pwms	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/pwm.rs	/^    pwms: ReadWrite<u32>,$/;"	m	struct:PwmRegisters
+queue	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/mod.rs	/^mod queue;$/;"	n
+radio	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/mod.rs	/^pub mod radio;$/;"	n
+random	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/rng.rs	/^    fn random(&self) -> u32;$/;"	F	interface:Random
+randomness_available	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/rng.rs	/^    fn randomness_available($/;"	F	interface:Client
+read	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    fn read(&self) -> bool {$/;"	F	implementation:GpioPin
+read	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio.rs	/^    fn read(&self) -> bool;$/;"	F	interface:Pin
+read	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio_async.rs	/^    fn read(&self, pin: usize) -> ReturnCode;$/;"	F	interface:Port
+read	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    fn read(&self, addr: u8, buffer: &'static mut [u8], len: u8);$/;"	F	interface:I2CMaster
+read	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    fn read(&self, buffer: &'static mut [u8], len: u8);$/;"	F	interface:I2CDevice
+read	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/led.rs	/^    fn read(&self) -> bool {$/;"	F	implementation:LedHigh
+read	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/led.rs	/^    fn read(&self) -> bool {$/;"	F	implementation:LedLow
+read	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/led.rs	/^    fn read(&self) -> bool;$/;"	F	interface:Led
+read	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/nonvolatile_storage.rs	/^    fn read(&self, buffer: &'static mut [u8], address: usize, length: usize) -> ReturnCode;$/;"	F	interface:NonvolatileStorage
+read_accelerometer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ninedof.rs	/^    fn read_accelerometer(&self) -> ReturnCode {$/;"	F	interface:NineDof
+read_accelerometer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/sensors.rs	/^    fn read_accelerometer(&self) -> ReturnCode {$/;"	F	interface:NineDof
+read_byte	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn read_byte(&self) -> u8;$/;"	F	interface:SpiMaster
+read_complete	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/flash.rs	/^    fn read_complete(&self, read_buffer: &'static mut F::Page, error: Error);$/;"	F	interface:Client
+read_done	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/nonvolatile_storage.rs	/^    fn read_done(&self, buffer: &'static mut [u8], length: usize);$/;"	F	interface:NonvolatileStorageClient
+read_expected	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    fn read_expected(&self);$/;"	F	interface:I2CHwSlaveClient
+read_gyroscope	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ninedof.rs	/^    fn read_gyroscope(&self) -> ReturnCode {$/;"	F	interface:NineDof
+read_gyroscope	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/sensors.rs	/^    fn read_gyroscope(&self) -> ReturnCode {$/;"	F	interface:NineDof
+read_humidity	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/sensors.rs	/^    fn read_humidity(&self) -> ReturnCode;$/;"	F	interface:HumidityDriver
+read_light_intensity	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/sensors.rs	/^    fn read_light_intensity(&self) -> ReturnCode {$/;"	F	interface:AmbientLight
+read_magnetometer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ninedof.rs	/^    fn read_magnetometer(&self) -> ReturnCode {$/;"	F	interface:NineDof
+read_magnetometer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/sensors.rs	/^    fn read_magnetometer(&self) -> ReturnCode {$/;"	F	interface:NineDof
+read_page	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/flash.rs	/^    fn read_page(&self, page_number: usize, buf: &'static mut Self::Page) -> ReturnCode;$/;"	F	interface:Flash
+read_send	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    fn read_send(&self, data: &'static mut [u8], max_len: u8);$/;"	F	interface:I2CSlave
+read_temperature	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/sensors.rs	/^    fn read_temperature(&self) -> ReturnCode;$/;"	F	interface:TemperatureDriver
+read_write_byte	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn read_write_byte(&self, val: u8) -> u8;$/;"	F	interface:SpiMaster
+read_write_bytes	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn read_write_bytes($/;"	F	interface:SpiMaster
+read_write_bytes	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn read_write_bytes($/;"	F	interface:SpiMasterDevice
+read_write_bytes	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn read_write_bytes($/;"	F	interface:SpiSlave
+read_write_bytes	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn read_write_bytes($/;"	F	interface:SpiSlaveDevice
+read_write_done	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn read_write_done($/;"	F	interface:SpiMasterClient
+read_write_done	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn read_write_done($/;"	F	interface:SpiSlaveClient
+receive	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^    fn receive(&self, _rx_buffer: &'static mut [u8], _rx_len: usize) {}$/;"	F	implementation:Uart
+receive	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^    fn receive($/;"	F	interface:RxClient
+receive	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^    fn receive(&self, rx_buffer: &'static mut [u8], rx_len: usize);$/;"	F	interface:UART
+receive_advertisement	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    fn receive_advertisement(&self, channel: RadioChannel);$/;"	F	interface:BleAdvertisementDriver
+receive_automatic	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^    fn receive_automatic(&self, rx_buffer: &'static mut [u8], interbyte_timeout: u8);$/;"	F	interface:UARTReceiveAdvanced
+receive_complete	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^    fn receive_complete($/;"	F	implementation:DebugWriter
+receive_complete	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^    fn receive_complete(&self, rx_buffer: &'static mut [u8], rx_len: usize, error: Error);$/;"	F	interface:Client
+receive_event	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    fn receive_event(&self, buf: &'static mut [u8], len: u8, result: ReturnCode);$/;"	F	interface:RxClient
+receive_result	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/crc.rs	/^    fn receive_result(&self, u32);$/;"	F	interface:Client
+registers	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    registers: StaticRef<GpioRegisters>,$/;"	m	struct:GpioPin
+registers	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/prci.rs	/^    registers: StaticRef<PrciRegisters>,$/;"	m	struct:Prci
+registers	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/pwm.rs	/^    registers: StaticRef<PwmRegisters>,$/;"	m	struct:Pwm
+registers	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/rtc.rs	/^    registers: StaticRef<RtcRegisters>,$/;"	m	struct:Rtc
+registers	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^    registers: StaticRef<UartRegisters>,$/;"	m	struct:Uart
+registers	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/watchdog.rs	/^    registers: StaticRef<WatchdogRegisters>,$/;"	m	struct:Watchdog
+registers	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/peripherals.rs	/^    pub registers: &'a H::RegisterType,$/;"	m	struct:PeripheralManager
+release_low	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn release_low(&self);$/;"	F	interface:SpiMaster
+repeat	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^    fn repeat(&self, interval: u32);$/;"	F	interface:Timer
+reseed	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/rng.rs	/^    fn reseed(&self, seed: u32);$/;"	F	interface:Random
+reset	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^    fn reset(&self) -> ReturnCode;$/;"	F	interface:RadioConfig
+reset	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/systick.rs	/^    fn reset(&self) {}$/;"	F	implementation:SysTick
+reset	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/systick.rs	/^    fn reset(&self);$/;"	F	interface:SysTick
+reset_handler	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/lib.rs	/^    fn reset_handler();$/;"	f
+restart_count	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    restart_count: usize,$/;"	m	struct:ProcessDebug
+resume	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn resume(&self) {$/;"	F	implementation:Process
+resume	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn resume(&self);$/;"	F	interface:ProcessType
+retrieve_buffers	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/adc.rs	/^    fn retrieve_buffers($/;"	F	interface:AdcHighSpeed
+returncode	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/lib.rs	/^mod returncode;$/;"	n
+ring	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/ring_buffer.rs	/^    ring: &'a mut [T],$/;"	m	struct:RingBuffer
+ring_buffer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/mod.rs	/^mod ring_buffer;$/;"	n
+rise_ie	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    rise_ie: ReadWrite<u32, pins::Register>,$/;"	m	struct:GpioRegisters
+rise_ip	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    rise_ip: ReadWrite<u32, pins::Register>,$/;"	m	struct:GpioRegisters
+rng	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/mod.rs	/^pub mod rng;$/;"	n
+rtc	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/lib.rs	/^pub mod rtc;$/;"	n
+rtccfg	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/rtc.rs	/^    rtccfg: ReadWrite<u32, rtccfg::Register>,$/;"	m	struct:RtcRegisters
+rtccmp	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/rtc.rs	/^    rtccmp: ReadWrite<u32, rtccmp::Register>,$/;"	m	struct:RtcRegisters
+rtchi	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/rtc.rs	/^    rtchi: ReadWrite<u32>,$/;"	m	struct:RtcRegisters
+rtclo	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/rtc.rs	/^    rtclo: ReadWrite<u32, rtclo::Register>,$/;"	m	struct:RtcRegisters
+rtcs	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/rtc.rs	/^    rtcs: ReadWrite<u32>,$/;"	m	struct:RtcRegisters
+rxctrl	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^    rxctrl: ReadWrite<u32, rxctrl::Register>,$/;"	m	struct:UartRegisters
+rxdata	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^    rxdata: ReadWrite<u32, rxdata::Register>,$/;"	m	struct:UartRegisters
+s_claim_complete	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/plic.rs	/^    s_claim_complete: ReadWrite<u32>,$/;"	m	struct:PlicRegisters
+s_enable	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/plic.rs	/^    s_enable: [ReadWrite<u32, Enable::Register>; (0x0C00_2094 - 0x0C00_2080) \/ 0x4],$/;"	m	struct:PlicRegisters
+s_priority_threshold	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/plic.rs	/^    s_priority_threshold: ReadWrite<u32, PriorityThreshold::Register>,$/;"	m	struct:PlicRegisters
+sample	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/adc.rs	/^    fn sample(&self, channel: &Self::Channel) -> ReturnCode;$/;"	F	interface:Adc
+sample_continuous	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/adc.rs	/^    fn sample_continuous(&self, channel: &Self::Channel, frequency: u32) -> ReturnCode;$/;"	F	interface:Adc
+sample_highspeed	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/adc.rs	/^    fn sample_highspeed($/;"	F	interface:AdcHighSpeed
+sample_ready	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/adc.rs	/^    fn sample_ready(&self, sample: u16);$/;"	F	interface:Client
+samples_ready	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/adc.rs	/^    fn samples_ready(&self, buf: &'static mut [u16], length: usize);$/;"	F	interface:HighSpeedClient
+sbrk	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn sbrk(&self, increment: isize) -> Result<*const u8, Error> {$/;"	F	implementation:Process
+sbrk	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn sbrk(&self, increment: isize) -> Result<*const u8, Error>;$/;"	F	interface:ProcessType
+sched	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/lib.rs	/^mod sched;$/;"	n
+schedule	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/callback.rs	/^    pub fn schedule(&mut self, r0: usize, r1: usize, r2: usize) -> bool {$/;"	F	implementation:Callback
+schedule_callback	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/ipc.rs	/^    pub unsafe fn schedule_callback($/;"	F	implementation:IPC
+send_done	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^    fn send_done(&self, buf: &'static mut [u8], acked: bool, result: ReturnCode);$/;"	F	interface:TxClient
+sensors	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/mod.rs	/^pub mod sensors;$/;"	n
+service_pending_interrupts	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/chip.rs	/^    fn service_pending_interrupts(&self) {$/;"	F	implementation:ArtyExx
+service_pending_interrupts	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mod.rs	/^    fn service_pending_interrupts(&self);$/;"	F	interface:Chip
+set	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    fn set(&self) {$/;"	F	implementation:GpioPin
+set	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    set: FieldValue<u32, pins::Register>,$/;"	m	struct:GpioPin
+set	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/deferred_call.rs	/^    pub fn set(&self) {$/;"	F	implementation:DeferredCall
+set	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio.rs	/^    fn set(&self);$/;"	F	interface:Pin
+set	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio_async.rs	/^    fn set(&self, pin: usize) -> ReturnCode;$/;"	F	interface:Port
+set_address	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    fn set_address(&self, addr: u8);$/;"	F	interface:I2CSlave
+set_address	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^    fn set_address(&self, addr: u16);$/;"	F	interface:RadioConfig
+set_address	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/usb.rs	/^    fn set_address(&self, addr: u16);$/;"	F	interface:UsbController
+set_alarm	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/time.rs	/^    fn set_alarm(&self, tics: u32);$/;"	F	interface:Alarm
+set_baud_rate	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^    fn set_baud_rate(&self, baud_rate: u32) {$/;"	F	implementation:Uart
+set_channel	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^    fn set_channel(&self, chan: u8) -> ReturnCode;$/;"	F	interface:RadioConfig
+set_client	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    pub fn set_client<C: hil::gpio::Client>(&self, client: &'static C) {$/;"	F	implementation:GpioPin
+set_client	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^    fn set_client(&self, client: &'static hil::uart::Client) {$/;"	F	implementation:Uart
+set_client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/entropy.rs	/^    fn set_client(&'a self, &'a Client32);$/;"	F	interface:Entropy32
+set_client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/entropy.rs	/^    fn set_client(&'a self, &'a Client8);$/;"	F	interface:Entropy8
+set_client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/flash.rs	/^    fn set_client(&'a self, client: &'a C);$/;"	F	interface:HasClient
+set_client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ninedof.rs	/^    fn set_client(&self, client: &'a NineDofClient);$/;"	F	interface:NineDof
+set_client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/nonvolatile_storage.rs	/^    fn set_client(&self, client: &'static NonvolatileStorageClient);$/;"	F	interface:NonvolatileStorage
+set_client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/rng.rs	/^    fn set_client(&'a self, &'a Client);$/;"	F	interface:Rng
+set_client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/sensors.rs	/^    fn set_client(&self, client: &'static AmbientLightClient);$/;"	F	interface:AmbientLight
+set_client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/sensors.rs	/^    fn set_client(&self, client: &'static HumidityClient);$/;"	F	interface:HumidityDriver
+set_client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/sensors.rs	/^    fn set_client(&self, client: &'static NineDofClient);$/;"	F	interface:NineDof
+set_client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/sensors.rs	/^    fn set_client(&self, client: &'static TemperatureClient);$/;"	F	interface:TemperatureDriver
+set_client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn set_client(&self, client: &'static SpiMasterClient);$/;"	F	interface:SpiMaster
+set_client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn set_client(&self, client: Option<&'static SpiSlaveClient>);$/;"	F	interface:SpiSlave
+set_client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/symmetric_encryption.rs	/^    fn set_client(&'a self, client: &'a CCMClient);$/;"	F	interface:AES128CCM
+set_client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/symmetric_encryption.rs	/^    fn set_client(&'a self, client: &'a Client<'a>);$/;"	F	interface:AES128
+set_client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^    fn set_client(&self, client: &'static Client);$/;"	F	interface:UART
+set_clock	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn set_clock(&self, polarity: ClockPolarity);$/;"	F	interface:SpiMaster
+set_clock	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn set_clock(&self, polarity: ClockPolarity);$/;"	F	interface:SpiSlave
+set_clock_frequency	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/prci.rs	/^    pub fn set_clock_frequency(&self, frequency: ClockFrequency) {$/;"	F	implementation:Prci
+set_config_client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^    fn set_config_client(&self, client: &'static ConfigClient);$/;"	F	interface:RadioConfig
+set_debug_writer_wrapper	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^pub unsafe fn set_debug_writer_wrapper(debug_writer: &'static mut DebugWriterWrapper) {$/;"	f
+set_fault_state	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn set_fault_state(&self) {$/;"	F	implementation:Process
+set_fault_state	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn set_fault_state(&self);$/;"	F	interface:ProcessType
+set_input_mode	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    fn set_input_mode(&self, mode: hil::gpio::InputMode) {$/;"	F	implementation:GpioPin
+set_input_mode	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio.rs	/^    fn set_input_mode(&self, InputMode);$/;"	F	interface:PinCtl
+set_iv	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/symmetric_encryption.rs	/^    fn set_iv(&self, iv: &[u8]) -> ReturnCode;$/;"	F	interface:AES128
+set_key	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/symmetric_encryption.rs	/^    fn set_key(&self, key: &[u8]) -> ReturnCode;$/;"	F	interface:AES128
+set_key	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/symmetric_encryption.rs	/^    fn set_key(&self, key: &[u8]) -> ReturnCode;$/;"	F	interface:AES128CCM
+set_mode_aes128cbc	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/symmetric_encryption.rs	/^    fn set_mode_aes128cbc(&self, encrypting: bool);$/;"	F	interface:AES128CBC
+set_mode_aes128ctr	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/symmetric_encryption.rs	/^    fn set_mode_aes128ctr(&self, encrypting: bool);$/;"	F	interface:AES128Ctr
+set_nonce	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/symmetric_encryption.rs	/^    fn set_nonce(&self, nonce: &[u8]) -> ReturnCode;$/;"	F	interface:AES128CCM
+set_pan	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^    fn set_pan(&self, id: u16);$/;"	F	interface:RadioConfig
+set_phase	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn set_phase(&self, cpal: ClockPhase);$/;"	F	interface:SpiMasterDevice
+set_phase	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn set_phase(&self, cpal: ClockPhase);$/;"	F	interface:SpiSlaveDevice
+set_phase	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn set_phase(&self, phase: ClockPhase);$/;"	F	interface:SpiMaster
+set_phase	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn set_phase(&self, phase: ClockPhase);$/;"	F	interface:SpiSlave
+set_polarity	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn set_polarity(&self, cpol: ClockPolarity);$/;"	F	interface:SpiMasterDevice
+set_polarity	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn set_polarity(&self, cpol: ClockPolarity);$/;"	F	interface:SpiSlaveDevice
+set_power_client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^    fn set_power_client(&self, client: &'static PowerClient);$/;"	F	interface:RadioConfig
+set_priority_threshold	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/plic.rs	/^pub unsafe fn set_priority_threshold(val: i8) {$/;"	f
+set_rate	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn set_rate(&self, rate: u32) -> u32;$/;"	F	interface:SpiMaster
+set_rate	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn set_rate(&self, rate: u32);$/;"	F	interface:SpiMasterDevice
+set_receive_buffer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^    fn set_receive_buffer(&self, receive_buffer: &'static mut [u8]);$/;"	F	interface:RadioData
+set_receive_client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    fn set_receive_client(&self, client: &'static RxClient);$/;"	F	interface:BleAdvertisementDriver
+set_receive_client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^    fn set_receive_client(&self, client: &'static RxClient, receive_buffer: &'static mut [u8]);$/;"	F	interface:RadioData
+set_syscall_return_value	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/syscall.rs	/^    unsafe fn set_syscall_return_value(&self, _stack_pointer: *const usize, _return_value: isize/;"	F	implementation:SysCall
+set_syscall_return_value	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    unsafe fn set_syscall_return_value(&self, return_value: isize) {$/;"	F	implementation:Process
+set_syscall_return_value	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    unsafe fn set_syscall_return_value(&self, return_value: isize);$/;"	F	interface:ProcessType
+set_syscall_return_value	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/syscall.rs	/^    unsafe fn set_syscall_return_value(&self, stack_pointer: *const usize, return_value: isize);$/;"	F	interface:UserspaceKernelBoundary
+set_timer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/systick.rs	/^    fn set_timer(&self, _: u32) {}$/;"	F	implementation:SysTick
+set_timer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/systick.rs	/^    fn set_timer(&self, us: u32);$/;"	F	interface:SysTick
+set_transmit_client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    fn set_transmit_client(&self, client: &'static TxClient);$/;"	F	interface:BleAdvertisementDriver
+set_transmit_client	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^    fn set_transmit_client(&self, client: &'static TxClient);$/;"	F	interface:RadioData
+set_tx_power	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    fn set_tx_power(&self, power: u8) -> ReturnCode;$/;"	F	interface:BleConfig
+set_tx_power	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^    fn set_tx_power(&self, power: i8) -> ReturnCode;$/;"	F	interface:RadioConfig
+set_value	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/dac.rs	/^    fn set_value(&self, value: usize) -> ReturnCode;$/;"	F	interface:DacChannel
+set_write_byte	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn set_write_byte(&self, write_byte: u8);$/;"	F	interface:SpiSlave
+set_yielded_state	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn set_yielded_state(&self) {$/;"	F	implementation:Process
+set_yielded_state	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn set_yielded_state(&self);$/;"	F	interface:ProcessType
+setup_mpu	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn setup_mpu(&self) {$/;"	F	implementation:Process
+setup_mpu	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn setup_mpu(&self);$/;"	F	interface:ProcessType
+shared_memory	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/ipc.rs	/^    shared_memory: [Option<AppSlice<Shared, u8>>; 8],$/;"	m	struct:IPCData
+size	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mpu.rs	/^    pub fn size(&self) -> usize {$/;"	F	implementation:Region
+size	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mpu.rs	/^    size: usize,$/;"	m	struct:Region
+sleep	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/chip.rs	/^    fn sleep(&self) {$/;"	F	implementation:ArtyExx
+sleep	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mod.rs	/^    fn sleep(&self);$/;"	F	interface:Chip
+sp	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn sp(&self) -> *const usize {$/;"	F	implementation:Process
+specify_chip_select	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn specify_chip_select(&self, cs: Self::ChipSelect);$/;"	F	interface:SpiMaster
+spi	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/mod.rs	/^pub mod spi;$/;"	n
+sqrtf32	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/math.rs	/^pub fn sqrtf32(num: f32) -> f32 {$/;"	f
+start	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^    fn start(&self) -> ReturnCode;$/;"	F	interface:RadioConfig
+start	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/watchdog.rs	/^    fn start(&self, period: usize);$/;"	F	interface:Watchdog
+start_address	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mpu.rs	/^    pub fn start_address(&self) -> *const u8 {$/;"	F	implementation:Region
+start_address	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mpu.rs	/^    start_address: *const u8,$/;"	m	struct:Region
+start_comparing	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/analog_comparator.rs	/^    fn start_comparing(&self, channel: &Self::Channel) -> ReturnCode;$/;"	F	interface:AnalogComparator
+start_message	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/symmetric_encryption.rs	/^    fn start_message(&self);$/;"	F	interface:AES128
+start_trap_rust	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/lib.rs	/^pub unsafe extern "C" fn start_trap_rust() {$/;"	f
+static_init	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/utils.rs	/^macro_rules! static_init {$/;"	M
+static_ref	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/mod.rs	/^mod static_ref;$/;"	n
+stop	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^    fn stop(&self) -> ReturnCode;$/;"	F	interface:RadioConfig
+stop	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/watchdog.rs	/^    fn stop(&self);$/;"	F	interface:Watchdog
+stop	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn stop(&self) {$/;"	F	implementation:Process
+stop	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn stop(&self);$/;"	F	interface:ProcessType
+stop_bits	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^    stop_bits: Cell<hil::uart::StopBits>,$/;"	m	struct:Uart
+stop_bits	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^    pub stop_bits: StopBits,$/;"	m	struct:UARTParameters
+stop_comparing	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/analog_comparator.rs	/^    fn stop_comparing(&self, channel: &Self::Channel) -> ReturnCode;$/;"	F	interface:AnalogComparator
+stop_sampling	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/adc.rs	/^    fn stop_sampling(&self) -> ReturnCode;$/;"	F	interface:Adc
+storage_volume	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/utils.rs	/^macro_rules! storage_volume {$/;"	M
+store_relaxed	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/deferred_call.rs	/^    crate fn store_relaxed(&self, val: usize) {$/;"	F	implementation:AtomicUsize
+stored_state	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    stored_state:$/;"	m	struct:Process
+subscribe	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/driver.rs	/^    fn subscribe(&self, minor_num: usize, callback: Option<Callback>, app_id: AppId) -> ReturnCo/;"	F	interface:Driver
+subscribe	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/ipc.rs	/^    fn subscribe($/;"	F	implementation:IPC
+support	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/lib.rs	/^pub mod support;$/;"	n
+switch_to	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    unsafe fn switch_to(&self) -> Option<syscall::ContextSwitchReason> {$/;"	F	implementation:Process
+switch_to	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    unsafe fn switch_to(&self) -> Option<syscall::ContextSwitchReason>;$/;"	F	interface:ProcessType
+switch_to_process	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/syscall.rs	/^    unsafe fn switch_to_process($/;"	F	implementation:SysCall
+switch_to_process	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/syscall.rs	/^    unsafe fn switch_to_process($/;"	F	interface:UserspaceKernelBoundary
+symmetric_encryption	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/mod.rs	/^pub mod symmetric_encryption;$/;"	n
+syscall	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/lib.rs	/^pub mod syscall;$/;"	n
+syscall	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/lib.rs	/^pub mod syscall;$/;"	n
+syscall_count	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    syscall_count: usize,$/;"	m	struct:ProcessDebug
+systick	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/chip.rs	/^    fn systick(&self) -> &Self::SysTick {$/;"	F	implementation:ArtyExx
+systick	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mod.rs	/^    fn systick(&self) -> &Self::SysTick;$/;"	F	interface:Chip
+systick	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mod.rs	/^crate mod systick;$/;"	n
+tail	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/ring_buffer.rs	/^    tail: usize,$/;"	m	struct:RingBuffer
+tail	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^    tail: Cell<usize>,$/;"	m	struct:DebugWriter
+tbfheader	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/lib.rs	/^mod tbfheader;$/;"	n
+tickle	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/watchdog.rs	/^    fn tickle(&self);$/;"	F	interface:Watchdog
+time	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/mod.rs	/^pub mod time;$/;"	n
+timeslice_expiration_count	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    timeslice_expiration_count: usize,$/;"	m	struct:ProcessDebug
+timeslice_expirations	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/introspection.rs	/^    pub fn timeslice_expirations(&self, _capability: &ProcessManagementCapability) -> usize {$/;"	F	implementation:KernelInfo
+tipe	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    tipe: TbfHeaderTypes,$/;"	m	struct:TbfHeaderTlv
+toggle	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    fn toggle(&self) {$/;"	F	implementation:GpioPin
+toggle	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio.rs	/^    fn toggle(&self);$/;"	F	interface:Pin
+toggle	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/gpio_async.rs	/^    fn toggle(&self, pin: usize) -> ReturnCode;$/;"	F	interface:Port
+toggle	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/led.rs	/^    fn toggle(&mut self) {$/;"	F	implementation:LedHigh
+toggle	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/led.rs	/^    fn toggle(&mut self) {$/;"	F	implementation:LedLow
+toggle	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/led.rs	/^    fn toggle(&mut self);$/;"	F	interface:Led
+total_size	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    total_size: u32,$/;"	m	struct:TbfHeaderV2Base
+transmit	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^    fn transmit(&self, tx_data: &'static mut [u8], tx_len: usize) {$/;"	F	implementation:Uart
+transmit	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/radio.rs	/^    fn transmit($/;"	F	interface:RadioData
+transmit	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^    fn transmit(&self, tx_data: &'static mut [u8], tx_len: usize);$/;"	F	interface:UART
+transmit_advertisement	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    fn transmit_advertisement($/;"	F	interface:BleAdvertisementDriver
+transmit_complete	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^    fn transmit_complete(&self, buffer: &'static mut [u8], _error: hil::uart::Error) {$/;"	F	implementation:DebugWriter
+transmit_complete	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/uart.rs	/^    fn transmit_complete(&self, tx_buffer: &'static mut [u8], error: Error);$/;"	F	interface:Client
+transmit_event	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/ble_advertising.rs	/^    fn transmit_event(&self, result: ReturnCode);$/;"	F	interface:TxClient
+txctrl	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^    txctrl: ReadWrite<u32, txctrl::Register>,$/;"	m	struct:UartRegisters
+txdata	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/uart.rs	/^    txdata: ReadWrite<u32, txdata::Register>,$/;"	m	struct:UartRegisters
+uart	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/lib.rs	/^pub mod uart;$/;"	n
+uart	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/lib.rs	/^pub mod uart;$/;"	n
+uart	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^    uart: &'static hil::uart::UART,$/;"	m	struct:DebugWriter
+uart	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/mod.rs	/^pub mod uart;$/;"	n
+unlock	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/watchdog.rs	/^    fn unlock(&self) {$/;"	F	implementation:Watchdog
+update_app_memory_region	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mpu.rs	/^    fn update_app_memory_region($/;"	F	interface:MPU
+update_heap_start_pointer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn update_heap_start_pointer(&self, heap_pointer: *const u8) {$/;"	F	implementation:Process
+update_heap_start_pointer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn update_heap_start_pointer(&self, heap_pointer: *const u8);$/;"	F	interface:ProcessType
+update_stack_start_pointer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn update_stack_start_pointer(&self, stack_pointer: *const u8) {$/;"	F	implementation:Process
+update_stack_start_pointer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/process.rs	/^    fn update_stack_start_pointer(&self, stack_pointer: *const u8);$/;"	F	interface:ProcessType
+usb	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/mod.rs	/^pub mod usb;$/;"	n
+userspace_kernel_boundary	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/chip.rs	/^    fn userspace_kernel_boundary(&self) -> &riscv32i::syscall::SysCall {$/;"	F	implementation:ArtyExx
+userspace_kernel_boundary	/home/dieraca/school/fall_2018/urop/tockos/chips/arty_exx/src/chip.rs	/^    userspace_kernel_boundary: riscv32i::syscall::SysCall,$/;"	m	struct:ArtyExx
+userspace_kernel_boundary	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mod.rs	/^    fn userspace_kernel_boundary(&self) -> &Self::UserspaceKernelBoundary;$/;"	F	interface:Chip
+usize	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/returncode.rs	/^impl From<ReturnCode> for usize {$/;"	c
+utils	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/mod.rs	/^pub mod utils;$/;"	n
+v	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/deferred_call.rs	/^    v: UnsafeCell<usize>,$/;"	m	struct:AtomicUsize
+value	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/gpio.rs	/^    value: ReadOnly<u32, pins::Register>,$/;"	m	struct:GpioRegisters
+version	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    version: u16,$/;"	m	struct:TbfHeaderV2Base
+watchdog	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/lib.rs	/^pub mod watchdog;$/;"	n
+watchdog	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/mod.rs	/^pub mod watchdog;$/;"	n
+wdogcfg	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/watchdog.rs	/^    wdogcfg: ReadWrite<u32, cfg::Register>,$/;"	m	struct:WatchdogRegisters
+wdogcmp	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/watchdog.rs	/^    wdogcmp: ReadWrite<u32>,$/;"	m	struct:WatchdogRegisters
+wdogcount	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/watchdog.rs	/^    wdogcount: ReadWrite<u32>,$/;"	m	struct:WatchdogRegisters
+wdogfeed	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/watchdog.rs	/^    wdogfeed: ReadWrite<u32, feed::Register>,$/;"	m	struct:WatchdogRegisters
+wdogkey	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/watchdog.rs	/^    wdogkey: WriteOnly<u32, key::Register>,$/;"	m	struct:WatchdogRegisters
+wdogs	/home/dieraca/school/fall_2018/urop/tockos/chips/sifive/src/watchdog.rs	/^    wdogs: ReadWrite<u32>,$/;"	m	struct:WatchdogRegisters
+wfi	/home/dieraca/school/fall_2018/urop/tockos/arch/riscv32i/src/support.rs	/^pub unsafe fn wfi() {$/;"	f
+with_driver	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/platform/mod.rs	/^    fn with_driver<F, R>(&self, driver_num: usize, f: F) -> R$/;"	F	interface:Platform
+work	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/sched.rs	/^    work: Cell<usize>,$/;"	m	struct:Kernel
+write	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^    fn write(&self, buf: &'static mut [u8], len: usize) {$/;"	F	implementation:Debug
+write	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^    fn write(&self, buf: &'static mut [u8], len: usize);$/;"	F	interface:Debug
+write	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    fn write(&self, addr: u8, data: &'static mut [u8], len: u8);$/;"	F	interface:I2CMaster
+write	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    fn write(&self, data: &'static mut [u8], len: u8);$/;"	F	interface:I2CDevice
+write	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/nonvolatile_storage.rs	/^    fn write(&self, buffer: &'static mut [u8], address: usize, length: usize) -> ReturnCode;$/;"	F	interface:NonvolatileStorage
+write_buffer	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^    fn write_buffer(&self, start: usize, end: usize, bytes: &[u8]) {$/;"	F	implementation:DebugWriter
+write_byte	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/spi.rs	/^    fn write_byte(&self, val: u8);$/;"	F	interface:SpiMaster
+write_complete	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/flash.rs	/^    fn write_complete(&self, write_buffer: &'static mut F::Page, error: Error);$/;"	F	interface:Client
+write_done	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/nonvolatile_storage.rs	/^    fn write_done(&self, buffer: &'static mut [u8], length: usize);$/;"	F	interface:NonvolatileStorageClient
+write_expected	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    fn write_expected(&self);$/;"	F	interface:I2CHwSlaveClient
+write_page	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/flash.rs	/^    fn write_page(&self, page_number: usize, buf: &'static mut Self::Page) -> ReturnCode;$/;"	F	interface:Flash
+write_read	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    fn write_read(&self, addr: u8, data: &'static mut [u8], write_len: u8, read_len: u8);$/;"	F	interface:I2CMaster
+write_read	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    fn write_read(&self, data: &'static mut [u8], write_len: u8, read_len: u8);$/;"	F	interface:I2CDevice
+write_receive	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/hil/i2c.rs	/^    fn write_receive(&self, data: &'static mut [u8], max_len: u8);$/;"	F	interface:I2CSlave
+write_str	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/debug.rs	/^    fn write_str(&mut self, s: &str) -> Result {$/;"	F	implementation:DebugWriterWrapper
+writeable_flash_region_offset	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    writeable_flash_region_offset: u32,$/;"	m	struct:TbfHeaderV2WriteableFlashRegion
+writeable_flash_region_size	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    writeable_flash_region_size: u32,$/;"	m	struct:TbfHeaderV2WriteableFlashRegion
+writeable_regions	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/tbfheader.rs	/^    writeable_regions: Option<&'static [TbfHeaderV2WriteableFlashRegion]>,$/;"	m	struct:TbfHeaderV2
+zero	/home/dieraca/school/fall_2018/urop/tockos/kernel/src/common/math.rs	/^    pub fn zero() -> PowerOfTwo {$/;"	F	implementation:PowerOfTwo
