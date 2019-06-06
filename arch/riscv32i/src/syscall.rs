@@ -22,8 +22,23 @@ extern "C" {
 
 /// This holds all of the state that the kernel must keep for the process when
 /// the process is not executing.
-#[derive(Copy, Clone, Default)]
-pub struct RiscvimacStoredState {}
+#[derive(Copy, Clone)]
+pub struct RiscvimacStoredState {
+    // 31 registers
+    regs: [usize; 31],
+    pc: usize,
+    reason: usize,
+}
+
+impl Default for RiscvimacStoredState {
+    fn default() -> RiscvimacStoredState {
+        RiscvimacStoredState {
+            regs: [0; 31],
+            pc: 0,
+            reason: 0,
+        }
+    }
+}
 
 /// Implementation of the `UserspaceKernelBoundary` for the RISC-V architecture.
 pub struct SysCall();
@@ -38,11 +53,15 @@ impl kernel::syscall::UserspaceKernelBoundary for SysCall {
     type StoredState = RiscvimacStoredState;
 
     /// Get the syscall that the process called.
-    unsafe fn get_syscall(&self, _stack_pointer: *const usize) -> Option<kernel::syscall::Syscall> {
+    unsafe fn get_syscall(&self, stack_pointer: *const usize) -> Option<kernel::syscall::Syscall> {
         None
     }
 
-    unsafe fn set_syscall_return_value(&self, _stack_pointer: *const usize, _return_value: isize) {}
+    unsafe fn set_syscall_return_value(&self, stack_pointer: *const usize, return_value: isize) {
+        // riscv has same convention as cortex m
+        let sp = stack_pointer as *mut isize;
+        write_volatile(sp, return_value);
+    }
 
     unsafe fn pop_syscall_stack_frame(
         &self,

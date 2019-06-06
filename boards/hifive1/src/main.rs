@@ -48,7 +48,7 @@ static mut APP_MEMORY: [u8; 8192] = [0; 8192];
 
 // Actual memory for holding the active process structures.
 static mut PROCESSES: [Option<&'static kernel::procs::ProcessType>; NUM_PROCS] =
-    [None, None, None, None];
+[None, None, None, None];
 
 /// Dummy buffer that causes the linker to reserve enough space for the stack.
 #[no_mangle]
@@ -72,21 +72,21 @@ struct HiFive1 {
 /// Mapping of integer syscalls to objects that implement syscalls.
 impl Platform for HiFive1 {
     fn with_driver<F, R>(&self, driver_num: usize, f: F) -> R
-    where
-        F: FnOnce(Option<&kernel::Driver>) -> R,
-    {
-        match driver_num {
-            // capsules::console::DRIVER_NUM => f(Some(self.console)),
-            capsules::gpio::DRIVER_NUM => f(Some(self.gpio)),
+        where
+            F: FnOnce(Option<&kernel::Driver>) -> R,
+        {
+            match driver_num {
+                // capsules::console::DRIVER_NUM => f(Some(self.console)),
+                capsules::gpio::DRIVER_NUM => f(Some(self.gpio)),
 
-            // capsules::alarm::DRIVER_NUM => f(Some(self.alarm)),
-            //capsules::led::DRIVER_NUM => f(Some(self.led)),
-            // capsules::button::DRIVER_NUM => f(Some(self.button)),
+                // capsules::alarm::DRIVER_NUM => f(Some(self.alarm)),
+                //capsules::led::DRIVER_NUM => f(Some(self.led)),
+                // capsules::button::DRIVER_NUM => f(Some(self.button)),
 
-            // kernel::ipc::DRIVER_NUM => f(Some(&self.ipc)),
-            _ => f(None),
+                // kernel::ipc::DRIVER_NUM => f(Some(&self.ipc)),
+                _ => f(None),
+            }
         }
-    }
 }
 
 pub unsafe fn trap_save_cause(mepc: u32) {
@@ -103,9 +103,9 @@ pub unsafe fn reset_handler() {
     // Basic setup of the platform.
     riscv32i::init_memory();
 
-    configure_pmp();
+    //configure_pmp();
     // configure trap handler addresses
-    riscv32i::configure_machine_trap_handler();
+    //riscv32i::configure_machine_trap_handler();
     //riscv32i::configure_supervisor_trap_handler();
     // riscv32i::configure_user_trap_handler();
 
@@ -114,15 +114,16 @@ pub unsafe fn reset_handler() {
     e310x::pwm::PWM0.disable();
     e310x::pwm::PWM1.disable();
     e310x::pwm::PWM2.disable();
+    // enables prci
     e310x::prci::PRCI.set_clock_frequency(sifive::prci::ClockFrequency::Freq18Mhz);
 
     // enable interrupts
     //riscv32i::enable_plic_interrupts();
     //enable m mode software interrupts
-    riscv32i::plic::enable_all_sources();
-    riscv32i::plic::set_priority_threshold(0);
-    riscv32i::plic::enable_interrupts();
-    riscvregs::register::mstatus::set_mpie();
+    //riscv32i::plic::enable_all_sources();
+    //riscv32i::plic::set_priority_threshold(0);
+    //riscv32i::plic::enable_interrupts();
+    //riscvregs::register::mstatus::set_mpie();
     //riscv32i::clint::write_mtimecmp1(0x0);
 
     let process_mgmt_cap = create_capability!(capabilities::ProcessManagementCapability);
@@ -132,7 +133,7 @@ pub unsafe fn reset_handler() {
         Some(&e310x::gpio::PORT[22]), // Red
         None,
         None,
-    );
+        );
     let the_chip = static_init!(e310x::chip::E310x, e310x::chip::E310x::new());
     // Create a shared UART channel for the console and for kernel debug.
     let uart_mux = static_init!(
@@ -155,14 +156,13 @@ pub unsafe fn reset_handler() {
     // Create virtual device for kernel debug.
     let debugger_uart = static_init!(UartDevice, UartDevice::new(uart_mux, false));
     debugger_uart.setup();
-    //UartDevice::set_client(&debugger_uart, uart_mux);
     let debugger = static_init!(
         kernel::debug::DebugWriter,
         kernel::debug::DebugWriter::new(
             debugger_uart,
             &mut kernel::debug::OUTPUT_BUF,
             &mut kernel::debug::INTERNAL_BUF,
-        )
+            )
     );
     hil::uart::UART::set_client(debugger_uart, debugger);
     //UartDevice::UART::set_client(debugger_uart );
@@ -180,14 +180,28 @@ pub unsafe fn reset_handler() {
     const UART0_BASE: StaticRef<UartRegisters> =
         unsafe { StaticRef::new(0x1001_3000 as *const UartRegisters) };
     let uart0 = &UART0_BASE;
-    //debug!("hi\r\n");
+    uart0.div.write(sifive::uart::div::div.val(138));
+    uart0.txctrl.modify(sifive::uart::txctrl::txen::SET);
+    while( 1 == (uart0.txctrl.get() & 0x80000000) ){
+    }
+    uart0.txdata.set('y' as u32);
+
+
+
+
+    //let led_pins = static_init!( [( &'static sifive::gpio::GpioPin, capsules::led::ActivationMode); 3], [ ( &e310x::gpio::PORT[22], capsules::led::ActivationMode::ActiveLow), ( &e310x::gpio::PORT[19], capsules::led::ActivationMode::ActiveLow), ( &e310x::gpio::PORT[21], capsules::led::ActivationMode::ActiveLow), ] );
+    //let led = static_init!(
+        //capsules::led::LED<'static, sifive::gpio::GpioPin>,
+        //capsules::led::LED::new(led_pins)
+    //);
+
+    debug!("hi\r\n");
     //hil::uart::UART::client.map(|aclient| {
     //self.buffer.take().map(|a| {
     //aclient.transmit_complete(a, kernel::hil::uart::Error::CommandComplete);
     //});
     //});
     //debug!("hi");
-    //uart0.txdata.set('y' as u32);
     //uart0.txdata.set('e' as u32);
     //uart0.txdata.set('e' as u32);
     //uart0.txdata.set('t' as u32);

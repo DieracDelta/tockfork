@@ -36,14 +36,17 @@ pub struct GpioRegisters {
     /// Low Interrupt Pending Register
     low_ip: ReadWrite<u32, pins::Register>,
     /// HW I/O Function Enable Register
-    iof_en: ReadWrite<u32, pins::Register>,
+    iof_en: ReadWrite<u32, raw::Register>,
     /// HW I/O Function Select Register
-    iof_sel: ReadWrite<u32, pins::Register>,
+    iof_sel: ReadWrite<u32, raw::Register>,
     /// Output XOR (invert) Register
     out_xor: ReadWrite<u32, pins::Register>,
 }
 
 register_bitfields![u32,
+	raw [
+	    pins OFFSET(0) NUMBITS(32)
+	],
 	pins [
 	    pin0 0,
 	    pin1 1,
@@ -114,20 +117,24 @@ impl GpioPin {
     /// specific.
     pub fn iof0(&self) {
         let regs = self.registers;
+        let sel_val = regs.iof_sel.get();
+        let en_val = regs.iof_en.get();
 
-        regs.out_xor.modify(self.clear);
-        regs.iof_sel.modify(self.clear);
-        regs.iof_en.modify(self.set);
+        regs.iof_sel.write(raw::pins.val(sel_val & 0xEFFECFFF));
+        regs.iof_en.write(raw::pins.val(en_val & 0xEFFECFFF));
+        //regs.out_xor.modify(self.clear);
+        //regs.iof_sel.modify(self.clear);
+        //regs.iof_en.modify(self.set);
     }
 
     /// Configure this pin as IO Function 1. What that maps to is chip- and pin-
     /// specific.
     pub fn iof1(&self) {
-        let regs = self.registers;
+        //let regs = self.registers;
 
-        regs.out_xor.modify(self.clear);
-        regs.iof_sel.modify(self.set);
-        regs.iof_en.modify(self.set);
+        //regs.out_xor.modify(self.clear);
+        //regs.iof_sel.modify(self.set);
+        //regs.iof_en.modify(self.set);
     }
 
     /// There are separate interrupts in PLIC for each pin, so the interrupt
@@ -169,7 +176,7 @@ impl hil::gpio::Pin for GpioPin {
         regs.drive.modify(self.clear);
         regs.out_xor.modify(self.clear);
         regs.output_en.modify(self.set);
-        regs.iof_en.modify(self.clear);
+        //regs.iof_en.modify(self.clear);
     }
 
     fn make_input(&self) {
@@ -177,7 +184,7 @@ impl hil::gpio::Pin for GpioPin {
 
         regs.pullup.modify(self.clear);
         regs.input_en.modify(self.set);
-        regs.iof_en.modify(self.clear);
+        //regs.iof_en.modify(self.clear);
     }
 
     fn read(&self) -> bool {
@@ -214,7 +221,7 @@ impl hil::gpio::Pin for GpioPin {
 
         regs.pullup.modify(self.clear);
         regs.input_en.modify(self.set);
-        regs.iof_en.modify(self.clear);
+        //regs.iof_en.modify(self.clear);
 
         self.client_data.set(client_data);
 

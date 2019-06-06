@@ -13,17 +13,17 @@ pub struct UartRegisters {
     /// Transmit Data Register
     pub txdata: ReadWrite<u32, txdata::Register>,
     /// Receive Data Register
-    rxdata: ReadWrite<u32, rxdata::Register>,
+    pub rxdata: ReadWrite<u32, rxdata::Register>,
     /// Transmit Control Register
     pub txctrl: ReadWrite<u32, txctrl::Register>,
     /// Receive Control Register
-    rxctrl: ReadWrite<u32, rxctrl::Register>,
+    pub rxctrl: ReadWrite<u32, rxctrl::Register>,
     /// Interrupt Enable Register
-    ie: ReadWrite<u32, interrupt::Register>,
+    pub ie: ReadWrite<u32, interrupt::Register>,
     /// Interrupt Pending Register
-    ip: ReadOnly<u32, interrupt::Register>,
+    pub ip: ReadOnly<u32, interrupt::Register>,
     /// Baud Rate Divisor Register
-    div: ReadWrite<u32, div::Register>,
+    pub div: ReadWrite<u32, div::Register>,
 }
 
 register_bitfields![u32,
@@ -86,7 +86,6 @@ impl Uart {
     /// Configure GPIO pins for the UART.
     pub fn initialize_gpio_pins(&self, tx: &gpio::GpioPin, rx: &gpio::GpioPin) {
         tx.iof0();
-        rx.iof0();
     }
 
     fn set_baud_rate(&self, baud_rate: u32) {

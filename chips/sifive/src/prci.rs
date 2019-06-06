@@ -68,7 +68,14 @@ impl Prci {
         let div = match frequency {
             ClockFrequency::Freq18Mhz => {
                 // 4, // this seems wrong, but it works??
-                regs.hfrosccfg.modify(hfrosccfg::div.val(4));
+                //regs.hfrosccfg.modify(hfrosccfg::div.val(4));
+                regs.hfrosccfg.modify(hfrosccfg::enable.val(1));
+                regs.pllcfg.modify(pllcfg::refsel.val(1) + pllcfg::bypass.val(1));
+                //regs.pllcfg.modify(pllcfg::bypass.val(1));
+                regs.pllcfg.modify(pllcfg::sel.val(1));
+                regs.hfrosccfg.modify(hfrosccfg::enable.val(0));
+
+
             }
             ClockFrequency::Freq384Mhz => {}
         };
