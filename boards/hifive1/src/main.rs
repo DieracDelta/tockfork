@@ -1,6 +1,16 @@
 //! Board file for SiFive HiFive1 RISC-V development platform.
 //!
 //! - <https://www.sifive.com/products/hifive1/>
+//!
+//!
+
+//This material is based upon work supported by the Under Secretary of Defense for Research and Engineering under Air Force Contract No. FA8702-15-D-0001. Any opinions, findings, conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the Under Secretary of Defense for Research and Engineering.
+
+//© 2019 Massachusetts Institute of Technology.
+
+//The software/firmware is provided to you on an As-Is basis
+
+//Delivered to the U.S. Government with Unlimited Rights, as defined in DFARS Part 252.227-7013 or 7014 (Feb 2014). Notwithstanding any copyright notice, U.S. Government rights in this work are defined by DFARS 252.227-7013 or DFARS 252.227-7014 as detailed above. Use of this work other than as specifically authorized by the U.S. Government may violate any copyrights that exist in this work.
 
 #![no_std]
 #![no_main]
@@ -48,7 +58,7 @@ static mut APP_MEMORY: [u8; 8192] = [0; 8192];
 
 // Actual memory for holding the active process structures.
 static mut PROCESSES: [Option<&'static kernel::procs::ProcessType>; NUM_PROCS] =
-[None, None, None, None];
+    [None, None, None, None];
 
 /// Dummy buffer that causes the linker to reserve enough space for the stack.
 #[no_mangle]
@@ -72,21 +82,21 @@ struct HiFive1 {
 /// Mapping of integer syscalls to objects that implement syscalls.
 impl Platform for HiFive1 {
     fn with_driver<F, R>(&self, driver_num: usize, f: F) -> R
-        where
-            F: FnOnce(Option<&kernel::Driver>) -> R,
-        {
-            match driver_num {
-                // capsules::console::DRIVER_NUM => f(Some(self.console)),
-                capsules::gpio::DRIVER_NUM => f(Some(self.gpio)),
+    where
+        F: FnOnce(Option<&kernel::Driver>) -> R,
+    {
+        match driver_num {
+            // capsules::console::DRIVER_NUM => f(Some(self.console)),
+            capsules::gpio::DRIVER_NUM => f(Some(self.gpio)),
 
-                // capsules::alarm::DRIVER_NUM => f(Some(self.alarm)),
-                //capsules::led::DRIVER_NUM => f(Some(self.led)),
-                // capsules::button::DRIVER_NUM => f(Some(self.button)),
+            // capsules::alarm::DRIVER_NUM => f(Some(self.alarm)),
+            //capsules::led::DRIVER_NUM => f(Some(self.led)),
+            // capsules::button::DRIVER_NUM => f(Some(self.button)),
 
-                // kernel::ipc::DRIVER_NUM => f(Some(&self.ipc)),
-                _ => f(None),
-            }
+            // kernel::ipc::DRIVER_NUM => f(Some(&self.ipc)),
+            _ => f(None),
         }
+    }
 }
 
 pub unsafe fn trap_save_cause(mepc: u32) {
@@ -133,7 +143,7 @@ pub unsafe fn reset_handler() {
         Some(&e310x::gpio::PORT[22]), // Red
         None,
         None,
-        );
+    );
     let the_chip = static_init!(e310x::chip::E310x, e310x::chip::E310x::new());
     // Create a shared UART channel for the console and for kernel debug.
     let uart_mux = static_init!(
@@ -162,7 +172,7 @@ pub unsafe fn reset_handler() {
             debugger_uart,
             &mut kernel::debug::OUTPUT_BUF,
             &mut kernel::debug::INTERNAL_BUF,
-            )
+        )
     );
     hil::uart::UART::set_client(debugger_uart, debugger);
     //UartDevice::UART::set_client(debugger_uart );
@@ -182,70 +192,11 @@ pub unsafe fn reset_handler() {
     let uart0 = &UART0_BASE;
     uart0.div.write(sifive::uart::div::div.val(138));
     uart0.txctrl.modify(sifive::uart::txctrl::txen::SET);
-    while( 1 == (uart0.txctrl.get() & 0x80000000) ){
-    }
+    while (1 == (uart0.txctrl.get() & 0x80000000)) {}
     uart0.txdata.set('y' as u32);
-
-
-
-
-    //let led_pins = static_init!( [( &'static sifive::gpio::GpioPin, capsules::led::ActivationMode); 3], [ ( &e310x::gpio::PORT[22], capsules::led::ActivationMode::ActiveLow), ( &e310x::gpio::PORT[19], capsules::led::ActivationMode::ActiveLow), ( &e310x::gpio::PORT[21], capsules::led::ActivationMode::ActiveLow), ] );
-    //let led = static_init!(
-        //capsules::led::LED<'static, sifive::gpio::GpioPin>,
-        //capsules::led::LED::new(led_pins)
-    //);
-
     debug!("hi\r\n");
-    //hil::uart::UART::client.map(|aclient| {
-    //self.buffer.take().map(|a| {
-    //aclient.transmit_complete(a, kernel::hil::uart::Error::CommandComplete);
-    //});
-    //});
-    //debug!("hi");
-    //uart0.txdata.set('e' as u32);
-    //uart0.txdata.set('e' as u32);
-    //uart0.txdata.set('t' as u32);
-    //uart0.txdata.set('m' as u32);
-    //uart0.txdata.set('o' as u32);
-    //uart0.txdata.set('f' as u32);
-    //uart0.txdata.set('o' as u32);
-    //uart0.txdata.set('\r' as u32);
-    //uart0.txdata.set('\n' as u32);
-    //uart0.txdata.set('h' as u32);
-    //uart0.txdata.set('a' as u32);
-    //uart0.txdata.set('h' as u32);
-    //uart0.txdata.set('a' as u32);
-
-    //let a = riscv32i::clint::read_mtimecmp();
-    //let a = riscvregs::register::mie::read().bits();
-    //let a = riscvregs::register::mip::read().bits();
-    //let a = riscv32i::clint::read_mtime();
-    //let a = riscvregs::register::mtvec::read().bits();
-    //if a == 0 {
-    //debug!("hi!");
-    //let new_wrapper = get_debug_writer();
-    //new_wrapper.write_str("fo shizzle\r\n");
-    //new_wrapper.publish_str();
-    //new_wrapper.write_str("haw yee\r\n");
-    //new_wrapper.publish_str();
-    ////new_wrapper.write_str("\n\n");
-    //kernel::debug::flush(new_wrapper);
-    //debug_wrapper.write_str("eet");
-    //debug_wrapper;
-
-    //} else {
-    //debug!("more hi!");
-    //e310x::uart::UART
-    //}
-    //debug!("the a is: {:?}", a);
-
-    // waiting for interrupt does not help
-    //<e310x::chip::E310x as kernel::Chip>::sleep(&the_chip);
-    //<e310x::chip::E310x as kernel::Chip>::service_pending_interrupts(&the_chip);
-
-    // change privilege level
-    //riscvregs::register::mstatus::set_mpp(riscvregs::register::mstatus::MPP::Supervisor);
     riscvregs::register::mstatus::set_mpp(riscvregs::register::mstatus::MPP::Machine);
+
     //debug!("hello world 1");
     //<e310x::chip::E310x as kernel::Chip>::service_pending_interrupts(&the_chip);
     //debug!("hello world 2");
